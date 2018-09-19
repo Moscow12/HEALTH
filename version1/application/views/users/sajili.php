@@ -27,7 +27,7 @@
 
 
             </div>
-            <?php echo form_open('Register/registration'); ?>
+            <?php echo form_open('Users/registration'); ?>
             <div class="col-lg-6">
               <div class="form-wrapper">
                 <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
@@ -36,50 +36,36 @@
                     <div class="panel-heading">
                       <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> <?php echo $title; ?> <small>(It's free!)</small></h3>
                     </div>
-                    <?php echo validation_errors(); ?>
+                   
                     <div class="panel-body">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
-                      <div id="errormessage"></div>
+                      <div id="errormessage" class="form-group" style="color: red;">
+                         <?php echo validation_errors(); ?>
+                      </div>
 
 <!--                       <form action="" method="post" role="form" class="contactForm lead">
  -->                        <div class="row">
-                          <div class="col-xs-6 col-sm-6 col-md-6">
+                          <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                              <label>Full name</label>
-                              <input type="text" name="name" id="first_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
+                              <label>Full Name</label>
+                              <input type="text" name="name" id="first_name"  class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
                               <div class="validation"></div>
                             </div>
                           </div>
-                          <div class="col-xs-6 col-sm-6 col-md-6">
+                          <!-- <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                               <label>Email</label>
                               <input type="text" name="email" id="last_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
                               <div class="validation"></div>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
 
-                        <div class="row">
+			                 <div class="row">
                           <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                              <label>Registration Number</label>
-                              <input type="text" name="reg_no" id="email" class="form-control input-md" data-rule="email" data-msg="Please enter a valid email">
-                              <div class="validation"></div>
-                            </div>
-                          </div>
-                          <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="form-group">
-                              <label>Phone number</label>
-                              <input type="text" name="phone" id="phone" class="form-control input-md" data-rule="required" data-msg="The phone number is required">
-                              <div class="validation"></div>
-                            </div>
-                          </div>
-                        </div>
-			 <div class="row">
-                          <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="form-group">
-                              <label>Location</label>
-                              <input type="text" name="location" id="email" class="form-control input-md" data-rule="email" data-msg="Please enter a valid location">
+                              <label>Email</label>
+                              <input type="email" name="email" id="email"  class="form-control input-md" data-rule="email" data-msg="Please enter a valid location" >
                               <div class="validation"></div>
                             </div>
                           </div>
@@ -98,9 +84,25 @@
                           </div>
                         </div>
 
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label>Password</label>
+                              <input type="password" name="password"  id="password" class="form-control input-md" data-rule="email" data-msg="Please enter a valid email">
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <label>Confirm Password</label>
+                              <input type="password" name="password2" id="password" class="form-control input-md" data-rule="required" data-msg="The phone number is required">
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                        </div>
                         <input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
 
-                        <p class="lead-footer">* We'll contact you by phone & email later</p>
+                        <p class="lead-footer">* We'll contact you by email later</p>
 
                       </form>
                     </div>

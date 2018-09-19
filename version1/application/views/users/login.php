@@ -25,10 +25,9 @@
                 </div>
               </div>
 
-<div class="col-sm-6 col-md-4 col-lg-3">
-                      <i class="fa fa-cog"></i> fa-cog</div>
-            </div>
-            <?php echo form_open('Register/login'); ?>
+<!-- <div class="col-sm-6 col-md-4 col-lg-3">
+ -->            </div>
+            <?php echo form_open('Users/login'); ?>
             <div class="col-lg-6">
               <div class="form-wrapper">
                 <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
@@ -37,17 +36,18 @@
                     <div class="panel-heading">
                       <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> <?php echo $title; ?> <small>(It's free!)</small></h3>
                     </div>
-                    <?php echo validation_errors(); ?>
+                    <div class="form-group" style="color: red;"> <?php echo validation_errors(); ?></div>
                     <div class="panel-body">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
-                      <div id="errormessage"></div>
+                        <div id="errormessage" class="form-group" style="color: red;">
+                        </div>
 
 <!--                       <form action="" method="post" role="form" class="contactForm lead">
  -->                        <div class="row">
                           <div class="col-xs-8 col-sm-8 col-md-8">
                             <div class="form-group">
                               <label>Email Address</label>
-                              <input type="text" name="email" id="first_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" autofocus="requied">
+                              <input type="text" name="email" id="first_name" class="form-control input-md" data-rule="minlen:3" autofocus data-msg="Please enter at least 3 chars" autofocus="requied">
                               <div class="validation"></div>
                             </div>
                           </div>
@@ -63,7 +63,7 @@
                         <div class="col-xs-8 col-sm-8 col-md-8">
                             <div class="form-group">
                               <label>Password</label>
-                              <input type="password" name="password" id="last_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" autofocus="requied">
+                              <input type="password" name="password" id="last_name" class="form-control input-md" data-rule="minlen:3" autofocus="required" data-msg="Please enter at least 3 chars" autofocus="requied">
                               <div class="validation"></div>
                             </div>
                           </div>

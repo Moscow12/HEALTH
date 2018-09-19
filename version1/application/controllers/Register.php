@@ -12,128 +12,18 @@
 			$this->load->model('Register_model');
 		}
 
-		public function registration(){
-
-			$data['title'] = 'Sajili kuweka taarifa zako kwenye mfumo';
-			$data['roles'] = $this->Register_model->get_role();
-			$this->load->library('form_validation');
-
-			$this->form_validation->set_rules('name', 'Full name', 'Required');
-			$this->form_validation->set_rules('email', 'Email Address', 'Required');
-			$this->form_validation->set_rules('reg_no', 'Registration number', 'Required');
-			$this->form_validation->set_rules('phone', 'Your phone number', 'Required|numeric');
-			$this->form_validation->set_rules('location', 'location', 'Required');
-			$this->form_validation->set_rules('role_id', 'role', 'Required');
-
-			if($this->form_validation->run() ===FALSE){
-
-				$this->load->view('home/header');
-				$this->load->view('users/sajili', $data);
-				$this->load->view('home/footer');
-			}else{
-				$data = array(
-					'name' => $this->input->post('name'),
-					'email' =>$this->input->post('email'),
-					'reg_no' =>$this->input->post('reg_no'),
-					'phone' =>$this->input->post('phone'),
-					'location' =>$this->input->post('location'),
-					'role_id' =>$this->input->post('role_id')
-				);
-				$this->Register_model->register($data);
-				$this->session->flashdata('restration', 'Umefanikiwa kusajili akaunti yako sasa unaweza kuingia');
-			}
-
-		}
-
-		public function login(){
-			$data['title'] = "Ingiza taarifa zako kuingia kwenye mfumo";
-
-			$this->load->library('form_validation');
-
-			$this->form_validation->set_rules('email', 'Email Address is ', 'Required');
-			$this->form_validation->set_rules('reg_no', 'Registration Number is ', 'Required');
-
-			if($this->form_validation->run() ===FALSE){
-				$this->load->view('home/header');
-				$this->load->view('users/login', $data);
-				$this->load->view('home/footer');
-			}else{
-
-				$email = $this->input->post('email');
-				$reg_no = $this->input->post('reg_no');
-
-				$yupo = $this->Register_model->check($email, $reg_no);
-
-				if($yupo == 1){
-					$user_info = $this->Register_model->getinfo($email);
-
-					foreach($user_info as $info){
-						$myuser_id = $info->$id;
-						$myrole_id = $info->role_id;
-
-						//create session
-						$user_data = array(
-							'user_id' => $myuser_id,
-							'email' => $email,
-							'logged_in' => true
-						);
-
-					if($user_info){
-						$this->session->set_userdata($user_data);
-						switch ($myrole_id) {
-							case '1':
-								redirect("register/doctor");
-								break;
-
-							case '2':
-								redirect("index.php/registerschool");
-								break;
-							case '3':
-								redirect("index.php/register/hospital");
-								break;
-							case '4':
-								redirect("index.php/register/student");
-							
-							default:
-								redirect("index.php/registration/login");
-								break;
-						}
-					}
-					}
-				}else{
-					redirect("register/doctor");
-				} 
-			}
-		}
-
-
+		
 		public function logout(){
-	 		//Unset user data
-			 $this->session->sess_destroy();
-			 #redirect('welcome/index');
-			 redirect('Register/login');
-
-
-	 		$this->session->set_flashdata('user_loggedout', 'You are now loged out login again');
-
-						redirect('index.php/users/login');
-	 	}
-
-		public function failed(){
-			$data['title'] = 'Sign in failed | Try again';
-			$this->session->set_flashdata('login_fail', 'Either password or Email is incorect');
-
-
-			
-
-			$this->load->view('home/header');
-			$this->load->view('users/login', $data);
-			$this->load->view('home/footer');
+			//Unset user data
+			$this->session->sess_destroy();
+			redirect('Users/login');
+			$this->session->set_flashdata('user_loggedout', 'You are now loged out login again');
+		    redirect('Users/login');
 		}
 
 		public function doctor(){
 
-			$data['title'] = "Welcomr Doctor to Our system ";
+			$data['title'] = "Welcome Doctor to Our system ";
 
 			$this->load->view('use/header');
 			$this->load->view('use/index', $data);
@@ -147,12 +37,16 @@
 
 			$data['title'] = 'Update Your current profile status';
 
-			$this->load->library('form_validation');
 
-			$this->form_validation->set_rules('sex', 'Sex', 'Required');
-			$this->form_validation->set_rules('dept_id', 'Department', 'Required');
-			$this->form_validation->set_rules('offer_prof', 'Profetional', 'Required');
-			$this->form_validation->set_rules('experience', 'Your experience', 'Required');
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('sex', 'Sex', 'required');
+			$this->form_validation->set_rules('dept_id', 'Department', 'required');
+			$this->form_validation->set_rules('professional', 'Profetional', 'required');
+			$this->form_validation->set_rules('lessen', 'lessen', 'required');
+			$this->form_validation->set_rules('region', 'region', 'required');
+			$this->form_validation->set_rules('dob', 'Date of birth', 'required');
+			$this->form_validation->set_rules('address', 'Address', 'required');
+			$this->form_validation->set_rules('experience', 'Your experience', 'required');
 
 			if($this->form_validation->run()===FALSE){
 
@@ -163,22 +57,216 @@
 				$data = array(
 					'sex' => $this->input->post('sex'),
 					'dept_id' => $this->input->post('dept_id'),
-					'other_prof' => $this->input->post('other_prof'),
+					'professional' => $this->input->post('professional'),
 					'experience' => $this->input->post('experience'),
 					'pic' => $this->input->post('pic'),
-					'user_id' => $this->session->usserdata('user_id')
+					'region' => $this->input->post('region'),
+					'district' => $this->input->post('district'),
+					'ward' => $this->input->post('ward'),
+					'address' => $this->input->post('address'),
+					'dob'=>$this->input->post('dob'),
+					'lessen' => $this->input->post('lessen'),
+					'user_id' => $this->session->userdata('user_id')
 					
 				);
 
-				if($this->session->userdata('user_id')===NULL){
-				redirect('index.php/users/login');
+				if($this->session->userdata('user_id') === NULL){
+				redirect('register/login');
+
 			}else{
-				$this->register_model->set_stprofile($data);
-				$this->session->set_flashdata('student_register', 'Your profile has been updated');
+				$this->Register_model->set_drprofile($data);
+				$this->session->set_flashdata('doctor_profile', 'Your profile has been updated');
 				
-				redirect('index.php/Student/view_profile');
+				redirect('Register/view_profile');
 			}
 			}
 
 		}
+
+		public function view_profile(){
+			$data['title'] = "Updated profile here";
+
+			$data['profiles'] = $this->Register_model->get_profile();
+			$this->load->view('use/header');
+			$this->load->view('use/vprofile', $data);
+			$this->load->view('use/footer');
+
+		}
+		
+		public function service(){
+			$data['title'] = "Add the servces you offer";
+
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('service_name', 'Service Name', 'required');
+			$this->form_validation->set_rules('description', 'Service Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+
+			$this->load->view('use/header');
+			$this->load->view('use/service', $data);
+			$this->load->view('use/footer');
+			}else{
+				$data = array(
+					'service_name'=>$this->input->post('service_name'),
+					'description' => $this->input->post('description'),
+            		'user_id' =>$this->session->userdata('user_id')
+				);
+
+				if($this->session->userdata('user_id') === NULL){
+				redirect('register/login');
+				}else{
+					$this->Register_model->set_service($data);
+					$this->session->set_flashdata('doctor_service', 'Services you offer has been set');
+
+					redirect('Register/view_service');
+				}
+			}
+		}
+
+		public function service_time(){
+			$data['title'] = "Fill in time for the service you offer";
+
+			$data['Service'] = $this->Register_model->get_services();
+
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('service_id', 'service name', 'required');
+			$this->form_validation->set_rules('day', 'Day', 'required');
+			$this->form_validation->set_rules('time', 'Time service given', 'required');
+
+
+			if($this->form_validation->run()===FALSE ){
+			$this->load->view('use/header');
+			$this->load->view('use/tservice', $data);
+			$this->load->view('use/footer');
+			}else{
+				$data = array(
+					'day' => $this->input->post('day'),
+					'time' => $this->input->post('time'),
+					'service_id' =>$this->input->post('service_id')
+				);
+				if($this->session->userdata('user_id')===NULL ){
+					redirect('Register/login');
+				}else{
+					$this->Register_model->service_time($data);
+					$this->session->set_flashdata('doctor_time', 'Service time added');
+					redirect('Register/service_time');
+				}
+			}
+		}
+
+		public function view_service(){
+			
+			$data['title'] = "This is your registered service u offer";
+			$data['Services'] = $this->Register_model->get_services();
+
+			$this->load->view('use/header');
+			$this->load->view('use/vservices', $data);
+			$this->load->view('use/footer'); 
+		}
+
+		public function edit_service($id){
+			$id = $this->uri->segment(3);
+			$data['title'] = "Edit the service";			
+			$data['edit'] = $this->Register_model->get_service();
+
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('service_name', 'Service Name', 'required');
+			$this->form_validation->set_rules('description', 'Service Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+
+			$this->load->view('use/header');
+			$this->load->view('use/editservices', $data);
+			$this->load->view('use/footer');
+			}else{
+				$data = array(
+					'service_name'=>$this->input->post('service_name'),
+					'description' => $this->input->post('description'),
+            		'user_id' =>$this->session->userdata('user_id')
+				);
+
+				if($this->session->userdata('user_id') === NULL){
+				redirect('register/login');
+				}else{
+					$this->Register_model->update_service($data, $id);
+					$this->session->set_flashdata('doctor_service', 'Services you offer has been set');
+
+					redirect('Register/view_service');
+				}
+			}
+
+		}
+
+		public function delete($id){
+
+
+			$id = $this->uri->segment(3);
+			$this->Register_model->delete_service_id($id);
+
+
+			$this->session->set_flashdata('service_delete', 'The service has been deleted');
+			redirect('Register/view_service');
+		}
+		//Function for posting events doctor
+		public function event(){
+			$data['title'] = "Post your Event vacation";
+
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('title', 'Title', 'required');
+			$this->form_validation->set_rules('description', 'Description', 'required');
+			$this->form_validation->set_rules('location', 'Location', 'required');
+			$this->form_validation->set_rules('photo', 'Photo', 'required');
+
+			if($this->form_validation->run()===FALSE ){
+				$this->load->view('use/header');
+				$this->load->view('use/dr_event', $data);
+				$this->load->view('use/footer');
+			}else{
+				$data = array(
+					'title' => $this->input->post('title'),
+					'description' => $this->input->post('description'),
+					'location' => $this->input->post('location'),
+					'photo' => $this->input->post('photo'),
+            		'user_id' =>$this->session->user_id,
+					'date' => $this->input->post('date')
+				);
+				
+					$this->Register_model->dr_event($data);
+					$this->session->set_flashdata('doctor_events', 'You have shared your event');
+					redirect('Register/event');
+				}
+
+		}
+
+		public function article(){
+			$data['title'] = "What's in you're mind <small>(Post article)</small>";
+
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('title', 'Articles title', 'required');
+			$this->form_validation->set_rules('description', 'Articles Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+				$this->load->view('use/header');
+				$this->load->view('use/dr_article', $data);
+				$this->load->view('use/footer');
+			}else{
+				$data = array(
+					'title' => $this->input->post('title'),
+					'description' => $this->input->post('description'),
+					'post_date' => $this->input->post('post_date'),
+            		'user_id' =>$this->session->userdata('user_id'),
+				);
+				if($this->session->userdata('user_id')===NULL){
+					redirect('Register/login');
+				}else{
+					$this->Register_model->dr_article($data);
+					$this->session->set_flashdata('doctor_article', 'You have shared your Article');
+					redirect('Register/article');
+				}
+			}
+		}
+
 	}

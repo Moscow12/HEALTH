@@ -209,9 +209,9 @@
                   <img src="<?=base_url();?>star/images/faces/face1.jpg" alt="profile image">
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">Dr. Meshack Muganyizi</p>
+                  <p class="profile-name"> MUHIMBILI HOSP</p>
                   <div>
-                    <small class="designation text-muted">Doctor</small>
+                    <small class="designation text-muted">Hospital</small>
                     <span class="status-indicator online"></span>
                   </div>
                 </div>

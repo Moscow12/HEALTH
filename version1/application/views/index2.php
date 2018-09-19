@@ -49,13 +49,13 @@
                   <a href="#" class="btn btn-skin btn-md">Make an Appointment</a>
                 </div>
                 <div class="col-sm-3 col-md-3">
-                  <span><a href="index.php/Register/login" data-toggle="modal2" data-target="#Login" class="btn btn-skin btn-sm" style="color: red">Login</a><a href="index.php/Register/registration" class="btn btn-skin btn-sm">register</a></span>
+                  <span><a href="index.php/Users/login" data-toggle="modal2" data-target="#Login" class="btn btn-skin btn-sm" style="color: red">Login</a><a href="index.php/Users/registration" class="btn btn-skin btn-sm">register</a></span>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <p class="bold text-right" href="index-form.html">Call us now +255 7542 89493</p>
                   </div>
               </div>
-        </div>
+        </div>B
       </div>
       <div class="container navigation">
 
