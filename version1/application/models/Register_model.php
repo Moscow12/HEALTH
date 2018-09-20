@@ -48,14 +48,23 @@
 
 		public function get_profile(){
 			$user = $this->session->userdata('user_id');
-			$this->db->select('name', 'email', 'sex', 'professional', 'phone', 'region', 'ward', 'experience', 'address', 'lessen', 'district', 'd.name', 'pic');
+			$this->db->select('dr.name', 'dr.email', 'dr.sex', 'dr.professional', 'dr.phone', 'dr.region', 'dr.ward', 'dr.experience', 'dr.address', 'dr.lessen', 'dr.district', 'd.name', 'pic');
 			$this->db->from('dr_profile_view dr');
 			$this->db->join('department d',  'd.id= dr.dept_id', 'inner');
 			$this->db->where('dr.id', $user);
+
+			$query = $this->db->get();
+            return $query->result_array();
 		}
 
 		public function set_service($data){
 			return $this->db->insert('service', $data);
+		}
+
+		public function get_service_id($id){
+			$this->db->where('id', $id);
+			$query = $this->db->get('service');
+			return $query->result_array();
 		}
 
 		public function update_service($data, $id){
@@ -74,22 +83,79 @@
 		}
 
 		public function service_time($data){
-			return $this->db->insert('service_time',$data);
- 
+			return $this->db->insert('service_time',$data); 
+		}
+
+		public function dr_service_update($data, $id){
+			$this->db->where('id', $id);
+			return $this->db->update('service', $data);
 		}
 
 		public function delete_service_id($id){
 			$this->db->delete('service', array('id'=>$id));
 			
 		}
+
+		//function to add doctor event
 		public function dr_event($data){
+			
 			return $this->db->insert('event', $data);
 		}
 
+		//function to view doctor event
+		public function get_events(){
+			$query = $this->db->get('event');
+			return $query->result_array();
+		}
+
+		//fucntion to show event by id for editing event  doctor
+		public function get_event_id($id){
+			$this->db->where('id', $id);
+			$query = $this->db->get('event');
+			return $query->result_array();
+		}
+
+		//function to update the event
+		public function update_event($data, $id){
+			$this->db->where('id', $id);
+			 $this->db->update('event', $data);
+		}
+
+		//function to delete an event
+		public function delete_event_id($id){
+			$this->db->delete('event', array('id'=>$id));
+
+		}
+
+
+		//function to add doctor article
 		public function dr_article($data){
 			return $this->db->insert('articles', $data);
 
 		}
+
+		public function get_article(){
+			$query=$this->db->get('articles');
+			return $query->result_array();
+		}
 		
+		//Function to delete the articles by id
+		public function delete_article_id($id){
+			$this->db->delete('articles', array('id'=>$id));
+
+		}
+
+		//function to show article by id for editing
+		public function get_article_id($id){
+			$this->db->where('id', $id);
+			$query = $this->db->get('articles');
+			return $query->result_array();
+		}
+
+		//function to update dr. article posted 
+		public function dr_article_update($data, $id){
+			$this->db->where('id', $id);
+			return $this->db->update('articles', $data);
+		}
 
 	}

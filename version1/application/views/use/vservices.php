@@ -4,6 +4,9 @@
 <?php if($this->session->flashdata('service_delete')):  ?>    
     <?php echo '<p class="alert alert-success">'.$this->session->flashdata('service_delete'). '</p>'; ?>
 <?php endif; ?>
+<?php if($this->session->flashdata('updated_service')):  ?>    
+    <?php echo '<p class="alert alert-success">'.$this->session->flashdata('updated_service'). '</p>'; ?>
+<?php endif; ?>
 
 
 <div class="row"><div class="col-md-1"></div>
@@ -11,13 +14,12 @@
         <div class="card">
             <div class="card card-header"><?php echo $title; ?></div>
             <div class="card card-body">
-                <table class="table-striped  ">
+                <table class="table-striped table-responsive ">
                 <thead>
                     <th>#</th>
                     <th>Service name</th>
                     <th>Service Description</th>
                     <th>Action</th>
-                    <!-- <th></th> -->
                 </thead>
                 <tbody>
                     <?php $namb=1; foreach($Services as $serv){?>

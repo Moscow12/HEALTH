@@ -24,7 +24,7 @@
 				</div>
 				
 				<div class="form-group">
-					<button class="btn btn-info">Submit</button>
+					<button class="btn btn-info">Submit</button><a href="vevent" class="btn btn-primary">view Event</a>
 				</div>
 			</div>
 		</div><?php echo form_close();?>

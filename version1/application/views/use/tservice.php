@@ -29,14 +29,17 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label>Service Time</label>
-					<input type="time" name="time" class="form-control">
-					
+					<label>Service sart Time</label>
+					<input type="time" name="start_at" class="form-control">					
+				</div>
+				<div class="form-group">
+					<label>service End Time</label>
+					<input type="time" name="end_at" class="form-control">					
 				</div>
 				
 				
 				<div class="form-group">
-					<button class="btn btn-info"><i class="fa fa-fw fa-plus"></i> Add</button>
+					<button class="btn btn-info"><i class="fa fa-fw fa-plus"></i> Add</button><a href="">View service time</a>
 				</div>
 			</div>
 		</div><?php echo form_close();?>

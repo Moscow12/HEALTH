@@ -13,7 +13,7 @@
 						<table class="table" border="1"> 
 								
 								<tbody>
-								<?php if(is_array($profiles) || is_object('$profiles')){ foreach($profiles as $ona){?>
+								<?php  foreach($profiles as $ona){?>
 									<tr> 
 										<th>Name</th>
 										<td><?php echo $ona['name'] ?></td>
@@ -66,7 +66,7 @@
 										<th>Ward</th> 
 										<td><?php echo $ona['ward']; ?></td>
 									<tr>
-									<?php } }?> 
+									<?php  }?> 
 
 							
 								</tbody> 
