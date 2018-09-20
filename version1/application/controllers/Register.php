@@ -219,7 +219,9 @@
 
 			$this->form_validation->set_rules('service_id', 'service name', 'required');
 			$this->form_validation->set_rules('day', 'Day', 'required');
-			$this->form_validation->set_rules('time', 'Time service given', 'required');
+			$this->form_validation->set_rules('start_at', 'Service time given ', 'required');
+			$this->form_validation->set_rules('end_at', 'Service end time', 'required');
+
 
 
 			if($this->form_validation->run()===FALSE ){
@@ -238,7 +240,7 @@
 				}else{
 					$this->Register_model->service_time($data);
 					$this->session->set_flashdata('doctor_time', 'Service time added');
-					redirect('Register/service_time');
+					redirect('Register/view_time');
 				}
 			}
 		}
@@ -394,7 +396,7 @@
 				$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
-					'date' => $this->input->post('date'),
+					'date' => mdate('%Y-%m-%d %H:%i:%s', now()),
             		'user_id' =>$this->session->userdata('user_id'),
 				);
 				if($this->session->userdata('user_id')===NULL){

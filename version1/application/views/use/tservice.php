@@ -39,7 +39,7 @@
 				
 				
 				<div class="form-group">
-					<button class="btn btn-info"><i class="fa fa-fw fa-plus"></i> Add</button><a href="">View service time</a>
+					<button class="btn btn-info"><i class="fa fa-fw fa-plus"></i> Add</button><a href="view_time">View service time</a>
 				</div>
 			</div>
 		</div><?php echo form_close();?>

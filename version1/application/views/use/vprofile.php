@@ -10,7 +10,7 @@
 			<div class="card">
 				<div class="card card-header"><h3 class="text-center"><?php echo $title; ?></h3></div>
 					<div class="card body">
-						<table class="table" border="1"> 
+						<table class="table-bordered"> 
 								
 								<tbody>
 								<?php  foreach($profiles as $ona){?>

@@ -25,8 +25,8 @@
                         <td><?php echo $serv['title'];?> </td>
                         <td><?php echo $serv['description']; ?> </td>
                         <td>
-                            <spap><a href="edit_article/<?php echo $serv['id']; ?>" ><button class="btn btn-info" value="<?php echo $serv['id']; ?>">Edit</button></a>
-                            <a href="delete_art/<?php echo $serv['id']; ?>" ><button type="reset" class="btn btn-danger" value="<?php echo $serv['id']; ?>">Delete</button></a></spap>
+                            <span><a href="edit_article/<?php echo $serv['id']; ?>" ><button class="btn btn-info" value="<?php echo $serv['id']; ?>">Edit</button></a>
+                            <a href="delete_art/<?php echo $serv['id']; ?>" ><button type="reset" class="btn btn-danger" value="<?php echo $serv['id']; ?>">Delete</button></a></span>
                         </td>
                        
                     </tr>
