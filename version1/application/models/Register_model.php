@@ -79,11 +79,23 @@
 		}
 		
 		public function get_service(){
+			
 			$query =$this->db->get('service');
 		}
 
 		public function service_time($data){
 			return $this->db->insert('service_time',$data); 
+		}
+
+		
+		public function get_time(){
+			#$user = $this->session->userdata('user_id');
+			// $this->db->select('service_name', 'day', 'start_at', 'end_at');
+			// $this->db->from('service_view');
+			// $this->db->join('service', 'service.id = service_time.service_id', 'inner');
+			// $this->db->where('service.id', $user);
+			$query = $this->db->get('service_view');
+			return $query->result_array();
 		}
 
 		public function dr_service_update($data, $id){
@@ -135,7 +147,12 @@
 		}
 
 		public function get_article(){
-			$query=$this->db->get('articles');
+            $user = $this->session->userdata('user_id');		
+			$this->db->select('*');
+			$this->db->from('articles a');
+			$this->db->where('a.id', $user);
+
+			$query=$this->db->get();
 			return $query->result_array();
 		}
 		
