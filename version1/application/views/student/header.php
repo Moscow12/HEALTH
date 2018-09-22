@@ -209,9 +209,9 @@
                   <img src="<?=base_url();?>star/images/faces/face1.jpg" alt="profile image">
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name"> MUHIMBILI HOSP</p>
+                  <p class="profile-name"> MUHIMBILI SCHOOL OF MEDICINE</p>
                   <div>
-                    <small class="designation text-muted">Hospital</small>
+                    <small class="designation text-muted">School</small>
                     <span class="status-indicator online"></span>
                   </div>
                 </div>
@@ -236,7 +236,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="doctor_prof">Update</a>
+                  <a class="nav-link" href="student_prof">Update Profile</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="view_profile">View Profile</a>
@@ -268,7 +268,7 @@
               <span class="menu-title">Articles</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-restart"></i>
               <span class="menu-title">Ardivertise Jobs</span>
@@ -293,7 +293,7 @@
                 </li>
               </ul>
             </div>
-          </li>
+          </li> -->
         </ul>
       </nav>
 
