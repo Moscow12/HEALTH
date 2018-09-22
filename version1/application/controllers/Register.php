@@ -71,7 +71,7 @@
 				);
 
 				if($this->session->userdata('user_id') === NULL){
-				redirect('register/login');
+				redirect('users/login');
 
 			}else{
 				$this->Register_model->set_drprofile($data);
@@ -441,7 +441,7 @@
             		'user_id' =>$this->session->userdata('user_id'),
 				);
 				if($this->session->userdata('user_id')===NULL){
-					redirect('Register/login');
+					redirect('Users/login');
 				}else{
 					$this->Register_model->dr_article_update($data, $id);
 					$this->session->set_flashdata('doctor_article', 'You have shared your Article');
@@ -472,7 +472,7 @@
             		'user_id' =>$this->session->userdata('user_id'),
 				);
 				if($this->session->userdata('user_id')===NULL){
-					redirect('Register/login');
+					redirect('users/login');
 				}else{
 					$this->Register_model->dr_article_update($data, $id);
 					$this->session->set_flashdata('doctor_article', 'You have shared your Article');
