@@ -26,9 +26,9 @@
 
     public function get_article(){
         $user =$this->session->userdata('user_id');
-        $this->db->select('title, description');
-        $this->db->from('articles');
-        $this->db->where('id', $user);
+        $this->db->select('*');
+        $this->db->from('articles a');
+        $this->db->where('a.user_id', $user);
 
         $query = $this->db->get();
         return $query->result_array();
