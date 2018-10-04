@@ -268,7 +268,7 @@
               <span class="menu-title">Articles</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-restart"></i>
               <span class="menu-title">Ardivertise Jobs</span>
@@ -293,7 +293,7 @@
                 </li>
               </ul>
             </div>
-          </li>
+          </li> -->
         </ul>
       </nav>
 
