@@ -178,7 +178,7 @@
 
 		
 		public function varticle(){
-			$data['title'] = "This is your article you posted to the website";
+			$data['title'] = "This is student article  posted to the website";
 			$data['varticle'] = $this->Student_model->get_article();
 
 			$this->load->view('student/header');
@@ -187,6 +187,80 @@
 
 		}
 
+		//function to edit article for student
+		public function edit_article(){
+			$id = $this->uri->segment(3);
+			$data['title'] = "Update the article";
+			$data['articles'] = $this->Register_model->get_article_id($id);
+
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('title', 'Articles title', 'required');
+			$this->form_validation->set_rules('description', 'Articles Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+				$this->load->view('student/header');
+				$this->load->view('student/edit_st_article', $data);
+				$this->load->view('student/footer');
+			}else{
+				$data = array(
+					'title' => $this->input->post('title'),
+					'description' => $this->input->post('description'),
+					'date' => $this->input->post('date'),
+            		'user_id' =>$this->session->userdata('user_id'),
+				);
+				if($this->session->userdata('user_id')===NULL){
+					redirect('Users/login');
+				}else{
+					$this->Register_model->dr_article_update($data, $id);
+					$this->session->set_flashdata('student_article', 'You have shared your Article');
+					redirect('Student/varticle');
+				}
+			}
+		}
+
+		//function to update article
+		public function update_article(){
+			$data['title'] = "Update the article";
+			$id= $this->input->post('id');
+			$data['event'] = $this->Register_model->get_article_id($id);
+
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('title', 'Articles title', 'required');
+			$this->form_validation->set_rules('description', 'Articles Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+				$this->load->view('student/header');
+				$this->load->view('student/edit_st_article', $data);
+				$this->load->view('student/footer');
+			}else{
+				$data = array(
+					'title' => $this->input->post('title'),
+					'description' => $this->input->post('description'),
+					'date' => mdate('%Y-%m-%d %H:%i:%s', now()),
+            		'user_id' =>$this->session->userdata('user_id'),
+				);
+				if($this->session->userdata('user_id')===NULL){
+					redirect('users/login');
+				}else{
+					$this->Register_model->dr_article_update($data, $id);
+					$this->session->set_flashdata('student_article', 'You have successfull shared your Article');
+					redirect('Student/varticle');
+				}
+			}
+
+		}
+
+		public function delete_art(){
+
+			$id = $this->uri->segment(3);
+			$this->Register_model->delete_article_id($id);
+
+			$this->session->set_flashdata('article_deleted', 'The service has been deleted');
+			redirect('Student/varticle');
+		}
+
+	
 		//Function for posting events doctor
 		public function event(){
 			$data['title'] = "Post your Event vacation";
@@ -349,5 +423,83 @@
 				$this->load->view('student/st_vservices', $data);
 				$this->load->view('student/footer'); 
 			}
+
+			//function for student to edit service 
+			
+		public function edit_service(){
+			$id = $this->uri->segment(3);
+			$data['title'] = "Edit the service";			
+			#$data['edit'] = $this->Register_model->get_service();
+			$data['edit'] = $this->Register_model->get_service_id($id);
+
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('service_name', 'Service Name', 'required');
+			$this->form_validation->set_rules('description', 'Service Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+
+			$this->load->view('student/header');
+			$this->load->view('student/editservices', $data);
+			$this->load->view('student/footer');
+			}else{
+				$data = array(
+					'service_name'=>$this->input->post('service_name'),
+					'description' => $this->input->post('description'),
+            		'user_id' =>$this->session->userdata('user_id')
+				);
+
+				if($this->session->userdata('user_id') === NULL){
+				redirect('Users/login');
+				}else{
+					$this->Register_model->update_service($data, $id);
+					$this->session->set_flashdata('doctor_service', 'Services you offer has been set');
+
+					redirect('Student/view_service');
+				}
+			}
+
+		}
+
+		//Update service
+		public function st_update_service(){
+			$data['title'] = "Update the service";
+			$id= $this->input->post('id');
+			$data['event'] = $this->Register_model->get_service_id($id);
+
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('service_name', 'Service Name', 'required');
+			$this->form_validation->set_rules('description', 'Service Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+
+			$this->load->view('student/header');
+			$this->load->view('student/editservices', $data);
+			$this->load->view('student/footer');
+			}else{
+				$data = array(
+					'service_name'=>$this->input->post('service_name'),
+					'description' => $this->input->post('description'),
+            		'user_id' =>$this->session->userdata('user_id')
+				);
+
+				if($this->session->userdata('user_id') === NULL){
+				redirect('Users/login');
+				}else{
+					$this->Register_model->dr_service_update($data, $id);
+					$this->session->set_flashdata('updated_service', 'Service has been update successfully');
+
+					redirect('Student/view_service');
+				}
+			}
+
+		}
+
+		public function delete($id){
+			$id = $this->uri->segment(3);
+			$this->Register_model->delete_service_id($id);
+
+			$this->session->set_flashdata('service_delete', 'The service has been deleted');
+			redirect('Register/view_service');
+		}
 
     }
