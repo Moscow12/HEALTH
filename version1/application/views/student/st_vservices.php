@@ -12,8 +12,8 @@
 <div class="row"><div class="col-md-1"></div>
     <div class="col-md-10">
         <div class="card">
-            <div class="card card-header"><?php echo $title; ?></div>
-            <div class="card card-body">
+            <div class="card-header"><?php echo $title; ?></div>
+            <div class="card-body">
                 <table class="table-striped table-responsive table-bordered">
                 <thead>
                     <th>#</th>
