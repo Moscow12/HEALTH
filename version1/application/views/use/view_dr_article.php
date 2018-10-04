@@ -16,7 +16,7 @@
                     <th>#</th>
                     <th>Title</th>
                     <th>Article Description</th>
-                    <th>Action</th>
+                    <th>Action</th> 
                 </thead>
                 <tbody>
                     <?php $namb=1; foreach($varticle as $serv){?>

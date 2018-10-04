@@ -13,9 +13,9 @@
             $user = $this->session->userdata('user_id');
             $this->db->select('*');
             $this->db->from('job');
-            $this->db->where('id', $user);
+            $this->db->where('user_id', $user);
 
             $query = $this->db->get();
             return $query->result_array();
-        }
+        } 
     }
