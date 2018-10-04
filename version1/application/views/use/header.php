@@ -277,7 +277,7 @@
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="<?=base_url();?>star/pages/samples/blank-page.html"> Blank Page </a>
+                  <a class="nav-link" href="job"> post job </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?=base_url();?>star/pages/samples/login.html"> Login </a>

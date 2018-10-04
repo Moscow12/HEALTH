@@ -222,7 +222,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="doctor">
+            <a class="nav-link" href="index">
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Dashboard</span>
             </a>
