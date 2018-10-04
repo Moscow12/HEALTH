@@ -70,7 +70,7 @@
 					//Query to check info from db
 				$chekikamayupo = $this->User_model->chekiyupo($email, $password);
 				if($chekikamayupo == 1){
-					$user_info = $this->User_model->getmyinfo($email, $name);
+					$user_info = $this->User_model->getmyinfo($email);
 
 						foreach($user_info as $info){
 							$myuser_id = $info->id;
@@ -92,10 +92,10 @@
 								break;
 
 							case '2':
-								redirect("hospital/index");
+								redirect("student/index");
 								break;
 							case '3':
-								redirect("index.php/register/hospital");
+								redirect("school/index");
 								break;
 							case '4':
 								redirect("index.php/register/student");
