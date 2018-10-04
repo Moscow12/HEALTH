@@ -25,9 +25,9 @@
                         </tr>
                         <?php }?>
                     </tbody>
-                    </table>
+                    </table> 
                 </div>
-            </div><a href="article" class="btn btn-info">Add Article</a>
+            </div><a href="service_time" class="btn btn-info">Add service time</a>
             <div class="col-md-1"></div>
         </div>
     </div>
