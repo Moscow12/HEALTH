@@ -150,10 +150,15 @@
             $user = $this->session->userdata('user_id');		
 			$this->db->select('*');
 			$this->db->from('articles a');
-			$this->db->where('a.id', $user);
+			$this->db->where('a.user_id', $user);
 
 			$query=$this->db->get();
 			return $query->result_array();
+		}
+
+		public function get_articles(){
+			$query=$this->db->get('articles');
+			return $query->row_array();
 		}
 		
 		//Function to delete the articles by id
