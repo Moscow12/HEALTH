@@ -68,9 +68,9 @@
 
 		}
 
-		public function jow_view(){
+		public function job_view(){
 			$data['title'] = 'This is the list of job Opportunity you Posted';
-			$data['job'] = $this->Hospital_modal->get_job();
+			$data['job'] = $this->Hospital_model->get_job();
 
 			$this->load->view('hospital/header');
 			$this->load->view('hospital/hosp_job_view', $data);
