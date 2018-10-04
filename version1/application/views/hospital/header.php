@@ -222,7 +222,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="doctor">
+            <a class="nav-link" href="index">
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -230,13 +230,13 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi mdi-content-copy"></i>
-              <span class="menu-title">Update your Profile</span>
+              <span class="menu-title">Update Profile</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="doctor_prof">Update</a>
+                  <a class="nav-link" href="profile">Update</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="view_profile">View Profile</a>
@@ -277,10 +277,10 @@
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="<?=base_url();?>star/pages/samples/blank-page.html"> Blank Page </a>
+                  <a class="nav-link" href="job"> Post job </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?=base_url();?>star/pages/samples/login.html"> Login </a>
+                  <a class="nav-link" href="view_job"> View Job Post</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?=base_url();?>star/pages/samples/register.html"> Register </a>
