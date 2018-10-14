@@ -74,7 +74,11 @@
 		}
 
 		public function get_services(){
-			$query = $this->db->get('service');
+			$user = $this->session->userdata('user_id');
+			$this->db->select('*');
+			$this->db->from('service');
+			$this->db->where('user_id', $user);
+			$query = $this->db->get();
 			return $query->result_array();
 		}
 		
@@ -89,11 +93,6 @@
 
 		
 		public function get_time(){
-			#$user = $this->session->userdata('user_id');
-			// $this->db->select('service_name', 'day', 'start_at', 'end_at');
-			// $this->db->from('service_view');
-			// $this->db->join('service', 'service.id = service_time.service_id', 'inner');
-			// $this->db->where('service.id', $user);
 			$query = $this->db->get('service_view');
 			return $query->result_array();
 		}
@@ -116,7 +115,11 @@
 
 		//function to view doctor event
 		public function get_events(){
-			$query = $this->db->get('event');
+			$user = $this->session->userdata('user_id');
+			$this->db->select('*');
+			$this->db->from('event');
+			$this->db->where('user_id', $user);
+			$query = $this->db->get();
 			return $query->result_array();
 		}
 
