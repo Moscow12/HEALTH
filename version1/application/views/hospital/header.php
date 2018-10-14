@@ -15,6 +15,7 @@
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="<?=base_url();?>star/css/style.css">
+  <link rel="stylesheet" href="<?=base_url();?>star/css/mine.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="<?=base_url();?>star/images/favicon.png" />
 </head>
@@ -257,17 +258,17 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="event">
+            <a class="nav-link" href="hospital_event">
               <i class="menu-icon mdi mdi-table"></i>
               <span class="menu-title">Events</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="article">
               <i class="menu-icon mdi mdi-sticker"></i>
               <span class="menu-title">Articles</span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-restart"></i>
@@ -280,9 +281,9 @@
                   <a class="nav-link" href="job"> Post job </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="view_job"> View Job Post</a>
+                  <a class="nav-link" href="job_view"> View Job Post</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="<?=base_url();?>star/pages/samples/register.html"> Register </a>
                 </li>
                 <li class="nav-item">
@@ -290,7 +291,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?=base_url();?>star/pages/samples/error-500.html"> 500 </a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
