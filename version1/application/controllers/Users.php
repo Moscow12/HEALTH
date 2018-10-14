@@ -98,7 +98,7 @@
 								redirect("school/index");
 								break;
 							case '4':
-								redirect("index.php/register/student");
+								redirect("shop/index.php");
 							case '5':
 								redirect("hospital/index");
 							
