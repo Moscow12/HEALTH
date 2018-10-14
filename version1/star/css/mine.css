@@ -1,0 +1,21 @@
+fieldset{
+    background: cornsilk; 
+    width:80%;
+     border:dotted; 
+     border-radius: 5%;
+     padding-left: 5%;;
+     padding-right: 3%;
+     margin-left: 5px;
+}
+#title{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: darkgrey;
+    border-radius: 50%;
+   }
+
+   #app{
+       align-content: flex-end;
+       text-align: right;
+   }
