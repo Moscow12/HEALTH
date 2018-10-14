@@ -31,7 +31,7 @@
                         <td><?php echo $serv['photo'];?> </td>
                         <td><?php echo $serv['date'];?></td>
                         <td>
-                            <spap><a href="edit_event/<?php echo $serv['id']; ?>" ><button class="btn btn-info" value="<?php echo $serv['id']; ?>">Edit</button></a>
+                            <span><a href="edit_event/<?php echo $serv['id']; ?>" ><button class="btn btn-info" value="<?php echo $serv['id']; ?>">Edit</button></a>
                             <a href="delete_evt/<?php echo $serv['id']; ?>" ><button type="reset" class="btn btn-danger" value="<?php echo $serv['id']; ?>">Delete</button></a></spap>
                         </td>
                        

@@ -54,7 +54,7 @@
                             
                            
                             				
-							<button class="btn btn-primary" type="submit">Submit</button>
+							<button class="btn btn-primary" type="submit">Submit</button><a href="job_view" class="btn btn-info">View advert</a>
 						</div>	
 					<div class="card-footer border-danger text-danger text-center"></div>
 				</div>
