@@ -113,7 +113,7 @@
 				);
 
 				if($this->session->userdata('user_id') === NULL){
-				redirect('register/login');
+				redirect('users/login');
 				}else{
 					$this->Register_model->set_service($data);
 					$this->session->set_flashdata('doctor_service', 'Services you offer has been set');
@@ -137,7 +137,6 @@
 		public function edit_service(){
 			$id = $this->uri->segment(3);
 			$data['title'] = "Edit the service";			
-			#$data['edit'] = $this->Register_model->get_service();
 			$data['edit'] = $this->Register_model->get_service_id($id);
 
 			$this->load->library('form_validation');
