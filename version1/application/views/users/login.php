@@ -63,7 +63,7 @@
                         <div class="col-xs-8 col-sm-8 col-md-8">
                             <div class="form-group">
                               <label>Password</label>
-                              <input type="password" name="password" id="last_name" class="form-control input-md" data-rule="minlen:3" autofocus="required" data-msg="Please enter at least 3 chars" autofocus="requied">
+                              <input type="password" name="password" id="last_name" class="form-control input-md" data-rule="minlen:3" autofocus="required" data-msg="Please enter at least 3 chars" >
                               <div class="validation"></div>
                             </div>
                           </div>

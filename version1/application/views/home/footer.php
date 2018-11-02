@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-sm-6 col-md-3">
             <div class="partner">
-              <a href="#"><img src=<?=base_url();?>assets/"img/dummy/partner-1.jpg" alt="" /></a>
+              <a href="#"><img src="<?=base_url();?>assets/img/dummy/partner-1.jpg" alt="" /></a>
             </div>
           </div>
           <div class="col-sm-6 col-md-3">

@@ -48,7 +48,7 @@
                           <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                               <label>Full Name</label>
-                              <input type="text" name="name" id="first_name"  class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
+                              <input type="text" name="name" id="first_name"  class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" autofocus="required">
                               <div class="validation"></div>
                             </div>
                           </div>
@@ -65,7 +65,7 @@
                           <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                               <label>Email</label>
-                              <input type="email" name="email" id="email"  class="form-control input-md" data-rule="email" data-msg="Please enter a valid location" >
+                              <input type="email" name="email" id="email"  class="form-control input-md" data-rule="email" data-msg="Please enter a valid location" autofocus="required">
                               <div class="validation"></div>
                             </div>
                           </div>
@@ -88,14 +88,14 @@
                           <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                               <label>Password</label>
-                              <input type="password" name="password"  id="password" class="form-control input-md" data-rule="email" data-msg="Please enter a valid email">
+                              <input type="password" name="password"  id="password" class="form-control input-md" data-rule="email" data-msg="Please enter a valid email" autofocus ="required">
                               <div class="validation"></div>
                             </div>
                           </div>
                           <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                               <label>Confirm Password</label>
-                              <input type="password" name="password2" id="password" class="form-control input-md" data-rule="required" data-msg="The phone number is required">
+                              <input type="password" name="password2" id="password" class="form-control input-md" data-rule="required" data-msg="The phone number is required" autofocus ="required">
                               <div class="validation"></div>
                             </div>
                           </div>

@@ -49,13 +49,13 @@
                   <a href="#" class="btn btn-skin btn-md">Make an Appointment</a>
                 </div>
                 <div class="col-sm-3 col-md-3">
-                  <span><a href="index.php/Users/login" data-toggle="modal2" data-target="#Login" class="btn btn-skin btn-sm" style="color: red">Login</a><a href="index.php/Users/registration" class="btn btn-skin btn-sm">register</a></span>
+                  <span><a href="<?=base_url();?>index.php/Users/login" data-toggle="modal2" data-target="#Login" class="btn btn-skin btn-sm" style="color: red">Login</a><a href="<?=base_url();?>index.php/Users/registration" class="btn btn-skin btn-sm">register</a></span>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <p class="bold text-right" href="index-form.html">Call us now +255 7542 89493</p>
                   </div>
               </div>
-        </div>B
+        </div>
       </div>
       <div class="container navigation">
 
@@ -72,18 +72,17 @@
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#intro">Home</a></li>
-            <li><a href="#doctor">Doctors</a></li>
+            <li><a href="<?=base_url();?>index.php/welcome/doctors">Doctors</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+              <a href="#services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#service">Doctors</a></li>
-                <li><a href="#service">Hospitals</a></li>
+                <li><a href="<?=base_url();?>index.php/welcome/services">Hospitals</a></li>
                 <li><a href="#">Medical Schools</a></li>
                 <li><a href="#">Medical Tools</a></li>
                 <li><a href="#">Emergance</a></li>
               </ul>
             </li>            
-            <li><a href="#pricing">Pricing</a></li>
+            <!-- <li><a href="#pricing">Pricing</a></li> -->
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -92,14 +91,16 @@
                   <li><a href="#">Job Opportunities</a></li>
                 </ul>
               </li>
-            <li class="dropdown">
+              <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="index.html">Home CTA</a></li>
                 <li><a href="index-form.html">Home Form</a></li>
                 <li><a href="index-video.html">Home video</a></li>
               </ul>
-            </li>
+            </li> -->
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
             
           </ul>
         </div>
@@ -115,18 +116,21 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                <h2 class="h-ultra">TANZA Health medical group</h2>
+               <h2 class="h-ultra">TANZA Health medical group <small>VIEW OUR SERVICES</small></h2>
               </div>
-              <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
+              <!-- <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
                 <h4 class="h-light">Provide best quality healthcare for you</h4>
-              </div>
+              </div> -->
               <div class="well well-trans">
                 <div class="wow fadeInRight" data-wow-delay="0.1s">
 
                   <ul class="lead-list">
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Affordable monthly premium packages</strong><br />On the pricing menu Choose the package you can <br/>afford to pay per month</span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br />Consern with you problem choose the doctor <br/>you wish could be the best</span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Only use friendly environment</strong><br />Choose Doctor depending your location you are</span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite hospital</strong><br />On the pricing menu Choose the package you can <br/></span><span class="list"><a href="#"><u>hospital</u></a></span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br />Consern with you problem choose the doctor <br/></span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical Schools</strong><br />View various collage and institution which offer medical course </span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Vifaa tiba na madawa</strong><br />Chagua duka la dawa na vifaa tiba</span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical events and articles</strong><br />Medical events and article posted by proffesionals</span></li>
+
                   </ul>
                   <p class="text-right wow bounceIn" data-wow-delay="0.4s">
                     <a href="#" class="btn btn-skin btn-lg">Learn more <i class="fa fa-angle-right"></i></a>
@@ -183,7 +187,7 @@
                 <i class="fa fa-user-md fa-3x circled bg-skin"></i>
                 <h4 class="h-bold">Help by specialist</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                  Choose any specialist from the list that may help you according to your concern. Here is the help.
                 </p>
               </div>
             </div>
@@ -195,7 +199,7 @@
                 <i class="fa fa-hospital-o fa-3x circled bg-skin"></i>
                 <h4 class="h-bold">Get diagnostic report</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                  Look for your diagnostic report from the doctor after testing, Note your result is confidential.
                 </p>
               </div>
             </div>
@@ -217,7 +221,7 @@
                   <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <div class="cta-text">
                       <h3>In an emergency? Need help now?</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit uisque interdum ante eget faucibus. </p>
+                      <p>If you have any emergamce case call or make an appointment with the doctor or speciatialist who can help you on your emergance cases. </p>
                     </div>
                   </div>
                 </div>
@@ -244,7 +248,16 @@
         <div class="row">
           <div class="col-sm-6 col-md-6">
             <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <img src="<?=base_url();?>assets/img/dummy/img-1.jpg" class="img-responsive" alt="" />
+              <!-- <img src="<?=base_url();?>assets/img/dummy/img-1.jpg" class="img-responsive" alt="" /> -->
+              <?php foreach($services as $service){?>
+                <div class="table">
+                  <div class="table-item-list">
+                  <strong><?php echo $service['service_name'];?></strong>
+                    <br>
+                    <?php echo $service['description'];?>
+                  </div>
+                </div>
+              <?php }?>
             </div>
           </div>
           <div class="col-sm-3 col-md-3">
@@ -268,7 +281,7 @@
                 </div>
                 <div class="service-desc">
                   <h5 class="h-light">Nursing Services</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                  <p>View our nursing service in every place you are.</p>
                 </div>
               </div>
             </div>
@@ -279,7 +292,7 @@
                 </div>
                 <div class="service-desc">
                   <h5 class="h-light">Pharmacy</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                  <p>Visit pharmacy with different medicines and medical tools <small><a href="pharmacy">Pharmacy</a></small></p>
                 </div>
               </div>
             </div>
@@ -319,6 +332,7 @@
                 <div class="service-desc">
                   <h5 class="h-light">Sleep Center</h5>
                   <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+
                 </div>
               </div>
             </div>
@@ -329,7 +343,7 @@
       </div>
     </section>
     <!-- /Section: services -->
-
+  
 
     <!-- Section: team -->
     <section id="doctor" class="home-section bg-gray paddingbot-60">
@@ -339,7 +353,7 @@
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="section-heading text-center">
                 <h2 class="h-bold">Doctors</h2>
-                <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
+                <p>Meet our proffetional doctors here and get in touch with them.</p>
               </div>
             </div>
             <div class="divider-short"></div>
@@ -352,14 +366,18 @@
           <div class="col-lg-12">
 
             <div id="filters-container" class="cbp-l-filters-alignLeft">
-              <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (
+              <?php foreach($dept as $deptment){?>
+              <div class="col-sm-2"><button class="btn-default"><?php echo $deptment['dept_name'];?></button></div>
+              <?php }?>
+
+              <!-- <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (
                 <div class="cbp-filter-counter"></div>)</div>
               <div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (
                 <div class="cbp-filter-counter"></div>)</div>
               <div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist (
                 <div class="cbp-filter-counter"></div>)</div>
               <div data-filter=".neurologist" class="cbp-filter-item">Neurologist (
-                <div class="cbp-filter-counter"></div>)</div>
+                <div class="cbp-filter-counter"></div>)</div> -->
             </div>
 
             <div id="grid-container" class="cbp-l-grid-team">
@@ -461,12 +479,18 @@
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="wow bounceInUp" data-wow-delay="0.2s">
               <div id="owl-works" class="owl-carousel">
-                <div class="item"><a href="<?=base_url();?>assets/img/photo/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/1@2x.jpg"><img src="img/photo/1.jpg" class="img-responsive" alt="img"></a></div>
-                <div class="item"><a href="<?=base_url();?>assets/img/photo/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/2@2x.jpg"><img src="img/photo/2.jpg" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="<?=base_url();?>assets/img/photo/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/3@2x.jpg"><img src="img/photo/3.jpg" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="<?=base_url();?>assets/img/photo/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/4@2x.jpg"><img src="img/photo/4.jpg" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="<?=base_url();?>assets/img/photo/5.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/5@2x.jpg"><img src="img/photo/5.jpg" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="<?=base_url();?>assets/img/photo/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/6@2x.jpg"><img src="<?=base_url();?>assets/img/photo/6.jpg" class="img-responsive " alt="img"></a></div>
+                <?php foreach($events as $event){?>
+                    <div class="table-list-hover">
+                      <?php echo $event['title'];?>
+                    </div>
+                <?php }?>
+                
+                <!-- <div class="item"><a href="<?=base_url();?>assets/img/photo/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/1@2x.jpg"><img src="<?=base_url();?>assets/img/photo/1.jpg" class="img-responsive" alt="img"></a></div>
+                <div class="item"><a href="<?=base_url();?>assets/img/photo/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/2@2x.jpg"><img src="<?=base_url();?>assets/img/photo/2.jpg" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="<?=base_url();?>assets/img/photo/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/3@2x.jpg"><img src="<?=base_url();?>assets/img/photo/3.jpg" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="<?=base_url();?>assets/img/photo/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/4@2x.jpg"><img src="<?=base_url();?>assets/img/photo/4.jpg" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="<?=base_url();?>assets/img/photo/5.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/5@2x.jpg"><img src="<?=base_url();?>assets/img/photo/5.jpg" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="<?=base_url();?>assets/img/photo/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/6@2x.jpg"><img src="<?=base_url();?>assets/img/photo/6.jpg" class="img-responsive " alt="img"></a></div> -->
               </div>
             </div>
           </div>
@@ -475,7 +499,42 @@
     </section>
     <!-- /Section: works -->
 
+    <!--section about-->
+    <section id="callaction" class="home-section paddingtop-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="callaction bg-gray">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="cta-text">
+                      <h3>ABOUT US</h3>
+                      <p>If you have any emergamce case call or make an appointment with the doctor or speciatialist who can help you on your emergance cases. </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="wow lightSpeedIn" data-wow-delay="0.1s">
+                  <div class="cta-text">
+                    <h3>Mission</h3>
+                      <p>If you have any emergamce case call or make an appointment with the doctor or speciatialist who can help you on your emergance cases. </p>
 
+                    </div>
+                    <div class="cta-text">
+                    <h3>Vision</h3>
+                      <p>If you have any emergamce case call or make an appointment with the doctor or speciatialist who can help you on your emergance cases. </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!--end section about-->
     <!-- Section: testimonial -->
     <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
 
@@ -600,7 +659,7 @@
 
 
     <!-- Section: pricing -->
-    <section id="pricing" class="home-section bg-gray paddingbot-60">
+    <!-- <section id="pricing" class="home-section bg-gray paddingbot-60">
       <div class="container marginbot-50">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
@@ -680,7 +739,7 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
     <!-- /Section: pricing -->
 
     <section id="partner" class="home-section paddingbot-60">
@@ -702,7 +761,7 @@
         <div class="row">
           <div class="col-sm-6 col-md-3">
             <div class="partner">
-              <a href="#"><img src=<?=base_url();?>assets/"img/dummy/partner-1.jpg" alt="" /></a>
+              <a href="#"><img src="<?=base_url();?>assets/img/dummy/partner-1.jpg" alt="" /></a>
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
@@ -731,9 +790,9 @@
           <div class="col-sm-6 col-md-4">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
-                <h5>About Medicio</h5>
+                <h5>About Tanza Health</h5>
                 <p>
-                  Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
+                  Tanza health connects patient, doctors, students and hospitals
                 </p>
               </div>
             </div>
@@ -752,9 +811,9 @@
           <div class="col-sm-6 col-md-4">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
-                <h5>Medicio center</h5>
+                <h5>Tanza Health center</h5>
                 <p>
-                  Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
+                  Get served with Tanza health
                 </p>
                 <ul>
                   <li>
@@ -767,13 +826,13 @@
                     <span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-								</span> +62 0888 904 711
+								</span> +255 754289493
                   </li>
                   <li>
                     <span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-								</span> hello@medicio.com
+								</span> tanzahealth.com
                   </li>
 
                 </ul>
@@ -784,7 +843,7 @@
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
                 <h5>Our location</h5>
-                <p>The Suithouse V303, Kuningan City, Jakarta Indonesia 12940</p>
+                <p>Buni innovation Hub COSTECH BUILDING</p>
 
               </div>
             </div>
@@ -809,7 +868,7 @@
             <div class="col-sm-6 col-md-6 col-lg-6">
               <div class="wow fadeInLeft" data-wow-delay="0.1s">
                 <div class="text-left">
-                  <p>&copy;Copyright - Medicio Theme. All rights reserved.</p>
+                  <p>&copy;Copyright - Tanza Health. All rights reserved.</p>
                 </div>
               </div>
             </div>
@@ -823,7 +882,7 @@
                       Licensing information: https://bootstrapmade.com/license/
                       Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medicio
                     -->
-                    Designed by <a href="https://bootstrapmade.com/">Meshack Muganyiz</a>
+                    Designed by <a href="https://bootstrapmade.com/">Meshack Muganyizi</a>
                   </div>
                 </div>
               </div>
