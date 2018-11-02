@@ -98,9 +98,11 @@
 								redirect("school/index");
 								break;
 							case '4':
-								redirect("shop/index.php");
+								redirect("shop/index");
 							case '5':
 								redirect("hospital/index");
+							case '6':
+								redirect('patient/index');
 							
 							default:
 								redirect("users/login");
