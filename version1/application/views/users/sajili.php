@@ -43,8 +43,8 @@
                          <?php echo validation_errors(); ?>
                       </div>
 
-<!--                       <form action="" method="post" role="form" class="contactForm lead">
- -->                        <div class="row">
+                       <form action="" method="post" role="form" class="contactForm lead">
+                        <div class="row">
                           <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                               <label>Full Name</label>
