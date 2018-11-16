@@ -245,6 +245,29 @@
             </div>
           </li>
           <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui1-basic" aria-expanded="false" aria-controls="ui1-basic">
+              <i class="menu-icon mdi mdi-content-copy"></i>
+              <span class="menu-title">Register Product</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui1-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="register_product">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="view_product"> View Products</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service">
+              <i class="menu-icon mdi mdi-sticker"></i>
+              <span class="menu-title">register product</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="service">
               <i class="menu-icon mdi mdi-backup-restore"></i>
               <span class="menu-title">Services You offer</span>
