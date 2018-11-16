@@ -43,12 +43,12 @@
                          <?php echo validation_errors(); ?>
                       </div>
 
-                       <form action="" method="post" role="form" class="contactForm lead">
+                       <form action="<?=base_url();?>index.php/Users/registration" method="post" role="form" class="contactForm lead">
                         <div class="row">
                           <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                               <label>Full Name</label>
-                              <input type="text" name="name" id="first_name"  class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" autofocus="required">
+                              <input type="text" name="name" id="first_name"  class="form-control input-md" data-rule="minlen:3"  data-msg="Please enter at least 3 chars" autofocus="required">
                               <div class="validation"></div>
                             </div>
                           </div>
