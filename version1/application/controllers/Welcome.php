@@ -11,7 +11,14 @@ class Welcome extends CI_Controller {
 		}
 	public function index()
 	{
-		$this->load->view('index2');
+		$data['services']= $this->Welcome_model->get_services();
+		$data['dept'] = $this->Register_model->get_dept();
+		$data['events'] = $this->Welcome_model->get_events();
+
+		$this->load->view('index2',$data);
+		
+
+
 	}
 
 	public function doctors(){

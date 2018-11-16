@@ -58,11 +58,21 @@
         }
 
         public function job(){
-            $data['title'] = 'Job opportunity advertised';
+            $data['title'] = 'Job opportunity advertised'; 
             $data['jobs'] = $this->Tanza_model->get_job();
 
             $this->load->view('web/header');
             $this->load->view('web/job', $data);
             $this->load->view('web/footer');
+        }
+
+        public function events(){
+            $data['title'] = "Events Posted ";
+            $data['events'] = $this->Tanza_model->get_events();
+
+            $this->load->view('web/header');
+            $this->load->view('web/events', $data);
+            $this->load->view('web/footer');
+
         }
     }
