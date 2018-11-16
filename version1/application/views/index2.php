@@ -71,7 +71,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#intro">Home</a></li>
+            <li class="active"><a href="<?=base_url();?>">Home</a></li>
             <li><a href="<?=base_url();?>index.php/Tanza/doctors">Doctors</a></li>
             <li class="dropdown">
               <a href="#services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
@@ -86,7 +86,7 @@
             <li class="dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="">Events</a></li>
+                  <li><a href="<?=base_url();?>index.php/Tanza/events">Events</a></li>
                   <li><a href="<?=base_url();?>index.php/Tanza/articles">Articles</a></li>
                   <li><a href="<?=base_url();?>index.php/Tanza/job">Job Opportunities</a></li>
                 </ul>

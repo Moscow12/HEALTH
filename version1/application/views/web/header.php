@@ -10,6 +10,7 @@
   <title>TANZA Health here</title>
 
   <!-- css -->
+  
   <link href="<?=base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url();?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link rel="<?=base_url();?>assets/stylesheet" type="text/css" href="<?=base_url();?>assets/plugins/cubeportfolio/css/cubeportfolio.min.css">
@@ -71,24 +72,24 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#intro">Home</a></li>
-            <li><a href="<?=base_url();?>index.php/welcome/doctors">Doctors</a></li>
+          <li class="active"><a href="<?=base_url();?>">Home</a></li>
+            <li><a href="<?=base_url();?>index.php/Tanza/doctors">Doctors</a></li>
             <li class="dropdown">
               <a href="#services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="<?=base_url();?>index.php/welcome/services">Hospitals</a></li>
-                <li><a href="#">Medical Schools</a></li>
+                <li><a href="<?=base_url();?>index.php/Tanza/hospitals">Hospitals</a></li>
+                <li><a href="<?=base_url();?>index.php/Tanza/schools">Medical Schools</a></li>
                 <li><a href="#">Medical Tools</a></li>
                 <li><a href="#">Emergance</a></li>
               </ul>
             </li>            
             <!-- <li><a href="#pricing">Pricing</a></li> -->
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Events</a></li>
-                  <li><a href="#">Articles</a></li>
-                  <li><a href="#">Job Opportunities</a></li>
+                  <li><a href="<?=base_url();?>index.php/Tanza/events">Events</a></li>
+                  <li><a href="<?=base_url();?>index.php/Tanza/articles">Articles</a></li>
+                  <li><a href="<?=base_url();?>index.php/Tanza/job">Job Opportunities</a></li>
                 </ul>
               </li>
               <!-- <li class="dropdown">
