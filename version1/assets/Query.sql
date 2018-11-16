@@ -12,3 +12,6 @@ inner join student WHERE users.id=student.user_id;
 
 CREATE VIEW hosp_profile_view as SELECT users.id, users.name, users.email, hospital.h_phone, hospital.country, hospital.region, hospital.district,
 hospital.ward, hospital.street, hospital.address FROM users inner join hospital WHERE users.id =  hospital.user_id;
+
+CREATE VIEW shop_profile_view as SELECT users.id, users.name, users.email, shop.shop_phone, shop.lessen, shop.region, shop.district,
+shop.ward, shop.street, shop.address FROM users inner join shop WHERE users.id =  shop.user_id;
