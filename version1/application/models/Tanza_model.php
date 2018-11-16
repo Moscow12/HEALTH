@@ -49,8 +49,8 @@
 
         public function get_schools(){
             $this->db->select('name, email, address');
-            $this->db->from('users');
-            $this->db->join('school', 'users.id= school.user_id', 'inner');
+            $this->db->from('school');
+            $this->db->join('users', 'users.id= school.user_id', 'inner');
             #$this->db->join('service','users.id = service.user_id');
             $this->db->where('role_id = 3');
 
@@ -62,6 +62,14 @@
             $this->db->select('title, description, jlocation, posted_at, salary, name, job_function');
             $this->db->from('job');
             $this->db->join('users', 'users.id = job.user_id', 'inner');
+            $query = $this->db->get();
+			return $query->result_array(); 
+        }
+
+        public function get_events(){
+            $this->db->select('title, description, date, location, name');
+            $this->db->from('event');
+            $this->db->join('users', 'users.id = event.user_id', 'inner');
             $query = $this->db->get();
 			return $query->result_array(); 
         }
