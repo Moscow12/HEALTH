@@ -168,7 +168,7 @@
 
         }else{
             $this->Shop_model->register_product($data);
-            $this->session->set_flashdata('product_registered', 'Your profile has been updated');
+            $this->session->set_flashdata('product_added', 'Your item has been added');
             
             redirect('Shop/product');
         }
@@ -176,11 +176,165 @@
 
        }
 
-       public function view_product(){
-           $dom = $this->session->userdata('user_id');
+       public function product(){
+          $data['title'] = "Product registered";
 
-           echo $dom;
+          $data['product'] = $this->Shop_model->get_product();
 
+
+          $this->load->view('shop/header');
+          $this->load->view('shop/products', $data);
+          $this->load->view('shop/footer');
        }
 
+       public function Edit_product(){
+           
+			$id = $this->uri->segment(3);
+			$data['title'] = "Update product";
+			$data['product'] = $this->Shop_model->get_product_id($id);
+			$data['id'] = $this->uri->segment(3); 
+            
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('item', 'Item ', 'required');
+            $this->form_validation->set_rules('measuments', 'measuments', 'required');
+            $this->form_validation->set_rules('quantity', 'quantity', 'required');
+            $this->form_validation->set_rules('price', 'price', 'required');
+          
+    
+            if($this->form_validation->run()===FALSE){
+    
+                $this->load->view('shop/header');
+                $this->load->view('shop/edit_product', $data);
+                $this->load->view('shop/footer');
+            }else{
+                $data = array(
+                    'item' => $this->input->post('item'),
+                    'measuments' => $this->input->post('measuments'),
+                    'quantity' => $this->input->post('quantity'),
+                    'price' => $this->input->post('price'),               
+                    'shop_id' => $this->session->userdata('user_id')
+                    
+                );
+    
+                if($this->session->userdata('user_id') === NULL){
+                redirect('users/login');
+    
+            }else{
+                $this->Shop_model->register_product($data);
+                $this->session->set_flashdata('product_registered', 'Your profile has been updated');
+                
+                redirect('Shop/product');
+            }
+            }
+       }
+       public function update_product(){
+        $data['title'] = "Update Product";
+        $id= $this->input->post('id');
+        $data['product'] = $this->Shop_model->get_product_id($id);
+
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('item', 'Item ', 'required');
+        $this->form_validation->set_rules('measuments', 'measuments', 'required');
+        $this->form_validation->set_rules('quantity', 'quantity', 'required');
+        $this->form_validation->set_rules('price', 'price', 'required');
+      
+
+        if($this->form_validation->run()===FALSE){
+
+            $this->load->view('shop/header');
+            $this->load->view('shop/edit_product', $data);
+            $this->load->view('shop/footer');
+        }else{
+            $data = array(
+                'item' => $this->input->post('item'),
+                'measuments' => $this->input->post('measuments'),
+                'quantity' => $this->input->post('quantity'),
+                'price' => $this->input->post('price'),               
+                'shop_id' => $this->session->userdata('user_id')
+                
+            );
+
+            if($this->session->userdata('user_id') === NULL){
+            redirect('users/login');
+
+        }else{
+            $this->Shop_model->update_product($data, $id);
+            $this->session->set_flashdata('product_updated', 'Product details has been updated');
+            
+            redirect('Shop/product');
+        }
+        }
+       }
+
+       public function delete_product(){
+        $id = $this->uri->segment(3);
+        $this->Shop_model->delete_product_id($id);
+
+        $this->session->set_flashdata('product_deleted', 'The Product has been deleted');
+        redirect('Shop/product');
+    
+    }
+
+        public function job(){
+            $data['title'] = "Advertizse job opportunity";
+
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('title', 'Title of Job', 'required');
+            $this->form_validation->set_rules('description', 'Description of the job', 'required');
+            $this->form_validation->set_rules('batch_date', 'Application start date', 'required');
+            $this->form_validation->set_rules('exp_date', 'Application End date', 'required');
+            $this->form_validation->set_rules('jlocation', 'job location', 'required');
+            $this->form_validation->set_rules('salary', 'Sarary range', 'required');
+            $this->form_validation->set_rules('job_function', 'Job Function', 'required');
+            $this->form_validation->set_rules('job_type', 'Job type', 'required');
+
+
+            if($this->form_validation->run()===FALSE){
+
+                $this->load->view('shop/header');
+                $this->load->view('shop/job', $data);
+                $this->load->view('shop/footer');
+            }else{
+                $data = array(
+                    'title' => $this->input->post('title'),
+                    'description' => $this->input->post('description'),
+                    'batch_date' => $this->input->post('batch_date'),
+                    'jlocation' => $this->input->post('jlocation'),
+                    'job_type' => $this->input->post('job_type'),
+                    'salary' => $this->input->post('salary'),
+                    'job_function' => $this->input->post('job_function'),
+                    'exp_date' => $this->input->post('exp_date'),
+                    'posted_at'=>mdate('%Y-%m-%d %H:%i:%s', now()),
+                    'user_id' =>$this->session->userdata('user_id')
+                );
+                if($this->session->userdata('user_id')===NULL){
+                    redirect('Users/login');
+                }else{
+                    $this->Shop_model->post_job($data);
+                    $this->session->set_flashdata('job_post', 'You job has been posted successfully');
+
+                    redirect('shop/job_view');
+                }
+            }
+
+        }
+
+        public function job_view(){
+            $data['title'] = 'This is the list of job Opportunity you Posted';
+            $data['job'] = $this->Shop_model->get_job();
+
+            $this->load->view('shop/header');
+            $this->load->view('shop/shop_job_view', $data);
+            $this->load->view('shop/footer');
+        }
+
+        public function view_job1_desc(){
+			$id = $this->uri->segment(3);
+			$data['title'] = "MY ADVERTISE";
+			$data['desc'] = $this->Shop_model->get_description($id);
+
+			$this->load->view('shop/header');
+			$this->load->view('shop/shop_jobdesc_view', $data);
+			$this->load->view('shop/footer');
+		}
     }
