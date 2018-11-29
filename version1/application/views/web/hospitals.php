@@ -12,6 +12,8 @@
                         <div class="media-body">
                             <h5><li><?php  echo $hospital['name'];?></li></h5>
                             <p><?php echo $hospital['email'];?> </p> 
+                            <?php echo $hospital['region']; ?><br>
+                            <?php echo $hospital['address']; ?>
                            
                         </div>
                     </li>
