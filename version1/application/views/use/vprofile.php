@@ -76,7 +76,7 @@
 								<a href="doctor_prof" type="submit" class="btn btn-info ">Edit Profile</a> 
 							</div>
 							</form>
-					</div>	
+					</div>	<p><br><br></p>
 				</div>			
 			</div><div class="col-md-3"></div>
     </div>
