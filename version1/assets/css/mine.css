@@ -1,0 +1,39 @@
+#doctor{
+    background-color: bisque;
+    padding-top: 2%;
+    margin-top: 0%;
+}
+
+#doctor row{
+    border-style: groove;
+
+}
+
+#service{
+    padding-top: 2%;
+    margin-top: 0%;
+}
+#short{
+    margin-bottom: 3%;
+}
+
+#mesh{
+    width: auto;
+    height: 200px;
+}
+
+#profile{
+    background-color: darkgray;
+    border-style: solid;
+    height: 100%;
+    
+}
+.appointment{
+    background-color: rgb(132, 190, 243);
+}
+
+.call{
+    border-style: groove;
+    display: block;
+
+}
