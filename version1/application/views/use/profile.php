@@ -24,31 +24,31 @@
                   </div>
                   <div class="row">
                     <div class="form-group col-md-6">
-                      <label for="exampleInputEmail3">Phone Number</label>
+                      <label for="phonenumber">Phone Number</label>
                       <input type="tel" class="form-control" name="phone" id="exampleInputEmail3" placeholder="Phone Number">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="exampleInputName1">Lessen</label>
+                      <label for="lessen">Lessen</label>
                       <input type="text" class="form-control" id="exampleInputName1" placeholder="lessen" name="lessen">
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-md-6">
-                      <label for="exampleInputPassword4">Region</label>
+                      <label for="region">Region</label>
                       <input type="text" class="form-control" name="region" id="exampleInputPassword4" placeholder="Region">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="exampleInputPassword4">District</label>
+                      <label for="district">District</label>
                       <input type="text" name="district" class="form-control" id="exampleInputPassword4" placeholder="District">
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-md-6">
-                      <label for="exampleInputPassword4">Ward</label>
+                      <label for="ward">Ward</label>
                       <input type="text" class="form-control" name="ward" id="exampleInputPassword4" placeholder="Ward">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="exampleInputPassword4">Years of experience</label>
+                      <label for="exp">Years of experience</label>
                       <input type="number" name="experience" class="form-control" id="exampleInputPassword4" placeholder="Years of experience">
                     </div>
                   </div>
@@ -67,10 +67,14 @@
                                  <option value="" align="center">--Select role--</option>
                                 <?php foreach ($dept as $department){ ?>
 
-                                  <option value="<?php echo $department['id']; ?>"><?php echo $department['name']; ?> </option>
+                                  <option value="<?php echo $department['id']; ?>"><?php echo $department['dept_name']; ?> </option>
                                 <?php }  ?>
                               </select>
                     </div>
+                  </div>
+                  <div class="row form-group col-md-12" >
+                    <label for="">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="5" placeholder="Write about your self. Your profetional and spetialist"class="form-control"></textarea>
                   </div>
                     <div class="row">
                     <div class="form-group col-md-6">
