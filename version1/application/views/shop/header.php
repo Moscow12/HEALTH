@@ -256,17 +256,12 @@
                   <a class="nav-link" href="register_product">Register</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="view_product"> View Products</a>
+                  <a class="nav-link" href="product"> View Products</a>
                 </li>
               </ul>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="service">
-              <i class="menu-icon mdi mdi-sticker"></i>
-              <span class="menu-title">register product</span>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="service">
               <i class="menu-icon mdi mdi-backup-restore"></i>
@@ -305,7 +300,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="job_view"> View Job posted</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="<?=base_url();?>star/pages/samples/register.html"> Register </a>
                 </li>
                 <li class="nav-item">
@@ -313,7 +308,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?=base_url();?>star/pages/samples/error-500.html"> 500 </a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
