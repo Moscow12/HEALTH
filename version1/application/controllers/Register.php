@@ -37,7 +37,7 @@
 
 			$data['title'] = 'Update Your current profile status';
 
-
+ 
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('sex', 'Sex', 'required');
 			$this->form_validation->set_rules('dept_id', 'Department', 'required');
@@ -58,6 +58,7 @@
 					'sex' => $this->input->post('sex'),
 					'dept_id' => $this->input->post('dept_id'),
 					'professional' => $this->input->post('professional'),
+					'description' => $this->input->post('description'),
 					'experience' => $this->input->post('experience'),
 					'pic' => $this->input->post('pic'),
 					'region' => $this->input->post('region'),
@@ -304,7 +305,7 @@
 			$data['title'] = "Update the article";
 			$data['event'] = $this->Register_model->get_event_id($id);
 			$data['id'] = $this->uri->segment(3); 
-			#$data['id']
+			
 
 			
 
