@@ -20,6 +20,8 @@
   <link href="<?=base_url();?>assets/css/owl.theme.css" rel="stylesheet" media="screen" />
   <link href="<?=base_url();?>assets/css/animate.css" rel="stylesheet" />
   <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet">
+  <link href="<?=base_url();?>assets/css/mine.css" rel="stylesheet" >
+
 
   <!-- boxed bg -->
   <link id="bodybg" href="<?=base_url();?>assets/bodybg/bg1.css" rel="stylesheet" type="text/css" />
@@ -47,7 +49,7 @@
                   <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
                 </div>
                 <div class="col-sm-3 col-md-3">
-                  <a href="#" class="btn btn-skin btn-md">Make an Appointment</a>
+                  <a href="<?=base_url();?>index.php/Tanza/appointment" class="btn btn-skin btn-md">Make an Appointment</a>
                 </div>
                 <div class="col-sm-3 col-md-3">
                   <span><a href="<?=base_url();?>index.php/Users/login" data-toggle="modal2" data-target="#Login" class="btn btn-skin btn-sm" style="color: red">Login</a><a href="<?=base_url();?>index.php/Users/registration" class="btn btn-skin btn-sm">register</a></span>
@@ -65,7 +67,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
           <a class="navbar-brand" href="index.html">
-                    <img src="<?=base_url();?>assets/img/logo.png" alt="" width="150" height="40" />
+                    <img src="<?=base_url();?>assets/img/logo.jpg" alt="" width="150" height="40" />
                 </a>
         </div>
 
