@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-2"></div>
-	<div class="col-md-8"><?php echo form_open('Student/event'); ?>
+	<div class="col-md-8"><?php echo form_open_multipart('Student/event'); ?>
 		<div class="card">
 			<div class="card card-header"><?php echo $title;?></div>
 			<div class="card card-body">
@@ -24,7 +24,7 @@
 				</div>
 				
 				<div class="form-group">
-					<button class="btn btn-info">Submit</button><a href="vevent" class="btn btn-primary">view Event</a>
+					<button class="btn btn-info" value="upload">Submit</button><a href="vevent" class="btn btn-primary">view Event</a>
 				</div>
 			</div>
 		</div><?php echo form_close();?>
