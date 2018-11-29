@@ -142,7 +142,7 @@
 				$this->Student_model->student_update_profile($data, $id);
 				$this->session->set_flashdata('student_profile', 'Your profile has been updated successfully');
 				
-				redirect('Student/view_profile');
+				redirect('Student/view_profile'); 
 			}
 			}
 		}
@@ -264,24 +264,40 @@
 		//Function for posting events doctor
 		public function event(){
 			$data['title'] = "Post your Event vacation";
-
 			$this->load->library('form_validation');
 
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('description', 'Description', 'required');
 			$this->form_validation->set_rules('location', 'Location', 'required');
-			$this->form_validation->set_rules('photo', 'Photo', 'required');
 
-			if($this->form_validation->run()===FALSE ){
+			if($this->form_validation->run() ===FALSE){
 				$this->load->view('student/header');
 				$this->load->view('student/st_event', $data);
-				$this->load->view('student/footer');
-			}else{
+			 	$this->load->view('student/footer');
+			 }else{
+				//Upload this file then pass to model
+
+			$config['upload_path'] = './asset/images/event/';
+			$config['allowed_type'] = 'gif|jpg|png';
+			$config['max_size'] = '2048';
+			$config['max_width'] = '1024';
+			$config['max_height'] = '768';
+			$config['overwrite'] = TRUE;
+
+			$this->load->library('upload', $config);
+			if(!$this->upload->do_upload('userfile')){
+					$uploadError = array('upload_error'=>$this->upload->display_error());
+					$this->set_flashdata('uploadError', $uploadError, $urlYouWantToReturn);
+					exit;
+				}
+				$file_info =$this->upload->data('userfile');
+				$file_name = $file_info['file_name'];
+
 				$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
-					'photo' => $this->input->post('photo'),
+					'photo' => $file_name,
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
@@ -289,6 +305,39 @@
 					$this->Register_model->dr_event($data);
 					$this->session->set_flashdata('student_events', 'You have shared your event');
 					redirect('Student/vevent');
+				// }else{
+				// 	$data = $this->generateCommonItem();
+				// 	$this->data['title'] = array(
+				// 		'name' => 'title',
+				// 		'id' => 'name',
+				// 		'type' => 'text',
+				// 		'style' => 'width:300px;',
+				// 		'value' => $this->form_validation->set_value('title')
+				// 	);
+				// 	$this->data['description'] = array(
+				// 		'name' => 'description',
+				// 		'id' => 'description',
+				// 		'type' => 'text',
+				// 		'cols' => '60',
+				// 		'rows' => '5',
+				// 		'value' => $this->form_validation->set_value('description')
+				// 	);
+				// 	$this->data['location'] = array(
+				// 		'name' => 'photo',
+				// 		'id' => 'photo',
+				// 		'type' => 'text',
+				// 		'style' => 'width:40px; text-align: right',
+				// 		'value' =>  $this->form_validation->set_value('location')
+				// 	);
+				// 	$this->data['photo'] = array(
+						
+				// 		'value' =>  $this->form_validation->set_value('photo')
+				// 	);
+
+				// 	$this->load->view('student/header');
+				// 	$this->load->view('student/st_event', $data);
+				// 	$this->load->view('student/footer');
+
 				}
 			}
 
@@ -430,7 +479,7 @@
 			$id = $this->uri->segment(3);
 			$data['title'] = "Edit the service";			
 			#$data['edit'] = $this->Register_model->get_service();
-			$data['edit'] = $this->Register_model->get_service_id($id);
+			$data['edit'] = $this->Register_model->get_service_id($id); 
 
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('service_name', 'Service Name', 'required');
