@@ -1,4 +1,4 @@
-<section id="partner" class="home-section paddingbot-60">
+<!-- <section id="partner" class="home-section paddingbot-60">
       <div class="container marginbot-50">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <footer>
 
@@ -138,7 +138,7 @@
                       Licensing information: https://bootstrapmade.com/license/
                       Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medicio
                     -->
-                    Designed by <a href="https://bootstrapmade.com/">Meshack Muganyizi</a>
+                    Designed by <a href="#">Meshack Muganyizi</a>
                   </div>
                 </div>
               </div>
