@@ -19,6 +19,7 @@
   <link href="<?=base_url();?>assets/css/owl.theme.css" rel="stylesheet" media="screen" />
   <link href="<?=base_url();?>assets/css/animate.css" rel="stylesheet" />
   <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?=base_url();?>assets/css/mine.css" >
 
   <!-- boxed bg -->
   <link id="bodybg" href="<?=base_url();?>assets/bodybg/bg1.css" rel="stylesheet" type="text/css" />
@@ -46,7 +47,7 @@
                   <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
                 </div>
                 <div class="col-sm-3 col-md-3">
-                  <a href="#" class="btn btn-skin btn-md">Make an Appointment</a>
+                  <a href="<?=base_url();?>index.php/Tanza/appointment" class="btn btn-skin btn-md">Make an Appointment</a>
                 </div>
                 <div class="col-sm-3 col-md-3">
                   <span><a href="<?=base_url();?>index.php/Users/login" data-toggle="modal2" data-target="#Login" class="btn btn-skin btn-sm" style="color: red">Login</a><a href="<?=base_url();?>index.php/Users/registration" class="btn btn-skin btn-sm">register</a></span>
@@ -114,13 +115,51 @@
       <div class="intro-content">
         <div class="container">
           <div class="row">
+            <!-- <div class="col-lg-6">
+              <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
+               <h2 class="h-ultra">TANZA Health medical group <small>VIEW OUR SERVICES</small></h2>
+              </div>
+              <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
+                <h4 class="h-light">Provide best quality healthcare for you</h4>
+              </div> 
+              <div class="well well-trans">
+                <div class="wow fadeInRight" data-wow-delay="0.1s">
+
+                  <ul class="lead-list">
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite hospital</strong><br />On the pricing menu Choose the package you can <br/></span><span class="list"><a href="#"><u>hospital</u></a></span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br />Consern with you problem choose the doctor <br/></span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical Schools</strong><br />View various collage and institution which offer medical course </span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Vifaa tiba na madawa</strong><br />Chagua duka la dawa na vifaa tiba</span></li>
+                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical events and articles</strong><br />Medical events and article posted by proffesionals</span></li>
+
+                  </ul>
+                  <p class="text-right wow bounceIn" data-wow-delay="0.4s">
+                    <a href="#" class="btn btn-skin btn-lg">Learn more <i class="fa fa-angle-right"></i></a>
+                  </p>
+                </div>
+              </div>
+
+
+            </div> -->
+            <!-- <div class="col-lg-6">
+              <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                <img src="<?=base_url();?>assets/img/dummy/img-1.png" class="img-responsive" alt="" />
+              </div>
+            </div> -->
+            
+<div class="carousel-reviews broun-block">
+  <div class="container">
+    <div class="row">
+      <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="item active">
+           
             <div class="col-lg-6">
               <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
                <h2 class="h-ultra">TANZA Health medical group <small>VIEW OUR SERVICES</small></h2>
               </div>
-              <!-- <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-                <h4 class="h-light">Provide best quality healthcare for you</h4>
-              </div> -->
+             
               <div class="well well-trans">
                 <div class="wow fadeInRight" data-wow-delay="0.1s">
 
@@ -146,6 +185,75 @@
               </div>
             </div>
           </div>
+          <!-- <div class="item">
+              <div class="row">
+                  <div class="col-md-12" id="mesh">
+                    <img src="<?=base_url();?>assets/img/dummy/mesh.jpg" width="40%" height="30%" class="i2mg-responsive" alt="" />
+                  </div>
+              </div>
+          </div> -->
+          <div class="item">
+            <div class="col-md-4 col-sm-6">
+              <div class="block-text rel zmin">
+                <a title="" href="#">Birth control pills</a>
+                <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
+                    class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
+                </div>
+                <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+              </div>
+              <div class="person-text rel text-light">
+                <img src="<?=base_url();?>assets/img/dummy/mesh.jpg" alt="" class="person img-circle" />
+                <a title="" href="#">Lucas Thompson</a>
+                <span>Austin, Texas</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 hidden-xs">
+              <div class="block-text rel zmin">
+                <a title="" href="#">Radiology</a>
+                <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span>
+                  <span
+                    data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
+                </div>
+                <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+              </div>
+              <div class="person-text rel text-light">
+                <img src="<?=base_url();?>assets/img/testimonials/5.jpg" alt="" class="person img-circle" />
+                <a title="" href="#">Ella Mentree</a>
+                <span>Fort Worth, Texas</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
+              <div class="block-text rel zmin">
+                <a title="" href="#">Cervical Lesions</a>
+                <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
+                    class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
+                </div>
+                <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+              </div>
+              <div class="person-text rel text-light">
+                <img src="<?=base_url();?>assets/img/testimonials/6.jpg" alt="" class="person img-circle" />
+                <a title="" href="#">Suzanne Adam</a>
+                <span>Detroit, Michigan</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+        <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
         </div>
       </div>
     </section>
@@ -162,7 +270,7 @@
               <div class="box text-center">
 
                 <i class="fa fa-check fa-3x circled bg-skin"></i>
-                <h4 class="h-bold">Make an appoinment</h4>
+                <h4 class="h-bold">Make an appoinmente</h4>
                 <p>
                   Choose the your fevoroute doctor and hospital then make an appoinment, that for for you to meet our doctor 
                 </p>
@@ -228,7 +336,7 @@
                 <div class="col-md-4">
                   <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                     <div class="cta-btn">
-                      <a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>
+                      <a href="<?=base_url();?>index.php/Tanza/appointment" class="btn btn-skin btn-lg">Book an appoinment</a>
                     </div>
                   </div>
                 </div>
@@ -240,11 +348,172 @@
     </section>
 
 
+    
+    <!-- Section: team -->
+    <section id="doctor" class="home-section bg-gray paddingbot-20">
+      <div class="container marginbot-10">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="section-heading text-center">
+                <h2 class="h-bold">Doctors</h2>
+                <p>Meet our proffetional doctors here and get in touch with them.</p>
+              </div>
+            </div>
+            <div class="divider-short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+         <!--<div class="row">
+          <div class="col-lg-12">
+
+            <div id="filters-container" class="cbp-l-filters-alignLeft">
+              <?php foreach($dept as $deptment){?>
+              <div class="col-sm-2"><button class="btn-default"><?php echo $deptment['dept_name'];?></button></div>
+              <?php }?>
+
+              <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (
+                <div class="cbp-filter-counter"></div>)</div>
+              <div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (
+                <div class="cbp-filter-counter"></div>)</div>
+              <div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist (
+                <div class="cbp-filter-counter"></div>)</div>
+              <div data-filter=".neurologist" class="cbp-filter-item">Neurologist (
+                <div class="cbp-filter-counter"></div>)</div>
+            </div>
+
+            <div id="grid-container" class="cbp-l-grid-team">
+              <ul>
+                <li class="cbp-item psychiatrist">
+                  <a href="<?=base_url();?>assets/doctors/member1.html" class="cbp-caption cbp-singlePage">
+                    <div class="cbp-caption-defaultWrap">
+                      <img src="<?=base_url();?>assets/img/team/1.jpg" alt="" width="100%">
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                      <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="<?=base_url();?>assets/doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
+                  <div class="cbp-l-grid-team-position">Psychiatrist</div>
+                </li>
+                <li class="cbp-item cardiologist">
+                  <a href="<?=base_url();?>assets/doctors/member2.html" class="cbp-caption cbp-singlePage">
+                    <div class="cbp-caption-defaultWrap">
+                      <img src="<?=base_url();?>assets/img/team/2.jpg" alt="" width="100%">
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                      <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="<?=base_url();?>assets/doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
+                  <div class="cbp-l-grid-team-position">Cardiologist</div>
+                </li>
+                <li class="cbp-item cardiologist">
+                  <a href="<?=base_url();?>assets/doctors/member3.html" class="cbp-caption cbp-singlePage">
+                    <div class="cbp-caption-defaultWrap">
+                      <img src="<?=base_url();?>assets/img/team/3.jpg" alt="" width="100%">
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                      <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="<?=base_url();?>assets/doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
+                  <div class="cbp-l-grid-team-position">Cardiologist</div>
+                </li>
+                <li class="cbp-item neurologist">
+                  <a href="<?=base_url();?>assets/doctors/member4.html" class="cbp-caption cbp-singlePage">
+                    <div class="cbp-caption-defaultWrap">
+                      <img src="<?=base_url();?>assets/img/team/4.jpg" alt="" width="100%">
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                      <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="<?=base_url();?>assets/doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
+                  <div class="cbp-l-grid-team-position">Neurologist</div>
+                </li>
+
+              </ul>
+            </div> -->
+           
+
+            <div class="row">
+                <div class="col-md-12">
+                    
+                        <?php foreach($doctor as $doctors){?>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <a href="<?=base_url();?>assets/img/dummy/img-1.png"><img src="<?=base_url();?>assets/img/dummy/img-1.png" alt=""></a>
+                                    <div class="caption">
+                                       <strong>Name:</strong> <?php echo $doctors['name'];?><br>
+                                        <strong>Professional:</strong> <?php echo $doctors['professional'];?><br>
+                                        <!-- Email:<?php echo $doctors['email'];?><br> -->
+                                       <!-- <strong>Phone #:</strong>  <?php echo $doctors['phone'];?><br>--><a href="<?=base_url();?>index.php/Tanza/dr_profile/<?php echo $doctors['id'];?>"class="btn btn-info">View profile</a> 
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+                            </div>
+                        <?php }?>
+                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                     <nav>
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <span class="page-link">Previous</span>
+                                </li>
+                                <li class="page-item active"><a href="#" class="page-link"><span class="page-link">1 <span class="sr-only">(current)</span></span></a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a class="page-link">Next</a></li>
+                            </ul>
+                    </nav>
+                </div>                
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- end Section: doctors -->
+
     <!-- Section: services -->
     <section id="service" class="home-section nopadding paddingtop-60">
 
       <div class="container">
-
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="section-heading text-center">
+                <h2 class="h-bold">Services</h2>
+                <p>Review our service given by our Medical students, Doctors and hospitals in different areas.</p>
+              </div>
+            </div>
+            <div id="short" class="divider-short"></div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-6 col-md-6">
             <div class="wow fadeInUp" data-wow-delay="0.2s">
@@ -345,116 +614,6 @@
     <!-- /Section: services -->
   
 
-    <!-- Section: team -->
-    <section id="doctor" class="home-section bg-gray paddingbot-60">
-      <div class="container marginbot-50">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="section-heading text-center">
-                <h2 class="h-bold">Doctors</h2>
-                <p>Meet our proffetional doctors here and get in touch with them.</p>
-              </div>
-            </div>
-            <div class="divider-short"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-
-            <div id="filters-container" class="cbp-l-filters-alignLeft">
-              <?php foreach($dept as $deptment){?>
-              <div class="col-sm-2"><button class="btn-default"><?php echo $deptment['dept_name'];?></button></div>
-              <?php }?>
-
-              <!-- <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".neurologist" class="cbp-filter-item">Neurologist (
-                <div class="cbp-filter-counter"></div>)</div> -->
-            </div>
-
-            <div id="grid-container" class="cbp-l-grid-team">
-              <ul>
-                <li class="cbp-item psychiatrist">
-                  <a href="<?=base_url();?>assets/doctors/member1.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="<?=base_url();?>assets/img/team/1.jpg" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="<?=base_url();?>assets/doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
-                  <div class="cbp-l-grid-team-position">Psychiatrist</div>
-                </li>
-                <li class="cbp-item cardiologist">
-                  <a href="<?=base_url();?>assets/doctors/member2.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="<?=base_url();?>assets/img/team/2.jpg" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="<?=base_url();?>assets/doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
-                  <div class="cbp-l-grid-team-position">Cardiologist</div>
-                </li>
-                <li class="cbp-item cardiologist">
-                  <a href="<?=base_url();?>assets/doctors/member3.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="<?=base_url();?>assets/img/team/3.jpg" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="<?=base_url();?>assets/doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
-                  <div class="cbp-l-grid-team-position">Cardiologist</div>
-                </li>
-                <li class="cbp-item neurologist">
-                  <a href="<?=base_url();?>assets/doctors/member4.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="<?=base_url();?>assets/img/team/4.jpg" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="<?=base_url();?>assets/doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
-                  <div class="cbp-l-grid-team-position">Neurologist</div>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!-- /Section: team -->
 
 
 
