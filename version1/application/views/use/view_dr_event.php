@@ -15,7 +15,7 @@
                 <thead>
                     <th>#</th>
                     <th>Title</th>
-                    <th>Location</th>
+                    <th>Location</th> 
                     <th>Event Description</th>
                     <th>Picture</th>
                     <th>Date</th>
@@ -25,12 +25,12 @@
                     <?php $namb=1; foreach($events as $serv){?>
                     <tr>
                         <th><?php echo $namb++; ?></th>
-                        <td><?php echo $serv['title'];?> </td>
-                        <td><?php echo $serv['location'];?> </td>
-                        <td><?php echo $serv['description']; ?> </td>
+                        <td id="title"><?php echo $serv['title'];?> </td>
+                        <td id="location"><?php echo $serv['location'];?> </td>
+                        <td id="desc"><?php echo $serv['description']; ?> </td>
                         <td><?php echo $serv['photo'];?> </td>
                         <td><?php echo $serv['date'];?></td>
-                        <td>
+                        <td id="btn">
                             <span><a href="edit_event/<?php echo $serv['id']; ?>" ><button class="btn btn-info" value="<?php echo $serv['id']; ?>">Edit</button></a>
                             <a href="delete_evt/<?php echo $serv['id']; ?>" ><button type="reset" class="btn btn-danger" value="<?php echo $serv['id']; ?>">Delete</button></a></spap>
                         </td>

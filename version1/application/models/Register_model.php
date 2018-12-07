@@ -46,14 +46,23 @@
 			return $this->db->insert('doctor',$data);
 		}
 
+		// public function get_profile(){
+		// 	$user = $this->session->userdata('user_id');
+		// 	$this->db->select('dr.name', 'dr.email', 'dr.sex', 'dr.professional', 'dr.phone', 'dr.region', 'dr.ward', 'dr.experience', 'dr.address', 'dr.lessen', 'dr.district', 'd.name', 'pic');
+		// 	$this->db->from('dr_profile_view dr');
+		// 	$this->db->join('department d',  'd.id= dr.dept_id', 'inner');
+		// 	$this->db->where('dr.id', $user);
+
+		// 	$query = $this->db->get(); 
+        //     return $query->result_array();
+		// }
+
 		public function get_profile(){
 			$user = $this->session->userdata('user_id');
-			$this->db->select('dr.name', 'dr.email', 'dr.sex', 'dr.professional', 'dr.phone', 'dr.region', 'dr.ward', 'dr.experience', 'dr.address', 'dr.lessen', 'dr.district', 'd.name', 'pic');
-			$this->db->from('dr_profile_view dr');
-			$this->db->join('department d',  'd.id= dr.dept_id', 'inner');
-			$this->db->where('dr.id', $user);
 
-			$query = $this->db->get();
+			$this->db->where('id', $user);
+
+			$query = $this->db->get('dr_profile_view'); 
             return $query->result_array();
 		}
 
@@ -89,7 +98,7 @@
 
 		public function service_time($data){
 			return $this->db->insert('service_time',$data); 
-		}
+		} 
 
 		
 		public function get_time(){
