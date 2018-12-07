@@ -24,6 +24,8 @@
 		public function doctor(){
 
 			$data['title'] = "Welcome Doctor to Our system ";
+			$data['profiles'] = $this->Register_model->get_profile();
+
 
 			$this->load->view('use/header');
 			$this->load->view('use/index', $data);
@@ -82,7 +84,7 @@
 			}
 			}
 
-		}
+		} 
 
 		public function view_profile(){
 			$data['title'] = "Updated profile here";
@@ -94,7 +96,7 @@
 
 		}
 		
-		public function service(){
+		public function service(){ 
 			$data['title'] = "Add the servces you offer";
 
 			$this->load->library('form_validation');

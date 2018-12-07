@@ -478,7 +478,6 @@
 		public function edit_service(){
 			$id = $this->uri->segment(3);
 			$data['title'] = "Edit the service";			
-			#$data['edit'] = $this->Register_model->get_service();
 			$data['edit'] = $this->Register_model->get_service_id($id); 
 
 			$this->load->library('form_validation');

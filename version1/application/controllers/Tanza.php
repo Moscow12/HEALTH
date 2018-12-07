@@ -108,4 +108,13 @@
             $this->load->view('web/appointment', $data);
             $this->load->view('web/footer');
         }
+
+        public function school(){
+
+            $data['title'] = "MY school";
+
+            $this->load->view('web/header');
+            $this->load->view('web/school', $data);
+            $this->load->view('web/footer');
+        }
     }

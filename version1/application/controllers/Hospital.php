@@ -66,7 +66,7 @@
 				}
 			}
 
-		}
+		} 
 
 		public function job_view(){
 			$data['title'] = 'This is the list of job Opportunity you Posted';
@@ -130,10 +130,10 @@
 					$this->session->set_flashdata('doctor_profile', 'Your profile has been updated');
 					
 					redirect('Hospital/profile');
-				}
+				} 
 				}
 	
-			}
+			} 
 	
 			public function view_profile(){
 				$data['title'] = "Updated profile here";
