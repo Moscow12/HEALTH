@@ -82,8 +82,8 @@
 			
                         <input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
                       
-                        <?php if($this->session->flashdata('login_failed')):  ?>    
-                <?php echo '<p class="lead-footer" align="center">'.$this->session->flashdata('login_failed'). '</p>'; ?>
+                        <?php if($this->session->flashdata('login_fail')):  ?>    
+                <?php echo '<p class="lead-footer alert alert-danger" align="center">'.$this->session->flashdata('login_fail'). '</p>'; ?>
             <?php endif; ?>
 
                       </form>
