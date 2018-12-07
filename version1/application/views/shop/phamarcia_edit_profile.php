@@ -85,7 +85,7 @@
                             <label for="">Address:</label>                        
                         </div>
                         <div class="col-sm-10">
-                            <textarea name="address" id="" cols="30" rows="10" class="form-control"><?php echo $profile['address']; ?></textarea>
+                            <textarea name="address" id="" cols="20" rows="7" class="form-control"><?php echo $profile['address']; ?></textarea>
                         </div>
                     </div>
                 </div><?php }?>

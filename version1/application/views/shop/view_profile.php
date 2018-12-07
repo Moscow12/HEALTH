@@ -1,6 +1,6 @@
     <div>
     <?php if($this->session->flashdata('shop_profile')):?>
-        <?php echo '<p class="alert alert-success" data-dismissable="true">'.$this->session->flashdata('shop_profile').'</p>'?>
+        <?php echo '<p class="alert alert-success alert-dismissable">'.$this->session->flashdata('shop_profile').'</p>'?>
 <?php endif;?>
     </div>
     <div class="row">

@@ -24,11 +24,11 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html">Tanza Health
-          <img src="<?=base_url();?>sta/images/logo.svg" alt="logo" />
+        <a class="navbar-brand brand-logo" href="">Tanza Health
+        <img src="<?=base_url();?>assets/img/logo.jpg" alt="logo" width="150" height="40" />
         </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html">
-          <img src="<?=base_url();?>star/images/logo-mini.svg" alt="logo" />
+        <a class="navbar-brand brand-logo-mini" href="">
+        <img src="<?=base_url();?>assets/img/logo.jpg" alt="logo" width="150" height="40" />
         </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -209,9 +209,13 @@
                   <img src="<?=base_url();?>star/images/faces/face1.jpg" alt="profile image">
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name"> PHAMARCY</p>
+                <?php #foreach($name as $names){?>
+                  <p class="profile-name"> <?php #echo $names['name']; ?></p>
+                    <?php #}?>
                   <div>
-                    <small class="designation text-muted">Phamarcy</small>
+                    <?php #foreach($role as $roles){?>
+                    <small class="designation text-muted"><?php #echo $roles['name']; ?></small>
+                    <?php #}?>
                     <span class="status-indicator online"></span>
                   </div>
                 </div>
@@ -222,7 +226,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="doctor">
+            <a class="nav-link" href="index">
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -268,24 +272,24 @@
               <span class="menu-title">Services You offer</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="service_time">
               <i class="menu-icon mdi mdi-chart-line"></i>
               <span class="menu-title">Service Time</span>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link" href="event">
               <i class="menu-icon mdi mdi-table"></i>
               <span class="menu-title">Events</span>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link" href="article">
               <i class="menu-icon mdi mdi-sticker"></i>
               <span class="menu-title">Articles</span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-restart"></i>
@@ -315,7 +319,7 @@
         </ul>
       </nav>
 
-        <!-- partial -->
+        <!-- partial --> 
       <div class="main-panel">
       <?php if(!($this->session->userdata('user_id'))){
 	redirect('/Users/login');

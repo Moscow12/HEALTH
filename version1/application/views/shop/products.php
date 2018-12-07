@@ -14,7 +14,7 @@
             <div class="card-header"><?php echo $title;?></div>
             <div class="card-body">
                
-                 <table class="table table-bordered table-hover">
+                 <table class="table table-bordered table-hover table-responsive">
                     <thead>
                         <th>#</th>
                         <th>Item</th>
