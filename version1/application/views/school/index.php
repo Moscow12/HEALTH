@@ -96,10 +96,10 @@
               <!--weather card-->
               <div class="card card-weather">
                 <div class="card-body">
-                  <div class="weather-date-location">
-                    <h3>Monday</h3>
+                <div class="weather-date-location">
+                    <h3><?php echo date('D'); ?></h3>
                     <p class="text-gray">
-                      <span class="weather-date">03 Sept, 2018</span>
+                      <span class="weather-date"><?php echo date('d/M/Y'); ?></span>
                       <span class="weather-location">Dar es Salaam, Tz</span>
                     </p>
                   </div>
