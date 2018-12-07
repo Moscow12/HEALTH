@@ -15,7 +15,8 @@ fieldset{
     border-radius: 50%;
    }
 
-   #app{
-       align-content: flex-end;
-       text-align: right;
+#app{
+    align-content: flex-end;
+    text-align: right;
    }
+   

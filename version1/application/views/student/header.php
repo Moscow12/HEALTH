@@ -24,11 +24,12 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html">Tanza Health
-          <img src="<?=base_url();?>sta/images/logo.svg" alt="logo" />
+        <a class="navbar-brand brand-logo" href="">Tanza Health
+        <img src="<?=base_url();?>assets/img/logo.jpg" alt="" width="150" height="40" />
+
         </a>
-        <a class="navbar-brand brand-logo-mini" href="index.html">
-          <img src="<?=base_url();?>star/images/logo-mini.svg" alt="logo" />
+        <a class="navbar-brand brand-logo-mini" href="">
+        <img src="<?=base_url();?>assets/img/logo.jpg" alt="" width="150" height="40" />
         </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -211,7 +212,7 @@
                 <div class="text-wrapper">
                   <p class="profile-name"> MUHIMBILI SCHOOL OF MEDICINE</p>
                   <div>
-                    <small class="designation text-muted">School</small>
+                    <small class="designation text-muted">Student</small>
                     <span class="status-indicator online"></span>
                   </div>
                 </div>
@@ -249,12 +250,7 @@
               <i class="menu-icon mdi mdi-backup-restore"></i>
               <span class="menu-title">Services You offer</span>
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="service_time">
-              <i class="menu-icon mdi mdi-chart-line"></i>
-              <span class="menu-title">Service Time</span>
-            </a>
+          </li>          
           </li>
           <li class="nav-item">
             <a class="nav-link" href="event">

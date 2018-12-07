@@ -100,7 +100,7 @@
                 <li><a href="index-video.html">Home video</a></li>
               </ul>
             </li> -->
-            <li><a href="">About</a></li>
+            <li><a href="<?=base_url();?>index.php/Tanza/school">About</a></li>
             <li><a href="">Contact</a></li>
             
           </ul>

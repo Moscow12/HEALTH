@@ -3,7 +3,7 @@
 	}?>
 <div class="row">
 	<div class="col-md-2"></div>
-	<div class="col-md-6"><?php echo form_open('Register/service'); ?>
+	<div class="col-md-6"><?php echo form_open('Student/service'); ?>
 		<div class="card">
 			<div class="card card-header"><?php echo $title;?></div>
 			<div class="card card-body">

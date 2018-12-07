@@ -78,7 +78,7 @@
             $query = $this->db->get();
 			return $query->result_array(); 
         }
-
+ 
         public function get_events(){
             $this->db->select('title, description, date, location, name');
             $this->db->from('event');
@@ -89,5 +89,22 @@
 
         public function appointment($data){
             $this->db->insert('appointment', $data);
+        }
+
+        public function get_role(){
+            $user = $this->session->userdata('user_id');           
+            $this->db->where('id', $user);
+            $query = $this->db->get('role');
+			return $query->result_array(); 
+        }
+
+        public function get_name(){
+            $user = $this->session->userdata('user_id');
+            $this->db->select('*');
+            $this->db->from('users');
+            $this->db->where('id', $user);
+
+            $query = $this->db->get();
+			return $query->result_array();
         }
     }

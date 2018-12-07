@@ -26,7 +26,7 @@
                     <tr>
                         <th><?php echo $namb++; ?></th>
                         <td><?php echo $serv['service_name'];?> </td>
-                        <td><?php echo $serv['description']; ?> </td>
+                        <td ><?php echo $serv['description']; ?> </td>
                         <td>
                             <span><a href="edit_service/<?php echo $serv['id']; ?>" ><button class="btn btn-info" value="<?php echo $serv['id']; ?>">Edit</button></a>
                             <a href="delete/<?php echo $serv['id']; ?>" ><button type="reset" class="btn btn-danger" value="<?php echo $serv['id']; ?>">Delete</button></a></span>

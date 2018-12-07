@@ -45,16 +45,16 @@
       <div class="top-area">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 col-md-3">
+                <div class="col-xsl-3 col-sm-3 col-md-3">
                   <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
                 </div>
-                <div class="col-sm-3 col-md-3">
+                <div class="col-xsl-3 col-sm-3 col-md-3">
                   <a href="<?=base_url();?>index.php/Tanza/appointment" class="btn btn-skin btn-md">Make an Appointment</a>
                 </div>
-                <div class="col-sm-3 col-md-3">
+                <div class="col-xsl-3 col-sm-3 col-md-3">
                   <span><a href="<?=base_url();?>index.php/Users/login" data-toggle="modal2" data-target="#Login" class="btn btn-skin btn-sm" style="color: red">Login</a><a href="<?=base_url();?>index.php/Users/registration" class="btn btn-skin btn-sm">register</a></span>
                 </div>
-                <div class="col-sm-3 col-md-3">
+                <div class="col-xsl-3 col-sm-3 col-md-3">
                     <p class="bold text-right" href="index-form.html">Call us now +255 7542 89493</p>
                   </div>
               </div>
@@ -102,7 +102,7 @@
                 <li><a href="index-video.html">Home video</a></li>
               </ul>
             </li> -->
-            <li><a href="">About</a></li>
+            <li><a href="<?=base_url();?>index.php/Tanza/school">About</a></li>
             <li><a href="">Contact</a></li>
             
           </ul>
