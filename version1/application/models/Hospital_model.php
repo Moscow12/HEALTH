@@ -13,7 +13,7 @@
             $user = $this->session->userdata('user_id');
             $this->db->select('*');
             $this->db->from('job');
-            $this->db->where('user_id', $user);
+            $this->db->where('id', $user);
 
             $query = $this->db->get();
             return $query->result_array();
@@ -27,7 +27,7 @@
 
         public function get_details(){
             $user = $this->session->userdata('user_id');
-            $this->db->select('*');
+            $this->db->select('*'); 
             $this->db->from('users');
             $this->db->where('user_id', $user);
         }

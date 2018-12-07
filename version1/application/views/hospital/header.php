@@ -19,17 +19,17 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="<?=base_url();?>star/images/favicon.png" />
 </head>
-
+ 
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="index.html">Tanza Health
-          <img src="<?=base_url();?>sta/images/logo.svg" alt="logo" />
+        <img src="<?=base_url();?>assets/img/logo.jpg" alt="" width="150" height="40" />
         </a>
         <a class="navbar-brand brand-logo-mini" href="index.html">
-          <img src="<?=base_url();?>star/images/logo-mini.svg" alt="logo" />
+        <img src="<?=base_url();?>assets/img/logo.jpg" alt="logo" width="150" height="40" />
         </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">

@@ -36,7 +36,7 @@
                                 <td><?php echo $profile['ward'];?></td>
                             </tr>
                             <tr>
-                                <th>Stret:</th>
+                                <th>Street:</th>
                                 <td><?php echo $profile['street'];?></td>
                             </tr>
                             <tr>
