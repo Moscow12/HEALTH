@@ -25,10 +25,10 @@
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="index.html">Tanza Health
-          <img src="<?=base_url();?>sta/images/logo.svg" alt="logo" />
+        <img src="<?=base_url();?>assets/img/logo.jpg" alt="logo" width="150" height="40" />
         </a>
         <a class="navbar-brand brand-logo-mini" href="index.html">
-          <img src="<?=base_url();?>star/images/logo-mini.svg" alt="logo" />
+        <img src="<?=base_url();?>assets/img/logo.jpg" alt="logo" width="150" height="40" />
         </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -222,7 +222,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="doctor">
+            <a class="nav-link" href="index">
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -250,12 +250,12 @@
               <span class="menu-title">Services You offer</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="service_time">
+          <!-- <li class="nav-item" >
+            <a class="nav-link" href="service_time"disabled>
               <i class="menu-icon mdi mdi-chart-line"></i>
               <span class="menu-title">Service Time</span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="event">
               <i class="menu-icon mdi mdi-table"></i>
@@ -282,7 +282,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="job_view"> View Job posted</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="<?=base_url();?>star/pages/samples/register.html"> Register </a>
                 </li>
                 <li class="nav-item">
@@ -290,7 +290,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?=base_url();?>star/pages/samples/error-500.html"> 500 </a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
