@@ -121,8 +121,8 @@
 	 	}
 
 	 	public function failed(){
-			$data['title'] = 'Sign in failed | Try again';
-			$this->session->set_flashdata('login_fail', 'Either papassword or Email is incorect');
+			$data['title'] = '<span style="color:red"> Sign in failed | Try again </span>';
+			$this->session->set_flashdata('login_fail', 'Either password or Email is incorrect');
 
 
 			

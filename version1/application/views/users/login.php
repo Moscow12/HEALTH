@@ -44,7 +44,7 @@
 
 <!--                       <form action="" method="post" role="form" class="contactForm lead">
  -->                        <div class="row">
-                          <div class="col-xs-8 col-sm-8 col-md-8">
+                          <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                               <label>Email Address</label>
                               <input type="text" name="email" id="first_name" class="form-control input-md" data-rule="minlen:3" autofocus data-msg="Please enter at least 3 chars" autofocus="requied">
@@ -60,7 +60,7 @@
                           </div> -->
                         </div>
                         <div class="row">
-                        <div class="col-xs-8 col-sm-8 col-md-8">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                               <label>Password</label>
                               <input type="password" name="password" id="last_name" class="form-control input-md" data-rule="minlen:3" autofocus="required" data-msg="Please enter at least 3 chars" >
@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="row">
-                          <div class="col-md-8  offset-md-4">
+                          <div class="col-md-10  offset-md-4">
                             <div class="checkbox">
                               <label>Remember Me
                               <input type="checkbox" name="" id="email"  data-rule="email" data-msg="Please enter a valid email"></label>
@@ -81,8 +81,10 @@
                         </div><br/>
 			
                         <input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
-
-                        <p class="lead-footer">* We'll contact you by phone & email later</p>
+                      
+                        <?php if($this->session->flashdata('login_failed')):  ?>    
+                <?php echo '<p class="lead-footer" align="center">'.$this->session->flashdata('login_failed'). '</p>'; ?>
+            <?php endif; ?>
 
                       </form>
                     </div>
