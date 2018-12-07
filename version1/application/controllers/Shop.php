@@ -4,11 +4,14 @@
             parent::__construct();
             $this->load->library('session');
             $this->load->model('Shop_model');
+            $this->load->model('Tanza_model');
         }
 
         function index(){
             $data['title'] = "Karibu kwenye mfumo";
-
+            $data['role'] = $this->Tanza_model->get_role();
+            $data['name'] = $this->Tanza_model->get_name();
+            
             $this->load->view('shop/header');
 			$this->load->view('shop/index', $data);
 			$this->load->view('shop/footer');
@@ -336,5 +339,125 @@
 			$this->load->view('shop/header');
 			$this->load->view('shop/shop_jobdesc_view', $data);
 			$this->load->view('shop/footer');
+        }
+        
+        public function service(){
+
+            $data['title'] = "Add the servces you offer";
+
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('service_name', 'Service Name', 'required');
+			$this->form_validation->set_rules('description', 'Service Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+
+                $this->load->view('shop/header');
+                $this->load->view('shop/service', $data);
+                $this->load->view('shop/footer');
+			}else{
+				$data = array(
+					'service_name'=>$this->input->post('service_name'),
+					'description' => $this->input->post('description'),
+            		'user_id' =>$this->session->userdata('user_id')
+				);
+
+				if($this->session->userdata('user_id') === NULL){
+				redirect('users/login');
+				}else{
+					$this->Register_model->set_service($data);
+					$this->session->set_flashdata('phamarcy_service', 'Services you offer has been set');
+
+					redirect('Shop/view_service');
+				}
+			}
+
+           
+        }
+
+            //function to view services
+            public function view_service(){
+                        
+                $data['title'] = "This is your registered service u offer";
+                $data['Services'] = $this->Register_model->get_services();
+
+                $this->load->view('shop/header');
+                $this->load->view('shop/vservices', $data);
+                $this->load->view('shop/footer'); 
+            }  
+
+            public function edit_service(){
+                $id = $this->uri->segment(3);
+                $data['title'] = "Edit the service";			
+                $data['edit'] = $this->Register_model->get_service_id($id);
+    
+                $this->load->library('form_validation');
+                $this->form_validation->set_rules('service_name', 'Service Name', 'required');
+                $this->form_validation->set_rules('description', 'Service Description', 'required');
+    
+                if($this->form_validation->run()===FALSE){
+    
+                $this->load->view('shop/header');
+                $this->load->view('shop/editservices', $data);
+                $this->load->view('shop/footer');
+                }else{
+                    $data = array(
+                        'service_name'=>$this->input->post('service_name'),
+                        'description' => $this->input->post('description'),
+                        'user_id' =>$this->session->userdata('user_id')
+                    );
+    
+                    if($this->session->userdata('user_id') === NULL){
+                    redirect('Users/login');
+                    }else{
+                        $this->Register_model->update_service($data, $id);
+                        $this->session->set_flashdata('doctor_service', 'Services you offer has been set');
+    
+                        redirect('Shop/view_service');
+                    }
+                }
+    
+            }
+
+            //Update service
+		public function dr_update_service(){
+			$data['title'] = "Update the service";
+			$id= $this->input->post('id');
+			$data['event'] = $this->Register_model->get_service_id($id);
+
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('service_name', 'Service Name', 'required');
+			$this->form_validation->set_rules('description', 'Service Description', 'required');
+
+			if($this->form_validation->run()===FALSE){
+
+			$this->load->view('shop/header');
+			$this->load->view('shop/editservices', $data);
+			$this->load->view('shop/footer');
+			}else{
+				$data = array(
+					'service_name'=>$this->input->post('service_name'),
+					'description' => $this->input->post('description'),
+            		'user_id' =>$this->session->userdata('user_id')
+				);
+
+				if($this->session->userdata('user_id') === NULL){
+				redirect('Users/login');
+				}else{
+					$this->Register_model->dr_service_update($data, $id);
+					$this->session->set_flashdata('updated_service', 'Service has been update successfully');
+
+					redirect('Shop/view_service');
+				}
+			}
+
+        }
+        
+        public function delete($id){
+			$id = $this->uri->segment(3);
+			$this->Register_model->delete_service_id($id);
+
+			$this->session->set_flashdata('service_delete', 'The service has been deleted');
+			redirect('Shop/view_service');
 		}
-    }
+
+}
