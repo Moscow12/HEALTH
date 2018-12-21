@@ -262,33 +262,68 @@
 		public function event(){
 			$data['title'] = "Post your Event vacation";
 
-			$this->load->library('form_validation');
+			
+				$this->load->view('use/header');
+				$this->load->view('use/dr_event',$data);
+				$this->load->view('use/footer');
+			
+				}
+
+			public function do_upload(){
+				$data['title'] = "Post your Event vacation";
+
+
+				$this->load->library('form_validation');
 
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('description', 'Description', 'required');
 			$this->form_validation->set_rules('location', 'Location', 'required');
-			$this->form_validation->set_rules('photo', 'Photo', 'required');
+			//$this->form_validation->set_rules('photo', 'Photo', 'required');
 
-			if($this->form_validation->run()===FALSE ){
+if($this->form_validation->run()===FALSE ){
 				$this->load->view('use/header');
 				$this->load->view('use/dr_event', $data);
 				$this->load->view('use/footer');
 			}else{
-				$data = array(
+
+
+		$config['upload_path'] = './uploads';
+        $config["allowed_types"] = 'jpg|jpeg|png|gif';
+        $config["max_size"] = "10244";
+        $config["max_width"] = "4000";
+        $config["max_height"] = "4000";
+       $this->load->library('upload', $config);
+        if($this->upload->do_upload('photo')) {               
+          
+          //  succeess
+
+        } else {
+             $error['error'] =  $this->upload->display_errors();
+             $this->load->view('error',$error);
+                                              
+        }
+
+
+				//file uploading ends
+
+            
+            $data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
-					'photo' => $this->input->post('photo'),
+					'photo' => $_FILES['photo']['name'],
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
-				
+
+			
 					$this->Register_model->dr_event($data);
 					$this->session->set_flashdata('doctor_events', 'You have shared your event');
 					redirect('Register/vevent');
-				}
+			}
 
-		}
+
+}
 
 		//function to view the event doctor posted 
 		public function vevent(){
