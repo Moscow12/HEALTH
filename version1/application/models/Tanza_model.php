@@ -34,7 +34,8 @@
 			$this->db->where('id', $id);
 			$query = $this->db->get('service');
 			return $query->result_array();
-		}
+        }
+        
 
         public function get_articles(){
             $this->db->select('title, description, date, name');
@@ -46,30 +47,23 @@
         }
 
         public function get_hospitals(){
-            $this->db->select('name, email, address, region');
-            $this->db->from('users');
-            $this->db->join('hospital', 'users.id= hospital.user_id', 'inner');
+           # $this->db->select('name, email, address, region');
+            #$this->db->from('users');
+            #$this->db->join('hospital', 'users.id= hospital.user_id', 'inner');
             $this->db->where('role_id = 5');
 
-            $query = $this->db->get();
+            $query = $this->db->get('users');
 			return $query->result_array();
         }
 
         // public function get_schools(){
-            
-        //     $query = $this->db->get('school');
+        //     $this->db->select('name, email');
+        //     $this->db->from('users');
+        //     $this->db->where('role_id = 3');
+
+        //     $query = $this->db->get();
 		// 	return $query->result_array();
         // }
-
-        public function get_schools(){
-            $this->db->select('name, email');
-            $this->db->from('users');
-            // $this->db->join('school', 'users.id= school.user_id', 'inner');
-            $this->db->where('role_id = 3');
-
-            $query = $this->db->get();
-			return $query->result_array();
-        }
 
         public function get_job(){
             $this->db->select('title, description, jlocation, posted_at, salary, name, job_function');
@@ -98,12 +92,43 @@
 			return $query->result_array(); 
         }
 
-        public function get_name(){
+        public function get_name(){ 
             $user = $this->session->userdata('user_id');
             $this->db->select('*');
             $this->db->from('users');
             $this->db->where('id', $user);
 
+            $query = $this->db->get();
+			return $query->result_array();
+        }
+
+        public function get_shops(){
+            $this->db->where('role_id=4');
+            $query = $this->db->get('users');
+			return $query->result_array();
+        }
+
+        public function get_schools(){
+
+            $this->db->where('role_id=3');
+            $query = $this->db->get('users');
+			return $query->result_array();
+        }
+
+        public function get_dept($id){
+            $this->db->select('*');
+            $this->db->from('hosp_profile_view');
+            $this->db->join('service', 'service.user_id = hosp_profile_view.id', 'inner');
+            $this->db->where('id', $id);
+            $query = $this->db->get();
+			return $query->result_array();
+        }
+
+        public function get_services($id){
+            $this->db->select('*');
+            $this->db->from('hosp_profile_view hp');
+            $this->db->join('service', ' hp.id = service.user_id ', 'inner');
+            $this->db->where('hp.id', $id);
             $query = $this->db->get();
 			return $query->result_array();
         }
