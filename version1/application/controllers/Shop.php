@@ -161,7 +161,8 @@
                 'item' => $this->input->post('item'),
                 'measuments' => $this->input->post('measuments'),
                 'quantity' => $this->input->post('quantity'),
-                'price' => $this->input->post('price'),               
+                'price' => $this->input->post('price'),     
+                'picture' =>$this->input->post('picture'),           
                 'shop_id' => $this->session->userdata('user_id')
                 
             );
@@ -214,7 +215,8 @@
                     'item' => $this->input->post('item'),
                     'measuments' => $this->input->post('measuments'),
                     'quantity' => $this->input->post('quantity'),
-                    'price' => $this->input->post('price'),               
+                    'price' => $this->input->post('price'),   
+                    'picture' =>$this->input->post('picture'),             
                     'shop_id' => $this->session->userdata('user_id')
                     
                 );
@@ -252,7 +254,8 @@
                 'item' => $this->input->post('item'),
                 'measuments' => $this->input->post('measuments'),
                 'quantity' => $this->input->post('quantity'),
-                'price' => $this->input->post('price'),               
+                'price' => $this->input->post('price'), 
+                'picture' =>$this->input->post('picture'),              
                 'shop_id' => $this->session->userdata('user_id')
                 
             );
