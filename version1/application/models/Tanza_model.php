@@ -132,4 +132,17 @@
             $query = $this->db->get();
 			return $query->result_array();
         }
+
+        public function get_products(){
+            $this->db->select('item, measuments, quantity, address, shop_phone, price ');
+            $this->db->from('product');
+            $this->db->join('shop', 'shop.id = product.shop_id', 'inner');            
+            $query = $this->db->get();
+			return $query->result_array();
+        }
+        public function get_product(){
+           #>join('product', 'shop.id = product.shop_id', 'inner');            
+            $query = $this->db->get('product');
+			return $query->result_array();
+        }
     }
