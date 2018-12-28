@@ -45,7 +45,7 @@
             $data['title'] = "Registered hospitals";
 
             $data['hospitals'] = $this->Tanza_model->get_hospitals();
-            $this->load->view('web/header');
+            $this->load->view('web/header'); 
             $this->load->view('web/hospitals', $data);
             $this->load->view('web/footer');
         }
@@ -69,7 +69,7 @@
         }
 
         public function events(){
-            $data['title'] = "Events Posted ";
+            $data['title'] = "Events";
             $data['events'] = $this->Tanza_model->get_events();
 
             $this->load->view('web/header');
@@ -111,10 +111,42 @@
 
         public function school(){
 
-            $data['title'] = "MY school";
+            $data['title'] = "Schools that offer medical services";
+            $data['schools'] = $this->Tanza_model->get_schools();
+
 
             $this->load->view('web/header');
             $this->load->view('web/school', $data);
+            $this->load->view('web/footer');
+        }
+
+        public function shop(){
+            $data['title'] = "GET MEDICAL TOOLS AND DRUGS FROM OUR PHARMACY";
+            $data['shops'] = $this->Tanza_model->get_shops();
+
+            $this->load->view('web/header');
+            $this->load->view('web/shop', $data);
+            $this->load->view('web/footer');
+        }
+
+        public function hospital_prof(){
+            $id = $this->uri->segment(3);
+            $data['title'] = "Hospital general view";
+            $data['service'] = $this->Tanza_model->get_services($id);
+            $data['hospitals'] = $this->Tanza_model->get_hospitals($id);
+            $data['dept'] = $this->Tanza_model->get_dept($id);
+
+            $this->load->view('web/header');
+            $this->load->view('web/hospital_prof', $data);
+            $this->load->view('web/footer');
+        }
+
+        public function products(){
+            $data['title'] = "View the available medical products on our shops and pharmacy";
+            $data['products'] = $this->Tanza_model->get_product();
+
+            $this->load->view('web/header');
+            $this->load->view('web/products', $data);
             $this->load->view('web/footer');
         }
     }
