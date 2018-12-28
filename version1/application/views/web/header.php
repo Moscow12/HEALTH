@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>TANZA Health here</title>
+  <title>TANZA Health</title>
 
   <!-- css -->
   
@@ -20,7 +20,7 @@
   <link href="<?=base_url();?>assets/css/owl.theme.css" rel="stylesheet" media="screen" />
   <link href="<?=base_url();?>assets/css/animate.css" rel="stylesheet" />
   <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet">
-  <link href="<?=base_url();?>assets/css/mine.css" rel="stylesheet" >
+  <link href="<?=base_url();?>star/css/mine.css" rel="stylesheet" >
 
 
   <!-- boxed bg -->
@@ -76,16 +76,10 @@
           <ul class="nav navbar-nav">
           <li class="active"><a href="<?=base_url();?>">Home</a></li>
             <li><a href="<?=base_url();?>index.php/Tanza/doctors">Doctors</a></li>
-            <li class="dropdown">
-              <a href="#services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="<?=base_url();?>index.php/Tanza/hospitals">Hospitals</a></li>
-                <li><a href="<?=base_url();?>index.php/Tanza/schools">Medical Schools</a></li>
-                <li><a href="#">Medical Tools</a></li>
-                <li><a href="#">Emergance</a></li>
-              </ul>
-            </li>            
-            <!-- <li><a href="#pricing">Pricing</a></li> -->
+            <li><a href="<?=base_url();?>index.php/Tanza/hospitals">Hospitals</a></li>
+            <li><a href="<?=base_url();?>index.php/Tanza/products">Medical tools</a></li>
+            <li><a href="<?=base_url();?>index.php/Tanza/school">Medical schools</a></li>
+           
             <li class="dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -94,16 +88,7 @@
                   <li><a href="<?=base_url();?>index.php/Tanza/job">Job Opportunities</a></li>
                 </ul>
               </li>
-              <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="index.html">Home CTA</a></li>
-                <li><a href="index-form.html">Home Form</a></li>
-                <li><a href="index-video.html">Home video</a></li>
-              </ul>
-            </li> -->
-            <li><a href="<?=base_url();?>index.php/Tanza/school">About</a></li>
-            <li><a href="">Contact</a></li>
+             
             
           </ul>
         </div>

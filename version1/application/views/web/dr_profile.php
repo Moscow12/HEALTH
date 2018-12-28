@@ -1,11 +1,11 @@
 
 <br><br><br><br><br><br><br>
-<div class="container" id="profile">
+<div class="container" id="profile" >
   <div class="row">
       <div class="col-md-12">
               <div class="col-md-3">
                 <div class="thumbnail">
-                  <a href="<?=base_url();?>assets/img/dummy/img-1.png"></a><img src="<?=base_url();?>assets/img/dummy/img-1.png" alt=""></a>
+                  <a href="<?=base_url();?>assets/img/dummy/mesh.jpg"></a><img src="<?=base_url();?>assets/img/dummy/mesh.jpg" alt=""></a>
                   <div class="caption">
                   <?php foreach($prof as $profile){?>           
                    <p class="col-md-2">Dr.</p><?php echo $profile['name'];?>                    
@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="form-group">                         
                           <div class="col-md-6">
-                            <h3>Services I offer</h3>
+                            <h3>Services offered</h3>
                             <div class="list-group">
                               <?php foreach($services as $service){?>
                                 <button class="list-group"><?php echo $service['service_name'];?> </button>

@@ -7,9 +7,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>TANZA Health here</title>
+  <title>TANZA Health</title>
 
   <!-- css -->
+  
   <link href="<?=base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url();?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link rel="<?=base_url();?>assets/stylesheet" type="text/css" href="<?=base_url();?>assets/plugins/cubeportfolio/css/cubeportfolio.min.css">
@@ -19,7 +20,8 @@
   <link href="<?=base_url();?>assets/css/owl.theme.css" rel="stylesheet" media="screen" />
   <link href="<?=base_url();?>assets/css/animate.css" rel="stylesheet" />
   <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="<?=base_url();?>assets/css/mine.css" >
+  <link href="<?=base_url();?>assets/css/mine.css" rel="stylesheet" >
+
 
   <!-- boxed bg -->
   <link id="bodybg" href="<?=base_url();?>assets/bodybg/bg1.css" rel="stylesheet" type="text/css" />
@@ -43,16 +45,16 @@
       <div class="top-area">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 col-md-3">
+                <div class="col-xsl-3 col-sm-3 col-md-3">
                   <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
                 </div>
-                <div class="col-sm-3 col-md-3">
+                <div class="col-xsl-3 col-sm-3 col-md-3">
                   <a href="<?=base_url();?>index.php/Tanza/appointment" class="btn btn-skin btn-md">Make an Appointment</a>
                 </div>
-                <div class="col-sm-3 col-md-3">
+                <div class="col-xsl-3 col-sm-3 col-md-3">
                   <span><a href="<?=base_url();?>index.php/Users/login" data-toggle="modal2" data-target="#Login" class="btn btn-skin btn-sm" style="color: red">Login</a><a href="<?=base_url();?>index.php/Users/registration" class="btn btn-skin btn-sm">register</a></span>
                 </div>
-                <div class="col-sm-3 col-md-3">
+                <div class="col-xsl-3 col-sm-3 col-md-3">
                     <p class="bold text-right" href="index-form.html">Call us now +255 7542 89493</p>
                   </div>
               </div>
@@ -72,9 +74,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="<?=base_url();?>">Home</a></li>
+          <li class="active"><a href="<?=base_url();?>">Home</a></li>
             <li><a href="<?=base_url();?>index.php/Tanza/doctors">Doctors</a></li>
-            <li class="dropdown">
+            <li><a href="<?=base_url();?>index.php/Tanza/hospitals">Hospitals</a></li>
+            <li><a href="<?=base_url();?>index.php/Tanza/shop">Medical tools</a></li>
+            <li><a href="<?=base_url();?>index.php/Tanza/school">Medical schools</a></li>
+            <!-- <li class="dropdown">
               <a href="#services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="<?=base_url();?>index.php/Tanza/hospitals">Hospitals</a></li>
@@ -82,7 +87,7 @@
                 <li><a href="#">Medical Tools</a></li>
                 <li><a href="#">Emergance</a></li>
               </ul>
-            </li>            
+            </li>             -->
             <!-- <li><a href="#pricing">Pricing</a></li> -->
             <li class="dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
@@ -100,8 +105,8 @@
                 <li><a href="index-video.html">Home video</a></li>
               </ul>
             </li> -->
-            <li><a href="<?=base_url();?>index.php/Tanza/school">About</a></li>
-            <li><a href="">Contact</a></li>
+            <!-- <li><a href="<?=base_url();?>index.php/Tanza/school">About</a></li>
+            <li><a href="">Contact</a></li> -->
             
           </ul>
         </div>
@@ -109,6 +114,7 @@
       </div>
       <!-- /.container -->
     </nav>
+
 
     <!-- Section: intro -->
     <section id="intro" class="intro">
@@ -219,8 +225,8 @@
                 <ins class="ab zmin sprite sprite-i-triangle block"></ins>
               </div>
               <div class="person-text rel text-light">
-                <img src="<?=base_url();?>assets/img/testimonials/5.jpg" alt="" class="person img-circle" />
-                <a title="" href="#">Ella Mentree</a>
+                <img src="<?=base_url();?>assets/img/dummy/jengo.jpg" alt="" class="person img-circle" />
+                <a title="" href="#">Millenium Tower</a>
                 <span>Fort Worth, Texas</span>
               </div>
             </div>
