@@ -149,6 +149,8 @@
         $this->form_validation->set_rules('measuments', 'measuments', 'required');
         $this->form_validation->set_rules('quantity', 'quantity', 'required');
         $this->form_validation->set_rules('price', 'price', 'required');
+        $this->form_validation->set_rules('picture', 'picture', 'required');
+
       
 
         if($this->form_validation->run()===FALSE){
