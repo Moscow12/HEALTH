@@ -11,7 +11,7 @@
 
   <!-- css -->
   
-  <link href="<?=base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="<?=base_url();?>assets/css/bootstrap.mine.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url();?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link rel="<?=base_url();?>assets/stylesheet" type="text/css" href="<?=base_url();?>assets/plugins/cubeportfolio/css/cubeportfolio.min.css">
   <link href="<?=base_url();?>assets/css/nivo-lightbox.css" rel="stylesheet" />
@@ -21,6 +21,8 @@
   <link href="<?=base_url();?>assets/css/animate.css" rel="stylesheet" />
   <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet">
   <link href="<?=base_url();?>assets/css/mine.css" rel="stylesheet" >
+  <link href="<?=base_url();?>star/css/mine.css" rel="stylesheet" >
+
 
 
   <!-- boxed bg -->
@@ -78,17 +80,7 @@
             <li><a href="<?=base_url();?>index.php/Tanza/doctors">Doctors</a></li>
             <li><a href="<?=base_url();?>index.php/Tanza/hospitals">Hospitals</a></li>
             <li><a href="<?=base_url();?>index.php/Tanza/shop">Medical tools</a></li>
-            <li><a href="<?=base_url();?>index.php/Tanza/school">Medical schools</a></li>
-            <!-- <li class="dropdown">
-              <a href="#services" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="<?=base_url();?>index.php/Tanza/hospitals">Hospitals</a></li>
-                <li><a href="<?=base_url();?>index.php/Tanza/schools">Medical Schools</a></li>
-                <li><a href="#">Medical Tools</a></li>
-                <li><a href="#">Emergance</a></li>
-              </ul>
-            </li>             -->
-            <!-- <li><a href="#pricing">Pricing</a></li> -->
+            <li><a href="<?=base_url();?>index.php/Tanza/school">Medical schools</a></li>           
             <li class="dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -96,18 +88,8 @@
                   <li><a href="<?=base_url();?>index.php/Tanza/articles">Articles</a></li>
                   <li><a href="<?=base_url();?>index.php/Tanza/job">Job Opportunities</a></li>
                 </ul>
-              </li>
-              <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="index.html">Home CTA</a></li>
-                <li><a href="index-form.html">Home Form</a></li>
-                <li><a href="index-video.html">Home video</a></li>
-              </ul>
-            </li> -->
-            <!-- <li><a href="<?=base_url();?>index.php/Tanza/school">About</a></li>
-            <li><a href="">Contact</a></li> -->
-            
+            </li>
+            <li><a href="<?=base_url();?>index.php/Tanza/contact">Contact us</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -120,145 +102,119 @@
     <section id="intro" class="intro">
       <div class="intro-content">
         <div class="container">
-          <div class="row">
-            <!-- <div class="col-lg-6">
-              <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-               <h2 class="h-ultra">TANZA Health medical group <small>VIEW OUR SERVICES</small></h2>
-              </div>
-              <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-                <h4 class="h-light">Provide best quality healthcare for you</h4>
-              </div> 
-              <div class="well well-trans">
-                <div class="wow fadeInRight" data-wow-delay="0.1s">
+          <div class="row">            
+              <div class="carousel-reviews broun-block">
+                <div class="container">
+                  <div class="row">
+                    <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
 
-                  <ul class="lead-list">
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite hospital</strong><br />On the pricing menu Choose the package you can <br/></span><span class="list"><a href="#"><u>hospital</u></a></span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br />Consern with you problem choose the doctor <br/></span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical Schools</strong><br />View various collage and institution which offer medical course </span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Vifaa tiba na madawa</strong><br />Chagua duka la dawa na vifaa tiba</span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical events and articles</strong><br />Medical events and article posted by proffesionals</span></li>
+                      <div class="carousel-inner">
+                        <div class="item active">
+                        
+                          <div class="col-lg-6">
+                            <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
+                            <h2 class="h-ultra">TANZA Health medical group <small>VIEW OUR SERVICES</small></h2>
+                            </div>
+                          
+                            <div class="well well-trans">
+                              <div class="wow fadeInRight" data-wow-delay="0.1s">
 
-                  </ul>
-                  <p class="text-right wow bounceIn" data-wow-delay="0.4s">
-                    <a href="#" class="btn btn-skin btn-lg">Learn more <i class="fa fa-angle-right"></i></a>
-                  </p>
-                </div>
-              </div>
+                                <ul class="lead-list">
+                                  <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite hospital</strong><br />On the pricing menu Choose the package you can <br/></span><span class="list"><a href="#"><u>hospital</u></a></span></li>
+                                  <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br />Consern with you problem choose the doctor <br/></span></li>
+                                  <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical Schools</strong><br />View various collage and institution which offer medical course </span></li>
+                                  <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Vifaa tiba na madawa</strong><br />Chagua duka la dawa na vifaa tiba</span></li>
+                                  <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical events and articles</strong><br />Medical events and article posted by proffesionals</span></li>
 
-
-            </div> -->
-            <!-- <div class="col-lg-6">
-              <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                <img src="<?=base_url();?>assets/img/dummy/img-1.png" class="img-responsive" alt="" />
-              </div>
-            </div> -->
-            
-<div class="carousel-reviews broun-block">
-  <div class="container">
-    <div class="row">
-      <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-
-        <div class="carousel-inner">
-          <div class="item active">
-           
-            <div class="col-lg-6">
-              <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-               <h2 class="h-ultra">TANZA Health medical group <small>VIEW OUR SERVICES</small></h2>
-              </div>
-             
-              <div class="well well-trans">
-                <div class="wow fadeInRight" data-wow-delay="0.1s">
-
-                  <ul class="lead-list">
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite hospital</strong><br />On the pricing menu Choose the package you can <br/></span><span class="list"><a href="#"><u>hospital</u></a></span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br />Consern with you problem choose the doctor <br/></span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical Schools</strong><br />View various collage and institution which offer medical course </span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Vifaa tiba na madawa</strong><br />Chagua duka la dawa na vifaa tiba</span></li>
-                    <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Medical events and articles</strong><br />Medical events and article posted by proffesionals</span></li>
-
-                  </ul>
-                  <p class="text-right wow bounceIn" data-wow-delay="0.4s">
-                    <a href="#" class="btn btn-skin btn-lg">Learn more <i class="fa fa-angle-right"></i></a>
-                  </p>
-                </div>
-              </div>
+                                </ul>
+                                <p class="text-right wow bounceIn" data-wow-delay="0.4s">
+                                  <a href="#" class="btn btn-skin btn-lg">Learn more <i class="fa fa-angle-right"></i></a>
+                                </p>
+                              </div>
+                            </div>
 
 
-            </div>
-            <div class="col-lg-6">
-              <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                <img src="<?=base_url();?>assets/img/dummy/img-1.png" class="img-responsive" alt="" />
-              </div>
-            </div>
-          </div>
-          <!-- <div class="item">
-              <div class="row">
-                  <div class="col-md-12" id="mesh">
-                    <img src="<?=base_url();?>assets/img/dummy/mesh.jpg" width="40%" height="30%" class="i2mg-responsive" alt="" />
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                              <img src="<?=base_url();?>assets/img/dummy/img-1.png" class="img-responsive" alt="" />
+                            </div>
+                          </div>
+                        </div>                        
+                        <div class="item">
+                          <div class="col-md-4 col-sm-6">
+                            <div class="block-text rel zmin">
+                              <a title="" href="#">Birth control pills</a>
+                              <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
+                                  class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
+                              </div>
+                              <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+                              <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                            </div>
+                            <div class="person-text rel text-light">
+                              <img src="<?=base_url();?>assets/img/dummy/mesh.jpg" alt="" class="person img-circle" />
+                              <a title="" href="#">Lucas Thompson</a>
+                              <span>Austin, Texas</span>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 hidden-xs">
+                            <div class="block-text rel zmin">
+                              <a title="" href="#">Radiology</a>
+                              <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span>
+                                <span
+                                  data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
+                              </div>
+                              <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+                              <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                            </div>
+                            <div class="person-text rel text-light">
+                              <img src="<?=base_url();?>assets/img/dummy/jengo.jpg" alt="" class="person img-circle" />
+                              <a title="" href="#">Millenium Tower</a>
+                              <span>Fort Worth, Texas</span>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
+                            <div class="block-text rel zmin">
+                              <a title="" href="#">Cervical Lesions</a>
+                              <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
+                                  class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
+                              </div>
+                              <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+                              <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                            </div>
+                            <div class="person-text rel text-light">
+                              <img src="<?=base_url();?>assets/img/testimonials/6.jpg" alt="" class="person img-circle" />
+                              <a title="" href="#">Suzanne Adam</a>
+                              <span>Detroit, Michigan</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="col-lg-6">
+                            <p class="jumbotron">
+                              Get your health online in a simple way and affordable price by using our site. <br>
+                               click, view, get updated with our daily news
+                            </p>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                              <img src="<?=base_url();?>assets/img/photo/5.jpg" class="img-responsive" alt="" />
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                      <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
                   </div>
-              </div>
-          </div> -->
-          <div class="item">
-            <div class="col-md-4 col-sm-6">
-              <div class="block-text rel zmin">
-                <a title="" href="#">Birth control pills</a>
-                <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                    class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
                 </div>
-                <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
               </div>
-              <div class="person-text rel text-light">
-                <img src="<?=base_url();?>assets/img/dummy/mesh.jpg" alt="" class="person img-circle" />
-                <a title="" href="#">Lucas Thompson</a>
-                <span>Austin, Texas</span>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 hidden-xs">
-              <div class="block-text rel zmin">
-                <a title="" href="#">Radiology</a>
-                <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span>
-                  <span
-                    data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                </div>
-                <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-              </div>
-              <div class="person-text rel text-light">
-                <img src="<?=base_url();?>assets/img/dummy/jengo.jpg" alt="" class="person img-circle" />
-                <a title="" href="#">Millenium Tower</a>
-                <span>Fort Worth, Texas</span>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-              <div class="block-text rel zmin">
-                <a title="" href="#">Cervical Lesions</a>
-                <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                    class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
-                </div>
-                <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-              </div>
-              <div class="person-text rel text-light">
-                <img src="<?=base_url();?>assets/img/testimonials/6.jpg" alt="" class="person img-circle" />
-                <a title="" href="#">Suzanne Adam</a>
-                <span>Detroit, Michigan</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-        <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-      </div>
-    </div>
-  </div>
-</div>
           </div>
         </div>
       </div>
@@ -325,13 +281,13 @@
     <!-- /Section: boxes -->
 
 
-    <section id="callaction" class="home-section paddingtop-40">
+    <section id="callaction" class="home-section paddingtop-20">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-sm-12 col-md-12 ">
             <div class="callaction bg-gray">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-sm-8 col-md-8">
                   <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <div class="cta-text">
                       <h3>In an emergency? Need help now?</h3>
@@ -339,7 +295,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4 col-md-4">
                   <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                     <div class="cta-btn">
                       <a href="<?=base_url();?>index.php/Tanza/appointment" class="btn btn-skin btn-lg">Book an appoinment</a>
@@ -372,100 +328,10 @@
       </div>
 
       <div class="container">
-         <!--<div class="row">
-          <div class="col-lg-12">
-
-            <div id="filters-container" class="cbp-l-filters-alignLeft">
-              <?php foreach($dept as $deptment){?>
-              <div class="col-sm-2"><button class="btn-default"><?php echo $deptment['dept_name'];?></button></div>
-              <?php }?>
-
-              <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist (
-                <div class="cbp-filter-counter"></div>)</div>
-              <div data-filter=".neurologist" class="cbp-filter-item">Neurologist (
-                <div class="cbp-filter-counter"></div>)</div>
-            </div>
-
-            <div id="grid-container" class="cbp-l-grid-team">
-              <ul>
-                <li class="cbp-item psychiatrist">
-                  <a href="<?=base_url();?>assets/doctors/member1.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="<?=base_url();?>assets/img/team/1.jpg" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="<?=base_url();?>assets/doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
-                  <div class="cbp-l-grid-team-position">Psychiatrist</div>
-                </li>
-                <li class="cbp-item cardiologist">
-                  <a href="<?=base_url();?>assets/doctors/member2.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="<?=base_url();?>assets/img/team/2.jpg" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="<?=base_url();?>assets/doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
-                  <div class="cbp-l-grid-team-position">Cardiologist</div>
-                </li>
-                <li class="cbp-item cardiologist">
-                  <a href="<?=base_url();?>assets/doctors/member3.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="<?=base_url();?>assets/img/team/3.jpg" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="<?=base_url();?>assets/doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
-                  <div class="cbp-l-grid-team-position">Cardiologist</div>
-                </li>
-                <li class="cbp-item neurologist">
-                  <a href="<?=base_url();?>assets/doctors/member4.html" class="cbp-caption cbp-singlePage">
-                    <div class="cbp-caption-defaultWrap">
-                      <img src="<?=base_url();?>assets/img/team/4.jpg" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                      <div class="cbp-l-caption-alignCenter">
-                        <div class="cbp-l-caption-body">
-                          <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="<?=base_url();?>assets/doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
-                  <div class="cbp-l-grid-team-position">Neurologist</div>
-                </li>
-
-              </ul>
-            </div> -->
-           
-
             <div class="row">
-                <div class="col-md-12">
-                    
+                <div class="col-sm-12 col-md-12">                    
                         <?php foreach($doctor as $doctors){?>
-                            <div class="col-md-3">
+                            <div class="col-sm-3 col-md-3">
                                 <div class="thumbnail">
                                     <a href="<?=base_url();?>assets/img/dummy/img-1.png"><img src="<?=base_url();?>assets/img/dummy/img-1.png" alt=""></a>
                                     <div class="caption">
@@ -473,18 +339,15 @@
                                         <strong>Professional:</strong> <?php echo $doctors['professional'];?><br>
                                         <!-- Email:<?php echo $doctors['email'];?><br> -->
                                        <!-- <strong>Phone #:</strong>  <?php echo $doctors['phone'];?><br>--><a href="<?=base_url();?>index.php/Tanza/dr_profile/<?php echo $doctors['id'];?>"class="btn btn-info">View profile</a> 
-                                    </div>
-                                    
-                                </div>
-                                
-                                
+                                    </div>                                    
+                                </div> 
                             </div>
                         <?php }?>
                    
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 offset-md-4">
+                <div class="col-sm-4 col-md-4 offset-md-4">
                      <nav>
                             <ul class="pagination">
                                 <li class="page-item disabled">
@@ -510,7 +373,7 @@
 
       <div class="container">
       <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
+          <div class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="section-heading text-center">
                 <h2 class="h-bold">Services</h2>
@@ -630,8 +493,8 @@
           <div class="col-lg-8 col-lg-offset-2">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="section-heading text-center">
-                <h2 class="h-bold">Our facilities</h2>
-                <p>Look for our facilities used to give the services</p>
+                <h2 class="h-bold">Contact us</h2>
+                <!-- <p>Look for our facilities used to give the services</p> -->
               </div>
             </div>
             <div class="divider-short"></div>
@@ -644,11 +507,99 @@
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="wow bounceInUp" data-wow-delay="0.2s">
               <div id="owl-works" class="owl-carousel">
-                <?php foreach($events as $event){?>
-                    <div class="table-list-hover">
-                      <?php echo $event['title'];?>
+              <div class="container" style="background-color: #da4;">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-sm-6 col-md-6 col-lg-6"style="background-color: #bc4;">
+                            <h4>If you have any query don't hustate to ask. Contact with us via.</h4>
+                            <div class="unstyled-list">
+                            <div class="wow fadeInDown" data-wow-delay="0.1s">
+                          <div class="widget">                
+                            <ul>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-location-arrow fa-stack-1x fa-inverse"></i>
+                                    </span> Address: Buni innovation Hub.
+                                </li>
+                              <li>
+                                    <span class="fa-stack fa-lg">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                        </span> Phone: +255 754289003
+                              </li>
+                              <li>
+                                    <span class="fa-stack fa-lg">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                        </span> Email: tanzahealth@gmail.com
+                              </li>
+                              <li>
+                                    <span class="fa-stack fa-lg">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-money fa-stack-1x fa-inverse"></i>
+                        </span> Fax: 222(255) 754289003.
+                              </li>
+
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                <?php }?>
+                        
+                            <div class="col-sm-6 col-md-6 col-lg-6" ><?php echo form_open('Tanza/contact'); ?>                
+                                <h4><?php echo $title;?></h4>
+                                <p>Let us know your objections and general view from our site performances, <br> contents outlooks, doctors perfoance form our site 
+                                and any othe query if is there  fill the boxes bellow don't fear it's confidential.</p>
+                                <div class="wow fadeInDown" data-wow-delay="0.1s">
+                                <div style="color:red;"><?php echo validation_errors(); ?></div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">                   
+                                            <input type="text" class="form-control" name="name" placeholder="Enter Your Full name">
+                                        </div>                       
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">                   
+                                            <input type="email" class="form-control" name="email" placeholder="Enter Your email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">                   
+                                            <input type="text" class="form-control" name="subject" placeholder="Enter subject">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">                   
+                                            <input type="tel" class="form-control" name="phone" placeholder="Enter Your phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">  
+                                            <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Enter your message"></textarea>                 
+                                        </div>
+                                    </div>                    
+                                </div>                    
+                                <div class="form-group">
+                                    <div class="col-sm-3 col-md-3 col-lg-3 col-offset-3">
+                                        <button class="btn btn-info" value="submit">Send Message</button>
+                                    </div> 
+                                </div>                    
+                            </div>  
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+                <!-- <?php #foreach($events as $event){?>
+                    <div class="table-list-hover">
+                      <?php #echo $event['title'];?>
+                    </div>
+                <?#php }?> -->
                 
                 <!-- <div class="item"><a href="<?=base_url();?>assets/img/photo/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/1@2x.jpg"><img src="<?=base_url();?>assets/img/photo/1.jpg" class="img-responsive" alt="img"></a></div>
                 <div class="item"><a href="<?=base_url();?>assets/img/photo/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="<?=base_url();?>assets/img/works/2@2x.jpg"><img src="<?=base_url();?>assets/img/photo/2.jpg" class="img-responsive " alt="img"></a></div>
