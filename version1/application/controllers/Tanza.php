@@ -104,9 +104,6 @@
             
             }
 
-            $this->load->view('web/header');
-            $this->load->view('web/appointment', $data);
-            $this->load->view('web/footer');
         }
 
         public function school(){
@@ -148,5 +145,65 @@
             $this->load->view('web/header');
             $this->load->view('web/products', $data);
             $this->load->view('web/footer');
+        }
+
+        public function contact_us(){
+            $data['title'] = "Leave your comment Here!";
+            $data['services']= $this->Welcome_model->get_services();
+            $data['dept'] = $this->Register_model->get_dept();
+            $data['events'] = $this->Welcome_model->get_events();
+            $data['doctor']= $this->Tanza_model->get_doctors();
+
+            $this->load->library('form_validation');
+
+			$this->form_validation->set_rules('name', 'Full name', 'required');
+			$this->form_validation->set_rules('email', 'Your Email', 'required');
+			$this->form_validation->set_rules('phone', 'Phone Number', 'required');
+            $this->form_validation->set_rules('subject', 'Subjects', 'required');
+            $this->form_validation->set_rules('message', 'Your Message ', 'required');
+
+            if($this->form_validation->run()===FALSE){
+                $this->load->view('index2', $data);
+                // $this->load->view('web/header');
+                // $this->load->view('web/message', $data);
+                // $this->load->view('web/footer');
+            }else{
+                $data = array(
+                    'name'=>$this->input->post('name'),
+                    'email'=>$this->input->post('email'),
+                    'phone'=>$this->input->post('phone'),
+                    'subject'=>$this->input->post('subject'),
+                    'message'=>$this->input->post('message')
+                );
+                $this->Tanza_model->contact_us($data);
+                redirect('Tanza/contact');
+            }
+        }
+        public function contact(){
+            $data['title'] = "Leave your comment Here!";
+           
+            $this->load->library('form_validation');
+
+			$this->form_validation->set_rules('name', 'Full name', 'required');
+			$this->form_validation->set_rules('email', 'Your Email', 'required');
+			$this->form_validation->set_rules('phone', 'Phone Number', 'required');
+            $this->form_validation->set_rules('subject', 'Subjects', 'required');
+            $this->form_validation->set_rules('message', 'Your Message ', 'required');
+
+            if($this->form_validation->run()===FALSE){
+                $this->load->view('web/header');
+                $this->load->view('web/message', $data);
+                $this->load->view('web/footer');
+            }else{
+                $data = array(
+                    'name'=>$this->input->post('name'),
+                    'email'=>$this->input->post('email'),
+                    'phone'=>$this->input->post('phone'),
+                    'subject'=>$this->input->post('subject'),
+                    'message'=>$this->input->post('message')
+                );
+                $this->Tanza_model->contact_us($data);
+                redirect('Tanza/contact');
+            }
         }
     }

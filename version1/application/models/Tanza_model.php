@@ -145,4 +145,8 @@
             $query = $this->db->get('product');
 			return $query->result_array();
         }
+
+        public function contact_us($data){
+            $this->db->insert('massages', $data);
+        }
     }
