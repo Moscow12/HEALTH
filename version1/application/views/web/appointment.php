@@ -49,7 +49,7 @@
                         <div class="row">
                             <div class="col-md-10"></div>
                             <div class="col-md-2">
-                                <button class="btn btn-success" value="submit">Submit</button>
+                                <button class="btn btn-success btn-skin" value="submit">Submit</button>
                             </div>
                         </div>
                     </div>

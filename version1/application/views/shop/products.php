@@ -17,6 +17,7 @@
                  <table class="table table-bordered table-hover table-responsive">
                     <thead>
                         <th>#</th>
+                        <th>Photo</th>
                         <th>Item</th>
                         <th>Measurements</th>
                         <th>Quantity</th>
@@ -34,6 +35,7 @@
                             ?>
                         <tr>
                             <td><?php echo $namb++; ?></td>
+                            <!-- <td><?php #    echo $products['picture'];?></td> -->
                             <td><?php echo $products['item'];?></td>
                             <td><?php echo $products['measuments'];?> </td>
                             <td><?php echo $products['quantity'];?></td>

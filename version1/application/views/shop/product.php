@@ -41,6 +41,14 @@
                             <input type="text" class="form-control" name="price">
                         </div>
                     </div>
+                    <div class="form-group row col-sm-12">
+                        <div class="col-sm-2">
+                            <label for="name">Product Photo</label>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="picture">
+                        </div>
+                    </div>
                    
                    
                     

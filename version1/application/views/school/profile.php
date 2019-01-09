@@ -30,7 +30,7 @@
                             <label for="name">Phone:</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="tel" class="form-control" name="h_phone">
+                            <input type="tel" class="form-control" name="phone">
                         </div>
                     </div>
                     <div class="form-group row col-sm-12">
@@ -63,19 +63,13 @@
                             </div>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="ward">
-                            </div>
-                        
+                            </div>                        
                             <div class="col-sm-2">
                                 <label for="">Street: </label>
                             </div>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="street">
                             </div>
-                        
-                        <!-- <div class="form-group  col-sm-10">
-                            <label for="street">Street</label>
-                            <input type="text" class="form-control" name="street">
-                        </div> -->
                     </div>
                     <div class="form-group row col-sm-12">
                         <div class="col-sm-2">
