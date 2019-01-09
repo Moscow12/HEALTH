@@ -54,7 +54,7 @@
   </div>  -->
   <div class="call">
     <div class="row col-md-12">
-      <div class="col-md-6"><a href="" class="btn btn-success btn-bg btn-block">call</a></div>
+      <div class="col-md-6"><span></span><a href="" class="btn btn-success btn-bg btn-block">call</a></div>
       <div class="col-md-6"><a href="" class="btn btn-success btn-bg btn-block">Review</a></div>
 
     </div>

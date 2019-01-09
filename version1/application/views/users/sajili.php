@@ -27,13 +27,13 @@
 
 
             </div>
-            <?php echo form_open('Users/registration'); ?>
+            
             <div class="col-lg-6">
               <div class="form-wrapper">
                 <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
 
                   <div class="panel panel-skin">
-                    <div class="panel-heading">
+                    <div class="panel-heading"><?php echo form_open('Users/registration'); ?>
                       <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> <?php echo $title; ?> <small>(It's free!)</small></h3>
                     </div>
                    
@@ -43,22 +43,14 @@
                          <?php echo validation_errors(); ?>
                       </div>
 
-                       <form action="<?=base_url();?>index.php/Users/registration" method="post" role="form" class="contactForm lead">
                         <div class="row">
                           <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                               <label>Full Name</label>
-                              <input type="text" name="name" id="first_name"  class="form-control input-md" data-rule="minlen:3"  data-msg="Please enter at least 3 chars" autofocus="required">
+                              <input type="text" name="name" id="first_name"  class="form-control input-md" required>
                               <div class="validation"></div>
                             </div>
                           </div>
-                          <!-- <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="form-group">
-                              <label>Email</label>
-                              <input type="text" name="email" id="last_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
-                              <div class="validation"></div>
-                            </div>
-                          </div> -->
                         </div>
 
 			                 <div class="row">
@@ -70,7 +62,7 @@
                             </div>
                           </div>
                           <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="form-group">
+                            <div class="form-group"> 
                               <label>User Role</label>
                               
                               <select name="role_id" class="form-control input-md" id="phone" data-rule="required" data-msg="Your role is required">
@@ -100,11 +92,10 @@
                             </div>
                           </div>
                         </div>
-                        <input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
+                        <button  value="Submit" class="btn btn-skin btn-block btn-lg">Submit</button>
 
                         <p class="lead-footer">* We'll contact you by email later</p>
 
-                      </form>
                     </div>
                   </div>
 

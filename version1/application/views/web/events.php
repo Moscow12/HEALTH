@@ -1,27 +1,27 @@
-<section id="doctors">
-    <div class="container">
-            <div>
-                <h3><?php echo $title;?></h3><br>
-                <p>Get assisted by our Authorized and professional Doctors </p><br>
-                <small>View their profile</small>
+
+<section id="events">
+    <div class="container" style="background-color: azure;">
+            <div><br><br><br><br><br><br>
+                <h4 align="center" ><?php echo $title;?></h4><hr>
+                <small>View posted events</small>
 
             </div>
 
-            <div class="row">
+            <div class="row" >
                 <div class="col-md-12">
                     
                         <?php foreach($events as $event){?>
-                            <div class="col-md-6">
-                                <div class="thumbnail">
-                                    <a href="<?=base_url();?>assets/img/dummy/img-1.png"><img src="<?=base_url();?>assets/img/dummy/img-1.png" alt=""></a>
-                                    <div class="caption">
-                                        Caption Title:<?php echo $event['title'];?><br>
-                                        Description:<?php echo $event['description'];?><br>
-                                        Posted at:<?php echo $event['date'];?><br>
-                                        Posted by: <?php echo $event['name'];?><br>
-                                    </div>
-                                    
-                                </div>
+                            <div class="col-md-4">
+                                                <div class="thumbnail">
+                                                    <a href="<?=base_url();?>assets/img/dummy/img-1.png"><img src="<?=base_url();?>assets/img/dummy/img-1.png" alt=""></a>
+                                                    <div class="caption">
+                                                        Caption Title:<?php echo $event['title'];?><br>
+                                                        Description:<?php echo $event['description'];?><br>
+                                                        Posted at:<?php echo $event['date'];?><br>
+                                                        Posted by: <?php echo $event['name'];?><br>
+                                                    </div>
+                                                    
+                                                </div>
                                 
                                 
                             </div>
