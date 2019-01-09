@@ -62,7 +62,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="<?=base_url();?>star/images/faces/face4.jpg" alt="image" class="profile-pic">
+                  <img src="<?=base_url();?>assets/img/dummy/mesh.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-medium text-dark">David Grey
@@ -76,7 +76,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                  <img src="<?=base_url();?>star/images/faces/face2.jpg" alt="image" class="profile-pic">
+                  <img src="<?=base_url();?>assets/img/dummy/mesh.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-medium text-dark">Tim Cook
@@ -161,7 +161,7 @@
           <li class="nav-item dropdown d-none d-xl-inline-block">
             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <span class="profile-text">Hello, Dr. Meshack Muganyizi!</span>
-              <img class="img-xs rounded-circle" src="<?=base_url();?>star/images/faces/face1.jpg" alt="Profile image">
+              <img class="img-xs rounded-circle" src="<?=base_url();?>assets/img/dummy/mesh.jpg" alt="Profile image">
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
               <a class="dropdown-item p-0">
@@ -206,7 +206,7 @@
             <div class="nav-link">
               <div class="user-wrapper">
                 <div class="profile-image">
-                  <img src="<?=base_url();?>star/images/faces/face1.jpg" alt="profile image">
+                  <img src="<?=base_url();?>assets/img/dummy/mesh.jpg" alt="profile image">
                 </div>
                 <div class="text-wrapper">
                   <p class="profile-name">Dr. Meshack Muganyizi</p>

@@ -17,36 +17,9 @@ class Welcome extends CI_Controller {
 		$data['dept'] = $this->Register_model->get_dept();
 		$data['events'] = $this->Welcome_model->get_events();
 		$data['doctor']= $this->Tanza_model->get_doctors();
+		$data['title'] = "Leave your comment Here!";
 
 
 		$this->load->view('index2',$data);
-		
-
-
-	}
-
-	public function doctors(){
-		$data['dept'] = $this->Register_model->get_dept();
-		$data['services']= $this->Welcome_model->get_services();
-		$data['events'] = $this->Welcome_model->get_events();
-
-		
-		$this->load->view('index2', $data);
-	}
-
-	public function services(){
-		$data['dept'] = $this->Register_model->get_dept();
-		$data['services']= $this->Welcome_model->get_services();
-		$data['events'] = $this->Welcome_model->get_events();
-
-		$this->load->view('index2', $data);
-	}
-
-	public function events(){
-		$data['dept'] = $this->Register_model->get_dept();
-		$data['services']= $this->Welcome_model->get_services();
-		$data['events'] = $this->Welcome_model->get_events();
-
-		$this->load->view('index2',$data);
-	}
+	}	
 }

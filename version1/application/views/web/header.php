@@ -11,7 +11,7 @@
 
   <!-- css -->
   
-  <link href="<?=base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="<?=base_url();?>assets/css/bootstrap.mine.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url();?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link rel="<?=base_url();?>assets/stylesheet" type="text/css" href="<?=base_url();?>assets/plugins/cubeportfolio/css/cubeportfolio.min.css">
   <link href="<?=base_url();?>assets/css/nivo-lightbox.css" rel="stylesheet" />
@@ -21,6 +21,8 @@
   <link href="<?=base_url();?>assets/css/animate.css" rel="stylesheet" />
   <link href="<?=base_url();?>assets/css/style.css" rel="stylesheet">
   <link href="<?=base_url();?>star/css/mine.css" rel="stylesheet" >
+  <link href="<?=base_url();?>assets/css/mine.css" rel="stylesheet" >
+
 
 
   <!-- boxed bg -->
@@ -66,7 +68,7 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="#">
                     <img src="<?=base_url();?>assets/img/logo.jpg" alt="" width="150" height="40" />
                 </a>
         </div>
@@ -87,9 +89,8 @@
                   <li><a href="<?=base_url();?>index.php/Tanza/articles">Articles</a></li>
                   <li><a href="<?=base_url();?>index.php/Tanza/job">Job Opportunities</a></li>
                 </ul>
-              </li>
-             
-            
+            </li>
+            <li><a href="<?=base_url();?>index.php/Tanza/contact">Contact us</a></li>            
           </ul>
         </div>
         <!-- /.navbar-collapse -->
