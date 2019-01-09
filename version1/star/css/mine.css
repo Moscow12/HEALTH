@@ -20,3 +20,31 @@ fieldset{
     text-align: right;
    }
    
+   #media{
+       width: 50%;
+       height: 20;
+   }
+
+  .events{
+       background-image: url(assets/img/dummy/img-1.png);
+   }
+   .panel{
+    background: #dc5;
+}
+h3{
+    padding-top: 10px;
+    padding-bottom: 3px;
+    margin-left: 200px;
+    margin-right:100px;
+}
+
+#caption1{
+    border-right:solid royalblue;
+}
+
+#caption2{
+    border-top:solid red;
+}
+.message{
+    background-color: aliceblue;
+}
