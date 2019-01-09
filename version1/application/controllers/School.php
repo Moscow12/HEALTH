@@ -35,7 +35,7 @@
 
 
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules('h_phone', 'Hospital phone', 'required');
+			$this->form_validation->set_rules('phone', 'School phone', 'required');
 			$this->form_validation->set_rules('country', 'Country', 'required');
 			$this->form_validation->set_rules('region', 'Region', 'required');
 			$this->form_validation->set_rules('district', 'District', 'required');
@@ -50,7 +50,7 @@
 				$this->load->view('school/footer');
 			}else{
 				$data = array(
-					'h_phone' => $this->input->post('h_phone'),
+					'phone' => $this->input->post('phone'),
 					'country' => $this->input->post('country'),
 					'region' => $this->input->post('region'),
 					'district' => $this->input->post('district'),
@@ -59,7 +59,7 @@
 					'address' => $this->input->post('address'),
 					'user_id' => $this->session->userdata('user_id')
 					
-				);
+				); 
 
 				if($this->session->userdata('user_id') === NULL){
 				redirect('users/login');

@@ -15,10 +15,10 @@
 
 		public function registration(){
 
-			$data['title'] = 'Sajili kuweka taarifa zako kwenye mfumo';
+			$data['title'] = 'Register yourself to the system to access more details.';
 			$data['roles'] = $this->Register_model->get_role();
 
-			$this->load->library('form_validation');
+            $this->load->library('form_validation');
 
 			$this->form_validation->set_rules('name', 'Full name', 'required');
 			$this->form_validation->set_rules('email', 'Email Address', 'required');
@@ -39,7 +39,7 @@
 					'role_id' =>$this->input->post('role_id')
 				);
 				$this->User_model->register($data);
-				$this->session->flashdata('restration', 'Umefanikiwa kusajili akaunti yako sasa unaweza kuingia');
+				$this->session->flashdata('restration', 'Successful logged registered login now!!!');
 				redirect ("users/login");
 			}
 

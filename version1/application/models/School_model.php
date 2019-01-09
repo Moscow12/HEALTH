@@ -7,7 +7,7 @@
 		
 		public function set_profile($data){
 
-			return $this->db->insert('hospital',$data);
+			return $this->db->insert('school',$data);
         }
         
         public function get_profile(){
