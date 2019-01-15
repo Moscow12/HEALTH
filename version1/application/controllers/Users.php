@@ -56,7 +56,7 @@
 	 		 
 			
 			if($this->form_validation->run() ===FALSE){
-				$this->load->view('home/header');
+				$this->load->view('web/header');
 				$this->load->view('users/login', $data);
 				$this->load->view('home/footer');
 			} else{
@@ -103,6 +103,8 @@
 								redirect("hospital/index");
 							case '6':
 								redirect('patient/index');
+							case '7':
+								redirect('admin/index');
 							
 							default:
 								redirect("users/login");

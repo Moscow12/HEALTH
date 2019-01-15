@@ -349,7 +349,7 @@
             <div class="row">
                 <div class="col-sm-4 col-md-4 offset-md-4">
                      <nav>
-                            <ul class="pagination">
+                            <ul class="pagination justify-content-end">
                                 <li class="page-item disabled">
                                     <span class="page-link">Previous</span>
                                 </li>
@@ -391,8 +391,10 @@
                 <div class="table">
                   <div class="table-item-list">
                   <strong><?php echo $service['service_name'];?></strong>
-                    <br>
-                    <?php echo $service['description'];?>
+                  <a href="#" data-toggle="popover" id="service" data-content="<?php echo $service['description'];?>" title="<?php echo $service['service_name']; ?>" >View Description</a>
+
+
+                    
                   </div>
                 </div>
               <?php }?>
@@ -858,7 +860,7 @@
     </section> -->
     <!-- /Section: pricing -->
 
-    <section id="partner" class="home-section paddingbot-60">
+    <!-- <section id="partner" class="home-section paddingbot-60">
       <div class="container marginbot-50">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
@@ -897,7 +899,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <footer>
 
@@ -998,7 +1000,7 @@
                       Licensing information: https://bootstrapmade.com/license/
                       Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medicio
                     -->
-                    Designed by <a href="https://bootstrapmade.com/">Meshack Muganyizi</a>
+                    Designed by <a href="#">Meshack Muganyizi</a>
                   </div>
                 </div>
               </div>
@@ -1012,6 +1014,7 @@
   <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
   <!-- Core JavaScript Files -->
+  <script src="<?=base_url();?>assets/js/mine.js"></script>
   <script src="<?=base_url();?>assets/js/jquery.min.js"></script>
   <script src="<?=base_url();?>assets/js/bootstrap.min.js"></script>
   <script src="<?=base_url();?>assets/js/jquery.easing.min.js"></script>
