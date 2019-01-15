@@ -1,4 +1,4 @@
-  <section id="partner" class="home-section paddingbot-60">
+  <!-- <section id="partner" class="home-section paddingbot-60">
       <div class="container marginbot-50">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
@@ -37,9 +37,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <footer>
+    <footer class="fix-bottom">
 
       <div class="container">
         <div class="row">
@@ -152,6 +152,7 @@
   <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
   <!-- Core JavaScript Files -->
+  <script src="<?=base_url();?>assets/js/mine.js"></script>
   <script src="<?=base_url();?>assets/js/jquery.min.js"></script>
   <script src="<?=base_url();?>assets/js/bootstrap.min.js"></script>
   <script src="<?=base_url();?>assets/js/jquery.easing.min.js"></script>

@@ -5,6 +5,7 @@
         }
 
         public function get_services(){
+            $this->db->limit(4);
             $query = $this->db->get('service');
 			return $query->result_array();
         }
