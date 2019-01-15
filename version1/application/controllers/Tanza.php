@@ -58,6 +58,13 @@
             $this->load->view('web/schools', $data);
             $this->load->view('web/footer');
         }
+        public function testschool(){
+            $data['title'] ="This is the test for new vrsion of bootstarp";
+
+            $this->load->view('home/header');
+            $this->load->view('home/schools', $data);
+            $this->load->view('home/footer');
+        }
 
         public function job(){
             $data['title'] = 'Job opportunity advertised'; 
