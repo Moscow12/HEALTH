@@ -37,7 +37,7 @@
                         <img src="<?=base_url();?>assets/img/dummy/me.png" alt="" class="thumbnails">
                         <div class="media-body">
                             <h5><li><?php  echo $school['name'];?></li></h5>
-                            <p><?php echo $school['email'];?><a href="hospital" class="btn btn-success">Read more</a> </p>                                                      
+                            <p><?php echo $school['email'];?><a href="testschool" class="btn btn-success">Read more</a> </p>                                                      
                         </div>
                         <hr>
                     </li>
