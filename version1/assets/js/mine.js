@@ -16,7 +16,7 @@ $(document).ready(function(){
       $(this).css("background-color", "lightblue");
     }, 
     click: function(){
-      $(this).css("background-color", "yellow");
+      $(this).css("background-color", "red");
     }  
   });
 });
@@ -31,12 +31,22 @@ $(document).ready(function(){
       } 
     //   click: function(){
     //     $(this).css("background-color", "yellow");
-    //   }  
+    //   } 
+      
     });
   });
+  
 
+  // $(document).ready(function(){
+  //   $("#service").click(function(){
+  //     $();
+  //   });
+
+  //event captions
   $(document).ready(function(){
-    $("#service").click(function(){
-      $()
-    })
-  });
+    $('.flek').click(function(){
+        $('.caption').slideToggle('slow');
+    });
+});
+      
+  

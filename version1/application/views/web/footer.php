@@ -163,6 +163,10 @@
   <script src="<?=base_url();?>assets/js/owl.carousel.min.js"></script>
   <script src="<?=base_url();?>assets/js/nivo-lightbox.min.js"></script>
   <script src="<?=base_url();?>assets/js/custom.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="<?=base_url();?>assets/js/mine.js"></script>
+
+
 
 </body>
 

@@ -37,3 +37,14 @@
     display: block;
 
 }
+.hospital{
+    background-color: antiquewhite;
+}
+#cup{
+    background-color: aliceblue;
+}
+
+#content{
+    height: 200px;
+    background-color: #cfcfcf;
+}

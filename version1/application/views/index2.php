@@ -36,9 +36,24 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  <style>
+    #cup{
+      background-color: white;
+      
+    }
+    #cups{
+      border: solid 1px;
+      border-style: ridge;
+    }
+    #table{
+      border: solid 1px;
+      border-style: round;
+      border-radius: 3px; 
+    }
+  </style>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom" style="background-color:blue;">
 
 
   <div id="wrapper">
@@ -308,7 +323,99 @@
         </div>
       </div>
     </section>
+<!--section hospital and services-->
+<section id="hospital" style="background-color: antiquewhite;">
+  <div class="container  margintop-10">
+    <div class="row col-sm-12 col-md-12 col-lg-12">
+        <div class="col-sm-8 col-md-8">
+          <h4>Welcome to Tanza Health Group</h4>
+          <p>These are hospitals that are available to our system which provides the prenty services.</p>
+          <?php foreach($hospitals as $hospital){?>
+          <div class="col-sm-6 col-md-6">
+            <div class="thumbnail">
+              <img src="<?=base_url();?>assets/img/photo/5.jpg" alt="" sizes="200px"  class="person img-square">
+              <div class="caption">
+                <?php echo $hospital['name'];?> <br>
+                <p>Get being served by our proffetiional doctors from our hospital you can visit our hospital or make an appointments 
+                  <br><small class="btn btn-info">read more</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <?php }?>
+         </div>
+        
+        <div class="col-sm-4 col-md-4">
+          <h4>Service offered</h4><p>view more</p><?php foreach($services as $service){?>
+            
+          <div class="jumbotrons">
+              <div class="service-icon">
+                  <span class="fa fa-stethoscope fa-1x"></span>
+                </div>
+                <div class="service-desc">
+                  <h5 class="h-light"><?php echo $service['service_name'];?></h5>
+                  <p>Check your general body checkup.</p>
+              </div>
+          </div><?php }?>
+          <!-- <div class="jumbotron">
+              <div class="service-icon">
+                  <span class="fa fa-stethoscope fa-3x"></span>
+                </div>
+                <div class="service-desc">
+                  <h5 class="h-light">Medical checkup</h5>
+                  <p>Check your general body checkup.</p>
+              </div>
+          </div> -->
+        </div>
+    </div>
+  </div>   
+</section>
 
+  <!--section general all web content-->
+    <section id="cup">
+      <div class="container">
+        <div class="row" id="cups">
+          <div class="col-sm-4 col-md-4">
+            <div class="table-responsible " id="table">
+              <table class="table table-striped table-hover " >
+                <tbody>
+                  <tr>
+                    <td><span class="fa fa-stethoscope fa-1x"></span><a href="">Events<span align="right" class="glyphicon glyphicon-chevron-right"></span></a> </td>
+                  </tr>
+                  <tr class="info">
+                    <td><span class="fa fa-envelop-o fa-1x"></span><a href="#">Jobs optunity<span class="glyphicon glyphicon-chevron-right"></span></a> </td>
+                  </tr>
+                  <tr>
+                    <td>Articles</td>
+                  </tr>
+                  <tr>
+                     <td>Hospitals</td>
+                  </tr>
+                  <tr>
+                      <td>Phamarcy</td>
+                  </tr>
+                  <tr>
+                    <td>Medical schools</td>
+                  </tr>
+                  <tr>
+                    <td>Medical schools</td>
+                  </tr>
+                  <tr>
+                    <td>Services</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-sm-8 col-md-8">
+            <div id="content">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!--section general all web content-->
 
     
     <!-- Section: team -->
@@ -390,9 +497,9 @@
               <?php foreach($services as $service){?>
                 <div class="table">
                   <div class="table-item-list">
-                  <strong><?php echo $service['service_name'];?></strong>
-                  <a href="#" data-toggle="popover" id="service" data-content="<?php echo $service['description'];?>" title="<?php echo $service['service_name']; ?>" >View Description</a>
-
+                  <strong><?php echo $service['service_name'];?></strong><br>
+                  <!-- <a href="#" data-toggle="popover" id="service" data-content="<?php echo $service['description'];?>" title="<?php echo $service['service_name']; ?>" >View Description</a> -->
+                  <?php echo $service['description'];?>
 
                     
                   </div>
@@ -484,7 +591,37 @@
     </section>
     <!-- /Section: services -->
   
-
+  <!--fieldset galley-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <fieldset class="col-md-12">
+            <legend>GALLEY</legend>
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img src="<?=base_url();?>assets/img/photo/2.jpg" alt="" class="thambnail img-square">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img src="<?=base_url();?>assets/img/photo/2.jpg" alt="" class="thambnail img-square">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img src="<?=base_url();?>assets/img/photo/2.jpg" alt="" class="thambnail img-square">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img src="<?=base_url();?>assets/img/photo/2.jpg" alt="" class="thambnail img-square">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+  <!--fieldsetgallarey-->
 
 
 
