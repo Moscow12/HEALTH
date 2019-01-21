@@ -10,6 +10,9 @@
 			parent::__construct();
 			$this->load->library('session');
 			$this->load->model('Register_model');
+			if ( !$this->session->userdata('isLogin') || $this->session->userdata('role_id')!="1") { 
+				redirect('Users/login');  
+				 }
 		}
 
 		
@@ -25,9 +28,10 @@
 
 			$data['title'] = "Welcome Doctor to Our system ";
 			$data['profiles'] = $this->Register_model->get_profile();
+			$data['user'] = $this->session->userdata;        
 
 
-			$this->load->view('use/header');
+			$this->load->view('use/header',$data);
 			$this->load->view('use/index', $data);
 			$this->load->view('use/footer');
 
@@ -267,47 +271,44 @@
 				$this->load->view('use/dr_event',$data);
 				$this->load->view('use/footer');
 			
-				}
+			}
 
-			public function do_upload(){
-				$data['title'] = "Post your Event vacation";
+		public function do_upload(){
+			$data['title'] = "Post your Event vacation";
 
 
-				$this->load->library('form_validation');
+			$this->load->library('form_validation');
 
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('description', 'Description', 'required');
 			$this->form_validation->set_rules('location', 'Location', 'required');
-			//$this->form_validation->set_rules('photo', 'Photo', 'required');
+			// $this->form_validation->set_rules('photo', 'Photo', 'required');
 
-if($this->form_validation->run()===FALSE ){
+			if($this->form_validation->run()===FALSE ){
 				$this->load->view('use/header');
 				$this->load->view('use/dr_event', $data);
 				$this->load->view('use/footer');
-			}else{
+				}else{
 
 
-		$config['upload_path'] = './uploads';
-        $config["allowed_types"] = 'jpg|jpeg|png|gif';
-        $config["max_size"] = "10244";
-        $config["max_width"] = "4000";
-        $config["max_height"] = "4000";
-       $this->load->library('upload', $config);
-        if($this->upload->do_upload('photo')) {               
-          
-          //  succeess
+				$config['upload_path'] = './uploads';
+				$config["allowed_types"] = 'jpg|jpeg|png|gif';
+				$config["max_size"] = "10244";
+				$config["max_width"] = "4000";
+				$config["max_height"] = "4000";
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('photo')) {               
+				
+				//  succeess
 
-        } else {
-             $error['error'] =  $this->upload->display_errors();
-             $this->load->view('error',$error);
-                                              
-        }
+				} else {
+					$error['error'] =  $this->upload->display_errors();
+					$this->load->view('error',$error);
+													
+				}
 
-
-				//file uploading ends
-
-            
-            $data = array(
+				//file uploading ends            
+           		$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
@@ -315,7 +316,6 @@ if($this->form_validation->run()===FALSE ){
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
-
 			
 					$this->Register_model->dr_event($data);
 					$this->session->set_flashdata('doctor_events', 'You have shared your event');

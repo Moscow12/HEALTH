@@ -5,6 +5,9 @@
             $this->load->library('session');
             $this->load->model('Shop_model');
             $this->load->model('Tanza_model');
+            if ( !$this->session->userdata('isLogin') || $this->session->userdata('role_id')!="4") { 
+                redirect('Users/login');  
+                 }
         }
 
         function index(){

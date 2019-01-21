@@ -5,6 +5,9 @@
 			parent::__construct();
 			$this->load->library('session');
 			$this->load->model('Hospital_model');
+			if ( !$this->session->userdata('isLogin') || $this->session->userdata('role_id')!="5") { 
+				redirect('Users/login');  
+				 }
         }
         
         public function index(){
@@ -14,7 +17,8 @@
             $this->load->view('hospital/header');
 			$this->load->view('hospital/index', $data);
 			$this->load->view('hospital/footer');
-        }
+		}
+		
 
         public function logout(){
 			//Unset user data

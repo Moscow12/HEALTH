@@ -7,6 +7,9 @@
 			$this->load->model('School_model');
 			$this->load->model('Hospital_model');
 			$this->load->model('Register_model');
+			if ( !$this->session->userdata('isLogin') || $this->session->userdata('role_id')!="3") { 
+				redirect('Users/login');  
+				 }
 
         }
         
@@ -17,6 +20,7 @@
             $this->load->view('school/header');
 			$this->load->view('school/index', $data);
 			$this->load->view('school/footer');
+
         }
 
         public function logout(){

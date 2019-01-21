@@ -5,6 +5,9 @@
 			parent::__construct();
 			$this->load->library('session');
 			$this->load->model('Student_model');
+			if ( !$this->session->userdata('isLogin') || $this->session->userdata('role_id')!="2") { 
+				redirect('Users/login');  
+				 }
 			$this->load->model('Register_model');
         }
         
