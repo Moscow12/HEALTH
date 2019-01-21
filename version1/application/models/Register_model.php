@@ -60,9 +60,12 @@
 		public function get_profile(){
 			$user = $this->session->userdata('user_id');
 
-			$this->db->where('id', $user);
+			$this->db->select('*');
+			$this->db->from('dr_profile_view dr');
+			$this->db->join('department d',  'd.id= dr.dept_id', 'inner');
+			$this->db->where('dr.id', $user);
 
-			$query = $this->db->get('dr_profile_view'); 
+			$query = $this->db->get();
             return $query->result_array();
 		}
 

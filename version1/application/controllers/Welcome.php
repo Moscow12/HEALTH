@@ -17,6 +17,8 @@ class Welcome extends CI_Controller {
 		$data['dept'] = $this->Register_model->get_dept();
 		$data['events'] = $this->Welcome_model->get_events();
 		$data['doctor']= $this->Tanza_model->get_doctors();
+		$data['hospitals'] = $this->Tanza_model->get_hospitals();
+
 		$data['title'] = "Leave your comment Here!";
 
 

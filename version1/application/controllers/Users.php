@@ -29,7 +29,7 @@
 			if($this->form_validation->run() ===FALSE){
 
 				$this->load->view('home/header');
-				$this->load->view('users/sajili', $data);
+				$this->load->view('users/sajili', $data); 
 				$this->load->view('home/footer');
 			}else{
 				$data = array(
@@ -76,13 +76,16 @@
 							$myuser_id = $info->id;
 							$myrole_id = $info->role_id;
 							$myname = $info->name;
+							$email = $info->email;
 								//create session
 								$user_data = array(
 									 'user_id' => $myuser_id,
+									 'role_id' => $myrole_id,
 									 'email' => $email,
-									 'name' =>$name,
-									 'logged_in' => true
+									 'name' =>$myname,
+									 'isLogin' => true
 								);
+
 						if($user_info){		
 						$this->session->set_userdata($user_data);
 						switch($myrole_id){
