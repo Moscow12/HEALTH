@@ -1,3 +1,10 @@
+<script>
+$(document).ready(function(){
+    $('.flek').click(function(){
+        $('.caption').slidetoggle('slow');
+    });
+});
+</script>
 
 <section id="events">
     <div class="container" style="background-color: azure;">
@@ -13,8 +20,8 @@
                         <?php foreach($events as $event){?>
                             <div class="col-md-4">
                                                 <div class="thumbnail">
-                                                    <a href="<?=base_url();?>assets/img/dummy/img-1.png"><img src="<?=base_url();?>assets/img/dummy/img-1.png" alt=""></a>
-                                                    <div class="caption">
+                                                    <a class="flek"><img src="<?=base_url();?>assets/img/dummy/img-1.png" alt="">click me</a>
+                                                    <div class="caption" style="display:none;">
                                                         Caption Title:<?php echo $event['title'];?><br>
                                                         Description:<?php echo $event['description'];?><br>
                                                         Posted at:<?php echo $event['date'];?><br>
