@@ -18,7 +18,7 @@
         public function get_profile(){
 
             $user = $this->session->userdata('user_id');
-            $this->db->select('name, email, shop_phone, lessen, region, district, ward, street, address');
+            $this->db->select('name, email, shop_phone, lessen, region, pic, district, ward, street, address');
             $this->db->from('shop_profile_view');
             $this->db->where('id', $user);
 
@@ -37,7 +37,7 @@
         
         public function get_product(){
             $user = $this->session->userdata('user_id');
-            $this->db->select('id, item, measuments, price, quantity');
+            $this->db->select('id, item, measuments, price, picture, quantity');
             $this->db->from('product');
             $this->db->where('shop_id', $user);
 

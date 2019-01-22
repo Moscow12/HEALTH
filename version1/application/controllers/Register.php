@@ -60,13 +60,31 @@
 				$this->load->view('use/profile', $data);
 				$this->load->view('use/footer');
 			}else{
+
+				$config['upload_path'] = './uploads/profile';
+				$config["allowed_types"] = 'jpg|jpeg|png|gif';
+				$config["max_size"] = "10240";
+				$config["max_width"] = "4000";
+				$config["max_height"] = "4000";
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('photo')) {              
+				
+				//  succeess
+
+				} else {
+					$error['error'] =  $this->upload->display_errors();
+					$this->load->view('error',$error);
+													
+				}
+
+				//file uploading ends 
 				$data = array(
 					'sex' => $this->input->post('sex'),
 					'dept_id' => $this->input->post('dept_id'),
 					'professional' => $this->input->post('professional'),
 					'description' => $this->input->post('description'),
 					'experience' => $this->input->post('experience'),
-					'pic' => $this->input->post('pic'),
+					'pic' => $_FILES['pic']['name'],
 					'region' => $this->input->post('region'),
 					'district' => $this->input->post('district'),
 					'ward' => $this->input->post('ward'),
@@ -265,7 +283,6 @@
 		//Function for posting events doctor
 		public function event(){
 			$data['title'] = "Post your Event vacation";
-
 			
 				$this->load->view('use/header');
 				$this->load->view('use/dr_event',$data);
@@ -275,7 +292,6 @@
 
 		public function do_upload(){
 			$data['title'] = "Post your Event vacation";
-
 
 			$this->load->library('form_validation');
 
@@ -290,14 +306,13 @@
 				$this->load->view('use/footer');
 				}else{
 
-
-				$config['upload_path'] = './uploads';
+				$config['upload_path'] = './uploads/Event';
 				$config["allowed_types"] = 'jpg|jpeg|png|gif';
-				$config["max_size"] = "10244";
+				$config["max_size"] = "10240";
 				$config["max_width"] = "4000";
 				$config["max_height"] = "4000";
 				$this->load->library('upload', $config);
-				if($this->upload->do_upload('photo')) {               
+				if($this->upload->do_upload('photo')) {              
 				
 				//  succeess
 

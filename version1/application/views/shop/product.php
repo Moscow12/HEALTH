@@ -7,7 +7,7 @@
                 <div  style="color: red; background: #dc3;">
                     <?php echo validation_errors(); ?>
                 </div>
-                <?php echo form_open('Shop/register_product'); ?>
+               <form method="post" action="<?php echo base_url();?>index.php/Shop/register_product" enctype="multipart/form-data">
                     <div class="form-group row col-sm-12">
                         <div class="col-sm-2">
                             <label for="name">Item:</label>
@@ -50,15 +50,15 @@
                         </div>
                     </div>
                    
-                   
-                    
-            </div>
-            <div class="form-group row col-sm-12">
+             <div class="form-group row col-sm-12">
                     <div class="col-sm-10"></div>
                     <div class="col-sm-2">
                     <button class="btn btn-primary">Submit</button>
                     </div>
+            </div>      
+                    
             </div>
+            
         </div>
     </div>
     <div class="col-sm-2"></div>

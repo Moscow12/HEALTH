@@ -21,7 +21,8 @@
                         <th>Item</th>
                         <th>Measurements</th>
                         <th>Quantity</th>
-                        <th>Price</th>
+                        <th>Photo</th>
+                        <th>Price</th>                        
                         <th>Amount</th>
                         <th>Action</th>
                     </thead>
@@ -32,6 +33,7 @@
                             $quantity = $products['quantity'];
                             $price = $products['price'];
                             $amount = $quantity * $price;
+                            $imgname =$products['picture'];
                             ?>
                         <tr>
                             <td><?php echo $namb++; ?></td>
@@ -39,6 +41,7 @@
                             <td><?php echo $products['item'];?></td>
                             <td><?php echo $products['measuments'];?> </td>
                             <td><?php echo $products['quantity'];?></td>
+                            <td><a href="<?php echo base_url();?>uploads/products/<?php echo $imgname;?>"> <img width="200px" src="<?php echo base_url();?>uploads/products/<?php echo $imgname;?>"> </a></td>
                             <td><?php echo $products['price'];?></td>
                             <td><?php echo $amount;?></td>
                             <td><span><a href="Edit_product/<?php echo $products['id'];?>" class="btn btn-primary">Edit</a><a href="delete_product/<?php echo $products['id'];?>" class="btn btn-danger">delete</a></span></td>

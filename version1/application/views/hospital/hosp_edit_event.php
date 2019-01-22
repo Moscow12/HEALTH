@@ -1,6 +1,8 @@
 <div class="row">
 	<div class="col-md-2"></div>
-	<div class="col-md-8"><?php echo form_open('Hospital/update_event'); ?>
+	<div class="col-md-8">
+	
+	<form method="post" action="<?php echo base_url();?>index.php/Hospital/update_event"  enctype="multipart/form-data">
 		<div class="card">
 			<div class="card card-header"><?php echo $title;?></div>
 			<div class="card card-body">
@@ -27,11 +29,11 @@
 				</div>
 				
 				<div class="form-group">
-					<button class="btn btn-info">update </button>
+					<button class="btn btn-info">update </button> 
 				</div>
                 <?php }?>
 			</div>
-		</div><?php echo form_close();?>
+		</div></form>
 	</div>
 	<div class="col-md-2"></div>
 </div>

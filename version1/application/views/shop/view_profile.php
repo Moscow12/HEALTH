@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <table class="table table-hover table-tripped table-condensed">
                         <tbody>
-                            <?php foreach($profiles as $profile){?>
+                            <?php foreach($profiles as $profile){ $imgname = $profile['pic'];?>
                                 <tr>
                                     <th>Name:</th>
                                     <td><?php echo $profile['name'];?></td>
@@ -19,6 +19,10 @@
                                 <tr>
                                     <th>Email:</th>
                                     <td><?php echo $profile['email'];?></td>
+                                </tr>
+                                <tr>
+                                    <th>profile:</th>
+                                    <td><a href="<?php echo base_url();?>uploads/profile/<?php echo $imgname;?>"> <img width="200px" src="<?php echo base_url();?>uploads/profile/<?php echo $imgname;?>"> </a></td>
                                 </tr>
                                 <tr>
                                     <th>Phone:</th>

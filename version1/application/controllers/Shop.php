@@ -50,17 +50,36 @@
                 $this->load->view('shop/profile', $data);
                 $this->load->view('shop/footer');
             }else{
-                $data = array(
-                    'shop_phone' => $this->input->post('shop_phone'),
-                    'region' => $this->input->post('region'),
-                    'lessen' => $this->input->post('lessen'),
-                    'district' => $this->input->post('district'),
-                    'street' => $this->input->post('street'),
+
+                $config['upload_path'] = './uploads/profile';
+                $config["allowed_types"] = 'jpg|jpeg|png|gif';
+                $config["max_size"] = "10240";
+                $config["max_width"] = "4000";
+                $config["max_height"] = "4000";
+                $this->load->library('upload', $config);
+                if($this->upload->do_upload('pic')) {              
+                
+                //  succeess
+    
+                } else {
+                    $error['error'] =  $this->upload->display_errors();
+                    $this->load->view('error',$error);
+                                                    
+                }
+    
+                //file uploading ends 
+				$data = array(
+					'lessen' => $this->input->post('lessen'),
+					'shop_phone'=>$this->input->post('shop_phone'),
+					'region' => $this->input->post('region'),
+					'district' => $this->input->post('district'),
+					'street' => $this->input->post('street'),
+					'address' => $this->input->post('address'),
                     'ward' => $this->input->post('ward'),
-                    'address' => $this->input->post('address'),
-                    'user_id' => $this->session->userdata('user_id')
-                    
-                );
+                    'pic' => $_FILES['pic']['name'],
+					'user_id' => $this->session->userdata('user_id')
+					
+				);
 
                 if($this->session->userdata('user_id') === NULL){
                 redirect('users/login');
@@ -117,6 +136,24 @@
 				$this->load->view('shop/phamarcia_edit_profile', $data);
 				$this->load->view('shop/footer');
 			}else{
+
+                $config['upload_path'] = './uploads/profile';
+                $config["allowed_types"] = 'jpg|jpeg|png|gif';
+                $config["max_size"] = "10240";
+                $config["max_width"] = "4000";
+                $config["max_height"] = "4000";
+                $this->load->library('upload', $config);
+                if($this->upload->do_upload('pic')) {              
+                
+                //  succeess
+    
+                } else {
+                    $error['error'] =  $this->upload->display_errors();
+                    $this->load->view('error',$error);
+                                                    
+                }
+    
+                //file uploading ends 
 				$data = array(
 					'lessen' => $this->input->post('lessen'),
 					'shop_phone'=>$this->input->post('shop_phone'),
@@ -124,7 +161,8 @@
 					'district' => $this->input->post('district'),
 					'street' => $this->input->post('street'),
 					'address' => $this->input->post('address'),
-					'ward' => $this->input->post('ward'),
+                    'ward' => $this->input->post('ward'),
+                    'pic' => $_FILES['pic']['name'],
 					'user_id' => $this->session->userdata('user_id')
 					
 				);
@@ -152,7 +190,7 @@
         $this->form_validation->set_rules('measuments', 'measuments', 'required');
         $this->form_validation->set_rules('quantity', 'quantity', 'required');
         $this->form_validation->set_rules('price', 'price', 'required');
-        $this->form_validation->set_rules('picture', 'picture', 'required');
+        #$this->form_validation->set_rules('picture', 'picture', 'required');
 
       
 
@@ -162,12 +200,30 @@
             $this->load->view('shop/product', $data);
             $this->load->view('shop/footer');
         }else{
+
+            $config['upload_path'] = './uploads/products';
+            $config["allowed_types"] = 'jpg|jpeg|png|gif';
+            $config["max_size"] = "10240";
+            $config["max_width"] = "4000";
+            $config["max_height"] = "4000";
+            $this->load->library('upload', $config);
+            if($this->upload->do_upload('picture')) {              
+            
+            //  succeess
+
+            } else {
+                $error['error'] =  $this->upload->display_errors();
+                $this->load->view('error',$error);
+                                                
+            }
+
+            //file uploading ends 
             $data = array(
                 'item' => $this->input->post('item'),
                 'measuments' => $this->input->post('measuments'),
                 'quantity' => $this->input->post('quantity'),
                 'price' => $this->input->post('price'),     
-                'picture' =>$this->input->post('picture'),           
+                'picture' =>$_FILES['picture']['name'],           
                 'shop_id' => $this->session->userdata('user_id')
                 
             );
@@ -216,18 +272,35 @@
                 $this->load->view('shop/edit_product', $data);
                 $this->load->view('shop/footer');
             }else{
-                $data = array(
-                    'item' => $this->input->post('item'),
-                    'measuments' => $this->input->post('measuments'),
-                    'quantity' => $this->input->post('quantity'),
-                    'price' => $this->input->post('price'),   
-                    'picture' =>$this->input->post('picture'),             
-                    'shop_id' => $this->session->userdata('user_id')
-                    
-                );
-    
-                if($this->session->userdata('user_id') === NULL){
-                redirect('users/login');
+                $config['upload_path'] = './uploads/products';
+            $config["allowed_types"] = 'jpg|jpeg|png|gif';
+            $config["max_size"] = "10240";
+            $config["max_width"] = "4000";
+            $config["max_height"] = "4000";
+            $this->load->library('upload', $config);
+            if($this->upload->do_upload('picture')) {              
+            
+            //  succeess
+
+            } else {
+                $error['error'] =  $this->upload->display_errors();
+                $this->load->view('error',$error);
+                                                
+            }
+
+            //file uploading ends 
+            $data = array(
+                'item' => $this->input->post('item'),
+                'measuments' => $this->input->post('measuments'),
+                'quantity' => $this->input->post('quantity'),
+                'price' => $this->input->post('price'),     
+                'picture' =>$_FILES['picture']['name'],           
+                'shop_id' => $this->session->userdata('user_id')
+                
+            );
+
+            if($this->session->userdata('user_id') === NULL){
+            redirect('users/login');
     
             }else{
                 $this->Shop_model->register_product($data);
@@ -255,12 +328,29 @@
             $this->load->view('shop/edit_product', $data);
             $this->load->view('shop/footer');
         }else{
+            $config['upload_path'] = './uploads/products';
+            $config["allowed_types"] = 'jpg|jpeg|png|gif';
+            $config["max_size"] = "10240";
+            $config["max_width"] = "4000";
+            $config["max_height"] = "4000";
+            $this->load->library('upload', $config);
+            if($this->upload->do_upload('picture')) {              
+            
+            //  succeess
+
+            } else {
+                $error['error'] =  $this->upload->display_errors();
+                $this->load->view('error',$error);
+                                                
+            }
+
+            //file uploading ends 
             $data = array(
                 'item' => $this->input->post('item'),
                 'measuments' => $this->input->post('measuments'),
                 'quantity' => $this->input->post('quantity'),
-                'price' => $this->input->post('price'), 
-                'picture' =>$this->input->post('picture'),              
+                'price' => $this->input->post('price'),     
+                'picture' =>$_FILES['picture']['name'],           
                 'shop_id' => $this->session->userdata('user_id')
                 
             );

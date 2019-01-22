@@ -14,7 +14,7 @@ CREATE VIEW hosp_profile_view as SELECT users.id, users.name, users.email, hospi
 hospital.ward, hospital.street, hospital.address FROM users inner join hospital WHERE users.id =  hospital.user_id;
 
 CREATE VIEW shop_profile_view as SELECT users.id, users.name, users.email, shop.shop_phone, shop.lessen, shop.region, shop.district,
-shop.ward, shop.street, shop.address FROM users inner join shop WHERE users.id =  shop.user_id;
+shop.ward, shop.street, shop.address, shop.pic FROM users inner join shop WHERE users.id =  shop.user_id;
 
 CREATE VIEW hosp_profile_view as SELECT users.id, users.name, users.email,hospital.h_phone, hospital.address, hospital.region, hospital.street, hospital.district,
 hospital.ward, FROM users inner join hospital WHERE users.id = hospital.user_id;

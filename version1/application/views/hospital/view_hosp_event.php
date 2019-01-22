@@ -22,13 +22,13 @@
                     <th>Action</th>
                 </thead>
                 <tbody>
-                    <?php $namb=1; foreach($events as $serv){?>
+                    <?php $namb=1; foreach($events as $serv){ $imgname = $serv['photo'];?>
                     <tr>
                         <th><?php echo $namb++; ?></th>
                         <td><?php echo $serv['title'];?> </td>
                         <td><?php echo $serv['location'];?> </td>
                         <td><?php echo $serv['description']; ?> </td>
-                        <td><?php echo $serv['photo'];?> </td>
+                        <td><a href="<?php echo base_url();?>uploads/Event/<?php echo $imgname;?>"> <img width="100px" src="<?php echo base_url();?>uploads/Event/<?php echo $imgname;?>"> </a></td>
                         <td><?php echo $serv['date'];?></td>
                         <td>
                             <span><a href="edit_event/<?php echo $serv['id']; ?>" ><button class="btn btn-info" value="<?php echo $serv['id']; ?>">Edit</button></a>

@@ -164,11 +164,28 @@
 					$this->load->view('hospital/hopital_event', $data);
 					$this->load->view('hospital/footer');
 				}else{
+					$config['upload_path'] = './uploads/Event';
+					$config["allowed_types"] = 'jpg|jpeg|png|gif';
+					$config["max_size"] = "10240";
+					$config["max_width"] = "4000";
+					$config["max_height"] = "4000";
+					$this->load->library('upload', $config);
+					if($this->upload->do_upload('photo')) {              
+					
+					//  succeess
+
+					} else {
+						$error['error'] =  $this->upload->display_errors();
+						$this->load->view('error',$error);
+														
+					}
+
+				//file uploading ends 
 					$data = array(
 						'title' => $this->input->post('title'),
 						'description' => $this->input->post('description'),
 						'location' => $this->input->post('location'),
-						'photo' => $this->input->post('photo'),
+						'photo' => $_FILES['photo']['name'],
 						'user_id' =>$this->session->userdata('user_id'),
 						'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 					);
@@ -218,17 +235,34 @@
 
 			if($this->form_validation->run()===FALSE ){
 				$this->load->view('hospital/header');
-				$this->load->view('hospital/dr_edit_event', $data);
+				$this->load->view('hospital/hosp_edit_event', $data);
 				$this->load->view('hospital/footer');
 			}else{
-				$data = array(
-					'title' => $this->input->post('title'),
-					'description' => $this->input->post('description'),
-					'location' => $this->input->post('location'),
-					'photo' => $this->input->post('photo'),
-					'user_id' =>$this->session->userdata('user_id'),
-					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
-				);
+				$config['upload_path'] = './uploads/Event';
+					$config["allowed_types"] = 'jpg|jpeg|png|gif';
+					$config["max_size"] = "10240";
+					$config["max_width"] = "4000";
+					$config["max_height"] = "4000";
+					$this->load->library('upload', $config);
+					if($this->upload->do_upload('photo')) {              
+					
+					//  succeess
+
+					} else {
+						$error['error'] =  $this->upload->display_errors();
+						$this->load->view('error',$error);
+														
+					}
+
+				//file uploading ends 
+					$data = array(
+						'title' => $this->input->post('title'),
+						'description' => $this->input->post('description'),
+						'location' => $this->input->post('location'),
+						'photo' => $_FILES['photo']['name'],
+						'user_id' =>$this->session->userdata('user_id'),
+						'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
+					);
 
 			
 					$this->Register_model->update_event($data, $id);

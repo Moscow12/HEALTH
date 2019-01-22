@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
-		<?php //echo form_open('Register/event'); ?>
+	
 		<form method="post"  action="<?php echo base_url();?>index.php/Register/do_upload" enctype="multipart/form-data">
 			
 			<div class="card">
@@ -15,7 +15,7 @@
 					<label>Title</label>
 					<input type="text" name="title" placeholder="Event title" class="form-control">
 				</div>
-				<div class="form-group">
+				<div class="form-group"> 
 					<label>Event Desciption</label>
 					<textarea class="form-control" type="text" name="description"></textarea>
 				</div>

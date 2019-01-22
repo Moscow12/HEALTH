@@ -7,7 +7,7 @@
                 <div  style="color: red; background: #dc3;">
                     <?php echo validation_errors(); ?>
                 </div>
-                <?php echo form_open('Shop/profile'); ?>
+               <form method="post" action="<?php echo base_url();?>index.php/Shop/profile"  enctype="multipart/form-data">
                     <div class="form-group row col-sm-12">
                         <div class="col-sm-2">
                             <label for="name">Name:</label>
@@ -22,6 +22,14 @@
                         </div>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row col-sm-12">
+                        <div class="col-sm-2">
+                            <label for="name">Upload profile</label>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="pic">
                         </div>
                     </div>
                 
@@ -70,12 +78,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="street">
-                            </div>
-                        
-                        <!-- <div class="form-group  col-sm-10">
-                            <label for="street">Street</label>
-                            <input type="text" class="form-control" name="street">
-                        </div> -->
+                            </div>                
                     </div>
                     <div class="form-group row col-sm-12">
                         <div class="col-sm-2">
@@ -85,14 +88,16 @@
                             <textarea name="address" id="" cols="30" rows="10" class="form-control"></textarea>
                         </div>
                     </div>
-            </div>
-            <div class="form-group row col-sm-12">
-                    <div class="col-sm-10"></div>
-                    <div class="col-sm-2">
-                    <button class="btn btn-primary">Submit</button>
+                    <div class="form-group row col-sm-12">
+                        <div class="col-sm-10"></div>
+                        <div class="col-sm-2">
+                        <button class="btn btn-primary">Submit</button>
                     </div>
             </div>
-        </div>
+                    
+            </div>
+            
+        </div></form>
     </div>
     <div class="col-sm-2"></div>
 

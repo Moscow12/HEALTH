@@ -278,69 +278,37 @@
 				$this->load->view('student/st_event', $data);
 			 	$this->load->view('student/footer');
 			 }else{
-				//Upload this file then pass to model
+				$config['upload_path'] = './uploads/Event';
+				$config["allowed_types"] = 'jpg|jpeg|png|gif';
+				$config["max_size"] = "10240";
+				$config["max_width"] = "4000";
+				$config["max_height"] = "4000";
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('photo')) {              
+				
+				//  succeess
 
-			$config['upload_path'] = './asset/images/event/';
-			$config['allowed_type'] = 'gif|jpg|png';
-			$config['max_size'] = '2048';
-			$config['max_width'] = '1024';
-			$config['max_height'] = '768';
-			$config['overwrite'] = TRUE;
-
-			$this->load->library('upload', $config);
-			if(!$this->upload->do_upload('userfile')){
-					$uploadError = array('upload_error'=>$this->upload->display_error());
-					$this->set_flashdata('uploadError', $uploadError, $urlYouWantToReturn);
-					exit;
+				} else {
+					$error['error'] =  $this->upload->display_errors();
+					$this->load->view('error',$error);
+													
 				}
-				$file_info =$this->upload->data('userfile');
-				$file_name = $file_info['file_name'];
 
-				$data = array(
+				//file uploading ends            
+           		$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
-					'photo' => $file_name,
+					'photo' => $_FILES['photo']['name'],
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
+			
 				
 					$this->Register_model->dr_event($data);
 					$this->session->set_flashdata('student_events', 'You have shared your event');
 					redirect('Student/vevent');
-				// }else{
-				// 	$data = $this->generateCommonItem();
-				// 	$this->data['title'] = array(
-				// 		'name' => 'title',
-				// 		'id' => 'name',
-				// 		'type' => 'text',
-				// 		'style' => 'width:300px;',
-				// 		'value' => $this->form_validation->set_value('title')
-				// 	);
-				// 	$this->data['description'] = array(
-				// 		'name' => 'description',
-				// 		'id' => 'description',
-				// 		'type' => 'text',
-				// 		'cols' => '60',
-				// 		'rows' => '5',
-				// 		'value' => $this->form_validation->set_value('description')
-				// 	);
-				// 	$this->data['location'] = array(
-				// 		'name' => 'photo',
-				// 		'id' => 'photo',
-				// 		'type' => 'text',
-				// 		'style' => 'width:40px; text-align: right',
-				// 		'value' =>  $this->form_validation->set_value('location')
-				// 	);
-				// 	$this->data['photo'] = array(
-						
-				// 		'value' =>  $this->form_validation->set_value('photo')
-				// 	);
-
-				// 	$this->load->view('student/header');
-				// 	$this->load->view('student/st_event', $data);
-				// 	$this->load->view('student/footer');
-
+				
 				}
 			}
 
@@ -376,14 +344,32 @@
 				$this->load->view('student/st_edit_event', $data);
 				$this->load->view('student/footer');
 			}else{
-				$data = array(
+				$config['upload_path'] = './uploads/Event';
+				$config["allowed_types"] = 'jpg|jpeg|png|gif';
+				$config["max_size"] = "10240";
+				$config["max_width"] = "4000";
+				$config["max_height"] = "4000";
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('photo')) {              
+				
+				//  succeess
+
+				} else {
+					$error['error'] =  $this->upload->display_errors();
+					$this->load->view('error',$error);
+													
+				}
+
+				//file uploading ends            
+           		$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
-					'photo' => $this->input->post('photo'),
+					'photo' => $_FILES['photo']['name'],
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
+			
 				
 					$this->Register_model->dr_event($data);
 					$this->session->set_flashdata('doctor_events', 'You have shared your event');
@@ -410,15 +396,31 @@
 				$this->load->view('student/dr_edit_event', $data);
 				$this->load->view('student/footer');
 			}else{
-				$data = array(
+				$config['upload_path'] = './uploads/Event';
+				$config["allowed_types"] = 'jpg|jpeg|png|gif';
+				$config["max_size"] = "10240";
+				$config["max_width"] = "4000";
+				$config["max_height"] = "4000";
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('photo')) {              
+				
+				//  succeess
+
+				} else {
+					$error['error'] =  $this->upload->display_errors();
+					$this->load->view('error',$error);
+													
+				}
+
+				//file uploading ends            
+           		$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
-					'photo' => $this->input->post('photo'),
+					'photo' => $_FILES['photo']['name'],
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
-
 			
 					$this->Register_model->update_event($data, $id);
 					$this->session->set_flashdata('doctor_events', 'You have shared your event');
