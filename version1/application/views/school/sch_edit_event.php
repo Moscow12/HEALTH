@@ -1,12 +1,14 @@
 <div class="row">
 	<div class="col-md-2"></div>
-	<div class="col-md-8"><?php echo form_open('School/update_event'); ?>
+	<div class="col-md-8">
+	<form method="post"  action="<?php echo base_url();?>index.php/School/update_event" enctype="multipart/form-data">
+
 		<div class="card">
 			<div class="card card-header"><?php echo $title;?></div>
 			<div class="card card-body">
 				<div class="card card-title"><h4>Event</h4></div>
 				<div class="form-group" style="color: red;"><?php echo validation_errors();?> </div>
-                <?php foreach($event as $evt){?>
+                <?php foreach($event as $evt){ $imgname =  $evt['photo'];?>
                 <input type="hidden" name="id"   value="<?php echo $evt['id']; ?>">
 
 				<div class="form-group">
@@ -23,7 +25,7 @@
 				</div>
 				<div class="form-group">
 					<label>Upload photo</label>
-					<input class="form-control" type="file" name="photo" value="<?php echo $evt['photo']; ?>">
+					<input class="form-control" type="file" name="photo" value="<?php echo $imgname; ?>">
 				</div>
 				
 				<div class="form-group">
@@ -31,7 +33,7 @@
 				</div>
                 <?php }?>
 			</div>
-		</div><?php echo form_close();?>
+		</div></form>
 	</div>
 	<div class="col-md-2"></div>
 </div>

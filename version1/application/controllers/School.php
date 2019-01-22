@@ -266,11 +266,28 @@
 				$this->load->view('school/sch_event', $data);
 				$this->load->view('school/footer');
 			}else{
-				$data = array(
+				$config['upload_path'] = './uploads/Event';
+				$config["allowed_types"] = 'jpg|jpeg|png|gif';
+				$config["max_size"] = "10240";
+				$config["max_width"] = "4000";
+				$config["max_height"] = "4000";
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('photo')) {              
+				
+				//  succeess
+
+				} else {
+					$error['error'] =  $this->upload->display_errors();
+					$this->load->view('error',$error);
+													
+				}
+
+				//file uploading ends            
+           		$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
-					'photo' => $this->input->post('photo'),
+					'photo' => $_FILES['photo']['name'],
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
@@ -315,11 +332,28 @@
 				$this->load->view('school/sch_edit_event', $data);
 				$this->load->view('school/footer');
 			}else{
-				$data = array(
+				$config['upload_path'] = './uploads/Event';
+				$config["allowed_types"] = 'jpg|jpeg|png|gif';
+				$config["max_size"] = "10240";
+				$config["max_width"] = "4000";
+				$config["max_height"] = "4000";
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('photo')) {              
+				
+				//  succeess
+
+				} else {
+					$error['error'] =  $this->upload->display_errors();
+					$this->load->view('error',$error);
+													
+				}
+
+				//file uploading ends            
+           		$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
-					'photo' => $this->input->post('photo'),
+					'photo' => $_FILES['photo']['name'],
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
@@ -342,18 +376,35 @@
 			$this->form_validation->set_rules('title', 'Title', 'required');
 			$this->form_validation->set_rules('description', 'Description', 'required');
 			$this->form_validation->set_rules('location', 'Location', 'required');
-			$this->form_validation->set_rules('photo', 'Photo', 'required');
+			#$this->form_validation->set_rules('photo', 'Photo', 'required');
 
 			if($this->form_validation->run()===FALSE ){
 				$this->load->view('school/header');
 				$this->load->view('school/sch_edit_event', $data);
 				$this->load->view('school/footer');
 			}else{
-				$data = array(
+				$config['upload_path'] = './uploads/Event';
+				$config["allowed_types"] = 'jpg|jpeg|png|gif';
+				$config["max_size"] = "10240";
+				$config["max_width"] = "4000";
+				$config["max_height"] = "4000";
+				$this->load->library('upload', $config);
+				if($this->upload->do_upload('photo')) {              
+				
+				//  succeess
+
+				} else {
+					$error['error'] =  $this->upload->display_errors();
+					$this->load->view('error',$error);
+													
+				}
+
+				//file uploading ends            
+           		$data = array(
 					'title' => $this->input->post('title'),
 					'description' => $this->input->post('description'),
 					'location' => $this->input->post('location'),
-					'photo' => $this->input->post('photo'),
+					'photo' => $_FILES['photo']['name'],
 					'user_id' =>$this->session->userdata('user_id'),
 					'date'=>mdate('%Y-%m-%d %H:%i:%s', now())
 				);
